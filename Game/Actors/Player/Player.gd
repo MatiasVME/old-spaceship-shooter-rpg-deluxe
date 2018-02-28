@@ -1,13 +1,22 @@
 extends KinematicBody2D
 
+export (float) var speed = 2.5
+export (bool) var auto_fire = false # TODO
+
+# Stats
+#
+
+export (int) var power = 1 # El daño de bala
+export (int) var ship_velocity = 1 # La velocidad de la nave 
+export (int) var fire_velocity = 1 # Velocidad de laser
+export (int) var protection = 1 # Mejora la vitalidad
+
 var rec_laser = load("res://Game/Actors/Bullets/Lasers/Laser.tscn")
 
 var direction = 0
 
 var move_x = 0
 var move_y = 0
-
-var speed = 2.5
 
 func _ready():
 	randomize()
@@ -20,7 +29,12 @@ func _physics_process(delta):
 	
 	movement_x(speed)
 	movement_y(speed)
-		
+	
+	move_and_collide(Vector2(move_x, move_y))
+	
+	fire()
+	
+func fire():
 	if Input.is_action_just_pressed("ui_accept"):
 		var laser = rec_laser.instance()
 		laser.global_position.y = $Image.global_position.y - 40
@@ -29,8 +43,6 @@ func _physics_process(delta):
 		
 		SoundManager.select_sound(0)
 		SoundManager.play_sound()
-
-	move_and_collide(Vector2(move_x, move_y))
 	
 func movement_x(speed):
 	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -42,7 +54,7 @@ func movement_x(speed):
 	else:
 		move_x = 0
 
-func movement_y(delta):
+func movement_y(speed):
 	direction = int(Input.is_action_pressed("ui_up")) - int(Input.is_action_pressed("ui_down"))
 	
 	if direction == 1 and not is_limited_up():

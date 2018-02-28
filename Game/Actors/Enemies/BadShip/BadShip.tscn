@@ -113,7 +113,7 @@ tracks/1/keys = {
 "values": [ -1080.0, 0.0 ]
 }
 
-[node name="BadShip" type="RigidBody2D" index="0" groups=[
+[node name="BadShip" type="RigidBody2D" groups=[
 "Enemies",
 ]]
 
@@ -136,8 +136,13 @@ linear_damp = -1.0
 angular_velocity = 0.0
 angular_damp = -1.0
 script = ExtResource( 1 )
-max_life = 3
-min_life = 1
+max_life = 6
+min_life = 3
+score_value = 5
+xp_value = 1
+max_wait_time = 1
+min_wait_time = 3
+one_of_each = 30
 
 [node name="Image" type="Sprite" parent="." index="0"]
 

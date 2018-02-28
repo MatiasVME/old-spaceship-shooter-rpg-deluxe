@@ -13,5 +13,9 @@ script = ExtResource( 1 )
 [node name="Player" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 619.886, 534.267 )
+power = 1
+ship_velocity = 1
+fire_velocity = 1
+protection = 1
 
 

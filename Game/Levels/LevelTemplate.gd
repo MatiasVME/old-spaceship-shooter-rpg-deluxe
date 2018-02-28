@@ -47,8 +47,10 @@ func save_high_score():
 func _on_IsWin_timeout():
 	update_score()
 	
+	Main.enemies_in_screen = get_tree().get_nodes_in_group("Enemies").size()
+	
 	# Cuando pasa de nivel
-	if get_tree().get_nodes_in_group("Enemies").size() <= 0:
+	if Main.enemies_in_screen <= 0:
 		$CanvasLayer/ResultDisplay.text = "You Win"
 		
 		$Anim.play("show")

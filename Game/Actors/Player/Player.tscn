@@ -79,6 +79,8 @@ collision_mask = 13
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
+speed = 2.5
+auto_fire = false
 
 [node name="Image" type="Sprite" parent="." index="0"]
 

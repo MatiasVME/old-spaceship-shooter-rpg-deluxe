@@ -125,7 +125,6 @@ _sections_unfolded = [ "Pause" ]
 
 [node name="Background" parent="." index="0" instance=ExtResource( 2 )]
 
-layer = -1
 velocity = 0
 
 [node name="AnimBackground" type="AnimationPlayer" parent="." index="1"]

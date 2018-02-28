@@ -1,6 +1,6 @@
-# Ultra-Space-Ships
+# Ultra Space Ships RPG
 
-Juego hecho en Godot Engine para la Jam de #ArcadeGameJam
+Contiunación del Juego [Ultra Space Ships](https://furygames.itch.io/ultra-space-ships) pero esta vez con elementos RPG
 
-## Descargar
-[Itch.io](https://furygames.itch.io/ultra-space-ships)
+## Descargar (Pronto)
+[Itch.io]()
