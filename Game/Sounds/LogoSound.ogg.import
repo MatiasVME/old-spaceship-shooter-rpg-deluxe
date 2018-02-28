@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LogoSound.ogg-b115897be179e2edb71f8585d3a1a2d4.oggstr"
+
+[deps]
+
+source_file="res://Game/Sounds/LogoSound.ogg"
+source_md5="c93aaee0a0865b602162718ae9345737"
+
+dest_files=[ "res://.import/LogoSound.ogg-b115897be179e2edb71f8585d3a1a2d4.oggstr" ]
+dest_md5="743eea98e6fbb6ea27349fdd34cc7bbc"
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drop.ogg-3bd240a560f7de5dbfb1b0dbbbe04242.oggstr"
+
+[deps]
+
+source_file="res://Game/Sounds/Drop.ogg"
+source_md5="1cc00c97cccfb293227d4cf7bb2c410d"
+
+dest_files=[ "res://.import/Drop.ogg-3bd240a560f7de5dbfb1b0dbbbe04242.oggstr" ]
+dest_md5="cd215974b216f70e6579e7fd7b7e28ff"
+
+[params]
+
+loop=false
+loop_offset=0

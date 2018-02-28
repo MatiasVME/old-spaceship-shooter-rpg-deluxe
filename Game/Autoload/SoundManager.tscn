@@ -1,0 +1,127 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Game/Autoload/SoundManager.gd" type="Script" id=1]
+[ext_resource path="res://Game/Sounds/Laser-Sound.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Game/Sounds/Hit1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Game/Sounds/Hit2.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Game/Sounds/ShipHit.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Game/Sounds/LogoSound.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Game/Sounds/MenuTitle.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Game/Sounds/EnemyBullet.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Game/Sounds/GoodShipDead.ogg" type="AudioStream" id=9]
+[ext_resource path="res://Game/Sounds/Rebound.ogg" type="AudioStream" id=10]
+[ext_resource path="res://Game/Sounds/Explosion.ogg" type="AudioStream" id=11]
+[ext_resource path="res://Game/Sounds/ConsumeLife.ogg" type="AudioStream" id=12]
+[ext_resource path="res://Game/Sounds/Drop.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Game/Sounds/Nope.ogg" type="AudioStream" id=14]
+
+[node name="SoundManager" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Laser" type="AudioStreamPlayer" parent="." index="0"]
+
+stream = ExtResource( 2 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Hit1" type="AudioStreamPlayer" parent="." index="1"]
+
+stream = ExtResource( 3 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Hit2" type="AudioStreamPlayer" parent="." index="2"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="ShipHit" type="AudioStreamPlayer" parent="." index="3"]
+
+stream = ExtResource( 5 )
+volume_db = -30.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="LogoSound" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 6 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+_sections_unfolded = [ "Pause" ]
+
+[node name="MenuSound" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 7 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="EnemyBullet" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="GoodShipDead" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Rebound" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 10 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Explosion" type="AudioStreamPlayer" parent="." index="9"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="ConsumeLife" type="AudioStreamPlayer" parent="." index="10"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Drop" type="AudioStreamPlayer" parent="." index="11"]
+
+stream = ExtResource( 13 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Nope" type="AudioStreamPlayer" parent="." index="12"]
+
+stream = ExtResource( 14 )
+volume_db = 10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

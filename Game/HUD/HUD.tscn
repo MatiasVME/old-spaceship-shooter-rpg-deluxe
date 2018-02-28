@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/HUD/HUD.gd" type="Script" id=1]
+[ext_resource path="res://Game/HUD/Lifes/Lifes1.png" type="Texture" id=2]
+
+[node name="HUD" type="CanvasLayer"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Lifes" type="Node" parent="." index="0"]
+
+editor/display_folded = true
+
+[node name="Life1" type="Sprite" parent="Lifes" index="0"]
+
+position = Vector2( 10, 10 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset", "Region", "Transform" ]
+
+[node name="Life2" type="Sprite" parent="Lifes" index="1"]
+
+position = Vector2( 50, 10 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Life3" type="Sprite" parent="Lifes" index="2"]
+
+position = Vector2( 90, 10 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Life4" type="Sprite" parent="Lifes" index="3"]
+
+position = Vector2( 130, 10 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+[node name="Life5" type="Sprite" parent="Lifes" index="4"]
+
+position = Vector2( 170, 10 )
+texture = ExtResource( 2 )
+centered = false
+_sections_unfolded = [ "Offset" ]
+
+

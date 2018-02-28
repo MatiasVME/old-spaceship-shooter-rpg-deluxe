@@ -1,0 +1,204 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Game/Actors/Enemies/BadBossShip/BadBossShip.gd" type="Script" id=1]
+[ext_resource path="res://Game/Actors/Enemies/BadBossShip/Boss5.png" type="Texture" id=2]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "damage"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Image:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 0.25, 0.25 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.570312, 0.082428, 0.082428, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Image:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 0.55, 0.55 ), Vector2( 0.6, 0.6 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "dead"
+length = 3.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Image:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3 ),
+"transitions": PoolRealArray( 4, 0.25, 4 ),
+"update": 0,
+"values": [ Vector2( 0.6, 0.6 ), Vector2( 0.7, 0.7 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Image:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1440.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Collision:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "show"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Image:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7, 1 ),
+"transitions": PoolRealArray( 4, 4, 0.25, 0.25 ),
+"update": 0,
+"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.6, 0.6 ), Vector2( 0.8, 0.8 ), Vector2( 0.6, 0.6 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Image:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ -1080.0, 0.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Collision:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ false ]
+}
+
+[node name="BadBossShip" type="RigidBody2D" groups=[
+"Enemies",
+]]
+
+input_pickable = false
+collision_layer = 3
+collision_mask = 3
+mode = 0
+mass = 20.0
+friction = 1.0
+bounce = 0.5
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 1
+contact_monitor = true
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = -1.0
+angular_velocity = 0.0
+angular_damp = -1.0
+script = ExtResource( 1 )
+_sections_unfolded = [ "Collision" ]
+max_life = 300
+min_life = 300
+score_value = 5
+max_wait_time = 0.3
+min_wait_time = 0.2
+one_of_each = 30
+
+[node name="Image" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Anim" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/damage = SubResource( 1 )
+anims/dead = SubResource( 2 )
+anims/show = SubResource( 3 )
+blend_times = [  ]
+
+[node name="LimitLeft" type="Position2D" parent="." index="2"]
+
+position = Vector2( -300, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LimitRight" type="Position2D" parent="." index="3"]
+
+[node name="TimeToDead" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = true
+autostart = false
+
+[node name="TimeToFire" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 0.1
+one_shot = false
+autostart = false
+
+[node name="Collision" type="CollisionPolygon2D" parent="." index="6"]
+
+build_mode = 0
+polygon = PoolVector2Array( -57.16, 17.0695, -55.8332, -8.80396, -81.0432, -86.4242, -68.4382, -91.7316, -20.0085, -29.37, 18.4699, -29.37, 70.2168, -91.0682, 79.5047, -83.7705, 56.9484, -6.8137, 58.2752, 15.7426, 102.724, 53.5576, 99.4073, 88.7189, 74.1973, 92.036, 18.4699, 31.0013, -16.6913, 31.6647, -75.0724, 90.0458, -98.9556, 88.0555, -102.273, 51.5674 )
+
+[connection signal="body_entered" from="." to="." method="_on_BadShip_body_entered"]
+
+[connection signal="timeout" from="TimeToDead" to="." method="_on_TimeToDead_timeout"]
+
+[connection signal="timeout" from="TimeToFire" to="." method="_on_TimeToFire_timeout"]
+
+

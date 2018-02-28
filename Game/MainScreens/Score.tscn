@@ -1,0 +1,297 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Game/MainScreens/Score.gd" type="Script" id=1]
+[ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/Buttons/button_normal.png" type="Texture" id=4]
+[ext_resource path="res://Game/Buttons/button_pressed.png" type="Texture" id=5]
+[ext_resource path="res://Game/Buttons/button_hover.png" type="Texture" id=6]
+[ext_resource path="res://Game/Buttons/button_disabled.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 64
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 32
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Extra Spacing", "Font", "Settings" ]
+
+[sub_resource type="Animation" id=4]
+
+resource_name = "idle_new_record"
+length = 6.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NewRecord:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5, 0.8, 1.1, 1.5 ),
+"transitions": PoolRealArray( -4, -4, -4, -4 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 3 ), Vector2( 0.7, 0.8 ), Vector2( 1, 2 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NewRecord:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5, 0.8, 1.1, 1.5 ),
+"transitions": PoolRealArray( -4, -4, -4, -4 ),
+"update": 0,
+"values": [ -22.12, 10.0, -11.0, 20.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("NewRecord:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( -4, -4, -4, -4 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 1.1, 1.5 ), Vector2( 1.06, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("NewRecord:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.2, 0.5, 0.7, 1 ),
+"transitions": PoolRealArray( -4, -4, -4, -4 ),
+"update": 0,
+"values": [ 16.0, -22.0, 15.0, -22.1203 ]
+}
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 24
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Score" type="Node" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Background" parent="." index="0" instance=ExtResource( 2 )]
+
+layer = -1
+
+[node name="Title" type="Label" parent="." index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = -132.5
+margin_right = 132.5
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Stats"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="VBox" type="VBoxContainer" parent="." index="2"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -189.0
+margin_top = -38.0
+margin_right = 189.0
+margin_bottom = 38.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="CurrentScore" type="Label" parent="VBox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 378.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Current Score: 0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="MaxScore" type="Label" parent="VBox" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 378.0
+margin_bottom = 76.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+text = "Max Score: 0"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="NewRecord" type="Label" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 492.0
+margin_top = 370.0
+margin_right = 789.0
+margin_bottom = 406.0
+rect_rotation = 16.0
+rect_scale = Vector2( 0, 0 )
+rect_pivot_offset = Vector2( 148, 18 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.381406, 0.675781, 0.058075, 1 )
+custom_colors/font_color_shadow = Color( 0.0718994, 0.484375, 0.146016, 1 )
+text = "New Record!!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="AnimNewRecord" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle_new_record = SubResource( 4 )
+anims/show_new_record = SubResource( 5 )
+blend_times = [  ]
+
+[node name="Menu" type="TextureButton" parent="." index="5"]
+
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+margin_left = 50.0
+margin_top = -93.0
+margin_right = 240.0
+margin_bottom = -44.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+texture_disabled = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Label" type="Label" parent="Menu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+text = "Menu"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[connection signal="animation_finished" from="AnimNewRecord" to="." method="_on_AnimNewRecord_animation_finished"]
+
+[connection signal="pressed" from="Menu" to="." method="_on_Menu_pressed"]
+
+

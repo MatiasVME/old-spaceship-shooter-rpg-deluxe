@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/EnemyBullet.ogg-a88f83612c8e8e543ef2d73a4d130f18.oggstr"
+
+[deps]
+
+source_file="res://Game/Sounds/EnemyBullet.ogg"
+source_md5="bb8a1d5449928d2bf197162f0291abdd"
+
+dest_files=[ "res://.import/EnemyBullet.ogg-a88f83612c8e8e543ef2d73a4d130f18.oggstr" ]
+dest_md5="c9c93613aa14a10b1624606890d496a8"
+
+[params]
+
+loop=false
+loop_offset=0

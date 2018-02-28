@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/GoodShipDead.ogg-505c19586ed39274c7930ba29c4e625a.oggstr"
+
+[deps]
+
+source_file="res://Game/Sounds/GoodShipDead.ogg"
+source_md5="ed94e0731387318276e558c6d36aaecc"
+
+dest_files=[ "res://.import/GoodShipDead.ogg-505c19586ed39274c7930ba29c4e625a.oggstr" ]
+dest_md5="1ba98ecf5b6497d4e7ed4b1cd6e012a2"
+
+[params]
+
+loop=false
+loop_offset=0
