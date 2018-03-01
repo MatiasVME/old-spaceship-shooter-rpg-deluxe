@@ -1,55 +1,108 @@
+# Persistence.gd
+
 extends Node
 
-const PATH = "user://data.dat"
-const PASS = "123"
+# Sólo es un password temporal
+var temporal_password = "y~mu_L!6$qq9o119y1W("
 
-var is_loaded = false
+const ACCOUNTS_NAME_PATH = "user://accounts.bin"
+var accounts = [] setget , get_accounts
 
-var data
-	
 func _ready():
-	reset_data()
-	load_or_create()
-
-func load_or_create():
-	var file = File.new()
+	var accounts_file_data = File.new()
 	
-	if file.file_exists(PATH):
-		load_data()
+	if accounts_file_data.file_exists(ACCOUNTS_NAME_PATH):
+		load_accounts()
 	else:
-		save_data()
-		load_data()
+		save_accounts()
+		load_accounts()
 
-func save_data():
+func save_accounts():
 	var file = File.new()
+	var err = file.open_encrypted_with_pass(ACCOUNTS_NAME_PATH, 
+			File.WRITE, temporal_password)
+	file.store_var(accounts)
+	file.close()
+
+func load_accounts():
+	var file = File.new()
+	var err = file.open_encrypted_with_pass(ACCOUNTS_NAME_PATH, 
+			File.READ, temporal_password)
 	
-	file.open_encrypted_with_pass(PATH, File.WRITE, PASS)
-	file.store_var(data)
+	accounts = file.get_var()
 	file.close()
 	
-	is_loaded = false
+	print("accounts: ", accounts)
+	
+	if accounts.size() >= 1:
+		for account in accounts:
+			print(account)
 
-func load_data():
-	if is_loaded:
+func create_account(name):
+	accounts.append(name)
+	save_accounts()
+	create_new_data(name)
+
+# Crea la nueva data y la guarda
+func create_new_data(account_name):
+	var data_account = create_data_account(account_name)
+	
+	if account_name != "accounts":
+		var path = "user://" + account_name + ".bin"
+		var file = File.new()
+		var err = file.open_encrypted_with_pass(path, 
+			File.WRITE, temporal_password)
+		file.store_var(data_account)
+		file.close()
+	else:
+		if Main.debug: print("account_name no puede llamarse: ", account_name)
+
+func create_data_account(owner):
+	var data_account = {
+		Owner = owner,
+		Players = []
+	}
+	
+	return data_account
+
+func delete_account(name):
+	if not accounts.has(name):
+		if Main.debug: print("No se encuentra %s para ser borrado" % name)
 		return
 	
+	delete_account_data(name)
+	
+	accounts.remove(accounts.find(name))
+	save_accounts()
+	
+func delete_account_data(name):
+	var directory = Directory.new()
+	var path = "user://" + name + ".bin"
+	
+	if not directory.file_exists(path):
+		if Main.debug: print("No se puede eliminar ", name, " ya que no existe el path: ", path)
+		return
+
+	var err = directory.remove(path)
+	
+# Setters/Getters
+#
+
+func get_accounts():
+	return accounts
+
+# Este método es para obtener la data de una cuenta en específico
+# para uso mas recurrente es mejor utilizar get_current_account_data.
+# Pero si se desea saber la data de otras cuentas se puede utilizar
+# este método.
+func get_account_data(account_name):
 	var file = File.new()
+	var path = "user://" + account_name + ".bin"
 	
-	file.open_encrypted_with_pass(PATH, File.READ, PASS)
-	data = file.get_var()
-	file.close()
-	
-	is_loaded = true
-
-func reset_data():
-	data = {
-		"AccountName" : 0
-	}
-
-func reset_file():
-	var file = Directory.new()
-	
-	if file.file_exists(PATH):
-		file.remove(PATH)
+	if file.file_exists(path):
+		var err = file.open_encrypted_with_pass(path, 
+				File.READ, temporal_password)
+		var account_data = file.get_var()
+		file.close()
 		
-	load_or_create()
+		return account_data
