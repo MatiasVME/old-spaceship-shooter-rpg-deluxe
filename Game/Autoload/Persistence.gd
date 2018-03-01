@@ -43,10 +43,7 @@ func load_data():
 
 func reset_data():
 	data = {
-		"Score" : 0,
-		Time = {
-			0 : 0
-		}
+		"AccountName" : 0
 	}
 
 func reset_file():

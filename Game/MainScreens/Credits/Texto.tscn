@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 22
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Texto" type="RichTextLabel"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 216.0
+margin_right = 1280.0
+margin_bottom = 568.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center][color=red]Matías Muñoz Espinoza[/color]
+[url=https://github.com/MatiasVME][Github][/url] [url=https://furygames.itch.io][Itch.io][/url] [url=https://twitter.com/writkas][Twitter][/url]
+[color=red]Kenney[/color]
+Asset Kenney [url=https://kenney.nl/][Web][/url]
+[color=red]Music[/color]
+Intro [url=https://opengameart.org/content/interplanetary-odyssey][OGA][/url] [url=https://patrickdearteaga.com][Web][/url]
+Battle [url=https://opengameart.org/content/railjet-long-seamless-loop][OGA][/url] [url=http://www.nosoapradio.us][Web][/url]
+[color=red]Others[/color]
+Laser Sounds [url=https://opengameart.org/content/laser-fire][OGA][/url]
+[/center]"
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Matías Muñoz Espinoza
+[Github] [Itch.io] [Twitter]
+Kenney
+Asset Kenney [Web]
+Music
+Intro [OGA] [Web]
+Battle [OGA] [Web]
+Others
+Laser Sounds [OGA]
+"
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "BBCode", "Margin", "Rect", "custom_fonts" ]
+
+

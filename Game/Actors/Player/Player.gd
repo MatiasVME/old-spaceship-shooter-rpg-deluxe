@@ -3,14 +3,6 @@ extends KinematicBody2D
 export (float) var speed = 2.5
 export (bool) var auto_fire = false # TODO
 
-# Stats
-#
-
-export (int) var power = 1 # El daño de bala
-export (int) var ship_velocity = 1 # La velocidad de la nave 
-export (int) var fire_velocity = 1 # Velocidad de laser
-export (int) var protection = 1 # Mejora la vitalidad
-
 var rec_laser = load("res://Game/Actors/Bullets/Lasers/Laser.tscn")
 
 var direction = 0
@@ -19,8 +11,6 @@ var move_x = 0
 var move_y = 0
 
 func _ready():
-	randomize()
-	random_texture()
 	Main.player_is_inmortal = true
 
 func _physics_process(delta):
@@ -87,11 +77,6 @@ func is_limited_down():
 		return true
 	
 	return false
-	
-func random_texture():
-	var texture_num = int(rand_range(1, 13) - 0.001)
-	var rec_texture = load(str("res://Game/Actors/Player/Players/Player", str(texture_num),".png"))
-	$Image.texture = rec_texture
 
 func _on_Anim_animation_finished( anim_name ):
 	if anim_name == "dead":

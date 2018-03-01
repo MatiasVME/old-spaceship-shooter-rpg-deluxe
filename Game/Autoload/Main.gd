@@ -25,9 +25,6 @@ var update_life_board = false
 
 var player setget set_player, get_player
 
-func _ready():
-	pass
-
 func set_player(_player):
 	player = _player
 	
