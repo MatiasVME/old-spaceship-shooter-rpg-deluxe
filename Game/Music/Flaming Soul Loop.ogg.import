@@ -10,9 +10,9 @@ source_file="res://Game/Music/Flaming Soul Loop.ogg"
 source_md5="0c5ff82e9a29b11d33e608c7ddb43790"
 
 dest_files=[ "res://.import/Flaming Soul Loop.ogg-0ff30b57aeb2576ecdaeab8aed574ec6.oggstr" ]
-dest_md5="bba434183649e93efedaf6cc7407846f"
+dest_md5="9abe33c2436189e8915283198244d542"
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0

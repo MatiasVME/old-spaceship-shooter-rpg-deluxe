@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Game/MainScreens/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
@@ -30,7 +30,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=2]
 
 resource_name = "show_all"
-length = 2.5
+length = 3.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -93,6 +93,30 @@ tracks/4/keys = {
 "update": 0,
 "values": [ Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
 }
+tracks/5/type = "value"
+tracks/5/path = NodePath("RPG:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 2, 2.2, 2.4, 2.6, 2.8 ),
+"transitions": PoolRealArray( 1, -4, -4, -4, -4, -4 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.5, 1.5 ), Vector2( 1, 1 ), Vector2( 1.2, 1.2 ), Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("RPG:rect_rotation")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2, 2.2, 2.4, 2.6, 2.8, 3 ),
+"transitions": PoolRealArray( -4, -4, -4, -4, -4, -4 ),
+"update": 0,
+"values": [ 0.0, -25.0, 10.0, -30.0, 15.0, -25.0 ]
+}
 
 [sub_resource type="DynamicFont" id=3]
 
@@ -105,6 +129,14 @@ _sections_unfolded = [ "Font", "Settings" ]
 [sub_resource type="DynamicFont" id=4]
 
 size = 50
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=6]
+
+size = 100
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 7 )
@@ -161,7 +193,7 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.0196078, 0.0156863, 0.0823529, 1 )
+color = Color( 0.0196078, 0.0156863, 0.0823529, 0 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="4"]
@@ -172,9 +204,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -95.0
-margin_top = -584.0
+margin_top = -140.0
 margin_right = 95.0
-margin_bottom = -376.0
+margin_bottom = 68.0
 rect_pivot_offset = Vector2( 95, 104 )
 rect_clip_content = false
 mouse_filter = 1
@@ -186,6 +218,7 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="Start" type="TextureButton" parent="VBoxContainer" index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -234,6 +267,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Options" type="TextureButton" parent="VBoxContainer" index="1"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -284,6 +318,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Credits" type="TextureButton" parent="VBoxContainer" index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -333,6 +368,7 @@ _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Exit" type="TextureButton" parent="VBoxContainer" index="3"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -386,10 +422,9 @@ anchor_left = 0.5
 anchor_top = 0.0
 anchor_right = 0.5
 anchor_bottom = 0.0
-margin_left = -1318.0
-margin_right = -688.0
+margin_left = -315.0
+margin_right = 315.0
 margin_bottom = 215.0
-rect_scale = Vector2( 1.08513, 1.08513 )
 rect_pivot_offset = Vector2( 315, 50 )
 rect_clip_content = false
 mouse_filter = 2
@@ -397,22 +432,43 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.227997, 0.941406, 0, 1 )
-custom_colors/font_color_shadow = Color( 0.131226, 0.839844, 0.208731, 1 )
+custom_colors/font_color = Color( 0.941406, 0.595733, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.801091, 0.839844, 0.131226, 1 )
 text = "ULTRA SPACE SHIPS"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "Rect" ]
+_sections_unfolded = [ "Rect", "custom_colors" ]
 
-[node name="SoundMenu" type="Timer" parent="." index="6"]
+[node name="RPG" type="Label" parent="." index="6"]
 
-process_mode = 1
-wait_time = 1.5
-one_shot = true
-autostart = true
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+margin_left = 197.0
+margin_top = 95.0
+margin_right = 446.0
+margin_bottom = 208.0
+rect_rotation = -25.0
+rect_pivot_offset = Vector2( 124, 56 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.144196, 0.241774, 0.878906, 1 )
+custom_colors/font_color_shadow = Color( 0.0545044, 0.063972, 0.296875, 1 )
+text = "rpg"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
 
 [node name="Version" type="Label" parent="." index="7"]
 
@@ -429,7 +485,7 @@ mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
 custom_fonts/font = SubResource( 5 )
-custom_colors/font_color = Color( 0.075442, 0.316406, 0.0482025, 1 )
+custom_colors/font_color = Color( 0.195256, 0.84375, 0.121948, 1 )
 custom_colors/font_color_shadow = Color( 0.0158691, 0.0625, 0.0176907, 1 )
 text = "0.1.0"
 align = 1
@@ -444,7 +500,5 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 
 [connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_Exit_pressed"]
-
-[connection signal="timeout" from="SoundMenu" to="." method="_on_SoundMenu_timeout"]
 
 

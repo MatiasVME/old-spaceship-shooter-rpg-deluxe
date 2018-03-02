@@ -14,13 +14,9 @@ func _on_Exit_pressed():
 	get_tree().quit()
 	
 func _on_Start_pressed():
-	reset_level()
-	
-	MusicManager.select_music(MusicManager.BATTLE)
-	MusicManager.play_music()
-	
-	get_tree().change_scene("res://Game/Levels/Level1.tscn")
-
-func _on_SoundMenu_timeout():
-	SoundManager.select_sound(SoundManager.MENU_SOUND)
-	SoundManager.play_sound()
+#	reset_level()
+#
+#	MusicManager.select_music(MusicManager.BATTLE)
+#	MusicManager.play_music()
+#
+	get_tree().change_scene("res://Game/MainScreens/Accounts.tscn")

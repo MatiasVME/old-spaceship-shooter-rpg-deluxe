@@ -10,9 +10,9 @@ source_file="res://Game/Music/Orbital Colossus.ogg"
 source_md5="fa8ef30bc9ebf8140164b3d1fb7f2aaa"
 
 dest_files=[ "res://.import/Orbital Colossus.ogg-ca09a5dfa8aec762c3d0f61ae0e56e39.oggstr" ]
-dest_md5="b708aa0256b4ad8a42ddabbdccf72553"
+dest_md5="e070296de0b6f5efdcb0f8892ff7b32d"
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
