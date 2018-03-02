@@ -222,10 +222,6 @@ _sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
 
 [node name="Layer1" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
-visible = false
-modulate = Color( 1, 1, 1, 0 )
-scale = Vector2( 1e-05, 1e-05 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Text" type="Label" parent="Layer1" index="0"]
