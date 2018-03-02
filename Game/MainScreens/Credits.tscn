@@ -1,14 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Game/MainScreens/Credits.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Game/MainScreens/Credits/FuryGames-Logo-Mini.png" type="Texture" id=4]
 [ext_resource path="res://Game/MainScreens/Credits/Texto.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Game/Buttons/button_normal.png" type="Texture" id=6]
-[ext_resource path="res://Game/Buttons/button_pressed.png" type="Texture" id=7]
-[ext_resource path="res://Game/Buttons/button_hover.png" type="Texture" id=8]
-[ext_resource path="res://Game/Buttons/button_disabled.png" type="Texture" id=9]
+[ext_resource path="res://Game/MainScreens/Elements/Button.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Animation" id=1]
 
@@ -56,15 +53,7 @@ tracks/0/keys = {
 "values": [ Vector2( 1, 1 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="DynamicFont" id=4]
-
-size = 20
-use_mipmaps = false
-use_filter = false
-font_data = ExtResource( 3 )
-_sections_unfolded = [ "Font", "Settings" ]
-
-[node name="Credits" type="Node" index="0"]
+[node name="Credits" type="Node"]
 
 script = ExtResource( 1 )
 
@@ -141,59 +130,6 @@ playback_speed = 1.0
 anims/other = SubResource( 3 )
 blend_times = [  ]
 
-[node name="Back" type="TextureButton" parent="." index="7"]
-
-anchor_left = 0.0
-anchor_top = 1.0
-anchor_right = 0.0
-anchor_bottom = 1.0
-margin_left = 35.0
-margin_top = -89.0
-margin_right = 225.0
-margin_bottom = -40.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-focus_mode = 2
-mouse_filter = 0
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 1
-toggle_mode = false
-enabled_focus_mode = 2
-shortcut = null
-group = null
-texture_normal = ExtResource( 6 )
-texture_pressed = ExtResource( 7 )
-texture_hover = ExtResource( 8 )
-texture_disabled = ExtResource( 9 )
-_sections_unfolded = [ "Textures" ]
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Label" type="Label" parent="Back" index="0"]
-
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0.5, 0.5, 0.5, 1 )
-text = "Back"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
-
-[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
+[node name="Back" parent="." index="7" instance=ExtResource( 6 )]
 
 

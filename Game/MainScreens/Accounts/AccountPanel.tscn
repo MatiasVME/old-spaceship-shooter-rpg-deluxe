@@ -1,0 +1,580 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Game/MainScreens/Accounts/grey_panel.png" type="Texture" id=1]
+[ext_resource path="res://Game/MainScreens/Accounts/AccountPanel.gd" type="Script" id=2]
+[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/MainScreens/Elements/Button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Actors/Player/Players/Player1.png" type="Texture" id=5]
+[ext_resource path="res://Game/MainScreens/Accounts/save.png" type="Texture" id=6]
+[ext_resource path="res://Game/MainScreens/Accounts/delete.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 28
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 28
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=4]
+
+size = 28
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=5]
+
+size = 28
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=6]
+
+resource_name = "idle"
+length = 4.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Player:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 360.0 ]
+}
+
+[sub_resource type="DynamicFont" id=8]
+
+size = 18
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "hide_layer1"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Layer1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( -4, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Layer1:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( -4, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Layer1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( -4, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+
+resource_name = "hide_layer2"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Layer2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( -4, -4 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Layer2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Layer2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( -4, -4 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+
+resource_name = "hide_layer3"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Layer3:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( -4, -4 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1e-05, 1e-05 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Layer3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Layer3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( -4, -4 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="AccountPanel" type="NinePatchRect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 608.0
+margin_bottom = 288.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+patch_margin_left = 33
+patch_margin_top = 33
+patch_margin_right = 33
+patch_margin_bottom = 33
+script = ExtResource( 2 )
+_sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
+
+[node name="Layer1" type="Node2D" parent="." index="0"]
+
+editor/display_folded = true
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1e-05, 1e-05 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Text" type="Label" parent="Layer1" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 48.0
+margin_top = 16.0
+margin_right = 439.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.769531, 0.769531, 0.769531, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Create New Account"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Create" parent="Layer1" index="1" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+margin_left = 176.0
+margin_top = 48.0
+margin_right = 366.0
+margin_bottom = 97.0
+
+[node name="Label" parent="Layer1/Create" index="0"]
+
+text = "Create"
+
+[node name="Layer2" type="Node2D" parent="." index="1"]
+
+editor/display_folded = true
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1e-05, 1e-05 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Title" type="Label" parent="Layer2" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -16.0
+margin_right = 512.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.409515, 0.832031, 0.465631, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Create New Account"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Name" type="Label" parent="Layer2" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 177.0
+margin_top = 32.0
+margin_right = 481.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.769531, 0.769531, 0.769531, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Name"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Player" type="Sprite" parent="Layer2" index="2"]
+
+position = Vector2( 96, 128 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LineEdit" type="LineEdit" parent="Layer2" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 209.0
+margin_top = 112.0
+margin_right = 513.0
+margin_bottom = 154.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 1
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 5 )
+align = 1
+max_length = 20
+focus_mode = 2
+context_menu_enabled = true
+placeholder_alpha = 0.6
+caret_blink = false
+caret_blink_speed = 0.65
+caret_position = 0
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="OK" type="TextureButton" parent="Layer2" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 304.0
+margin_top = 176.0
+margin_right = 342.0
+margin_bottom = 212.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Cancel" type="TextureButton" parent="Layer2" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 368.0
+margin_top = 176.0
+margin_right = 406.0
+margin_bottom = 212.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="AnimLayer2" type="AnimationPlayer" parent="Layer2" index="6"]
+
+root_node = NodePath("..")
+autoplay = "idle"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/idle = SubResource( 6 )
+blend_times = [  ]
+
+[node name="Layer3" type="Node2D" parent="." index="2"]
+
+editor/display_folded = true
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 1e-05, 1e-05 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Title" type="Label" parent="Layer3" index="0"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = -16.0
+margin_right = 512.0
+margin_bottom = 16.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.409515, 0.832031, 0.465631, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Select Account"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Name" type="Label" parent="Layer3" index="1"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 177.0
+margin_top = 53.0
+margin_right = 481.0
+margin_bottom = 101.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.769531, 0.769531, 0.769531, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Name"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Player" type="Sprite" parent="Layer3" index="2"]
+
+position = Vector2( 97, 101 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Level" type="Label" parent="Layer3" index="3"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -32.0
+margin_top = 112.0
+margin_right = 160.0
+margin_bottom = 160.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.769531, 0.769531, 0.769531, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "Level 1"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Focus", "Hint", "Mouse", "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="OK" type="TextureButton" parent="Layer3" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 256.0
+margin_top = 176.0
+margin_right = 294.0
+margin_bottom = 212.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 6 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Delete" type="TextureButton" parent="Layer3" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 528.0
+margin_top = -16.0
+margin_right = 566.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Anim" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/hide_layer1 = SubResource( 2 )
+anims/hide_layer2 = SubResource( 7 )
+anims/hide_layer3 = SubResource( 9 )
+blend_times = [  ]
+
+
+[editable path="Layer1/Create"]
