@@ -122,7 +122,7 @@ _sections_unfolded = [ "Transform" ]
 
 margin_top = 182.0
 bbcode_text = "[center][color=red]Matías Muñoz Espinoza[/color]
-[url=https://github.com/MatiasVME][Github][/url] [url=https://furygames.itch.io][Itch.io][/url] [url=https://twitter.com/writkas][Twitter][/url]
+[url=https://patreon.com/matiasme][Patreon][/url] [url=https://github.com/MatiasVME][Github][/url] [url=https://furygames.itch.io][Itch.io][/url] [url=https://twitter.com/writkas][Twitter][/url]
 [color=red]Kenney[/color]
 Asset Kenney [url=https://kenney.nl/][Web][/url]
 [color=red]Music[/color]
@@ -134,7 +134,7 @@ End Battle [url=https://opengameart.org/content/action-music-pack][OGA][/url] [u
 Laser Sounds [url=https://opengameart.org/content/laser-fire][OGA][/url]
 [/center]"
 text = "Matías Muñoz Espinoza
-[Github] [Itch.io] [Twitter]
+[Patreon] [Github] [Itch.io] [Twitter]
 Kenney
 Asset Kenney [Web]
 Music
@@ -157,5 +157,7 @@ anims/other = SubResource( 3 )
 blend_times = [  ]
 
 [node name="Back" parent="." index="7" instance=ExtResource( 6 )]
+
+[connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 
 

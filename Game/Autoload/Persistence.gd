@@ -18,8 +18,9 @@ func _ready():
 	else:
 		save_accounts()
 		load_accounts()
+		print("save and load")
 		
-	# Test
+#	Test
 #	test()
 	
 func test():
@@ -109,12 +110,14 @@ func create_data_account(owner):
 func delete_account(name):
 	if not accounts.has(name):
 		if Main.debug: print("No se encuentra %s para ser borrado" % name)
-		return
+		return false
 	
 	delete_account_data(name)
 	
 	accounts.remove(accounts.find(name))
 	save_accounts()
+	
+	return true
 	
 func delete_account_data(name):
 	var directory = Directory.new()

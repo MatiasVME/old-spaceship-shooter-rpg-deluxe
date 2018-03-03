@@ -237,7 +237,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="AccountPanel" type="NinePatchRect" index="0"]
+[node name="AccountPanel" type="NinePatchRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -263,7 +263,6 @@ _sections_unfolded = [ "Axis Stretch", "Patch Margin" ]
 
 [node name="Layer1" type="Node2D" parent="." index="0"]
 
-editor/display_folded = true
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 1e-05, 1e-05 )
@@ -310,7 +309,6 @@ text = "Create"
 
 [node name="Layer2" type="Node2D" parent="." index="1"]
 
-editor/display_folded = true
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 1e-05, 1e-05 )
@@ -464,7 +462,6 @@ blend_times = [  ]
 
 [node name="Layer3" type="Node2D" parent="." index="2"]
 
-editor/display_folded = true
 visible = false
 modulate = Color( 1, 1, 1, 0 )
 scale = Vector2( 1e-05, 1e-05 )

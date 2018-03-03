@@ -4,6 +4,9 @@ enum State {LAYER1, LAYER2, LAYER3, LAYER4}
 var state = State.LAYER1
 var old_state = null
 
+var total_accounts
+var account_number
+
 # One time
 var ot_layer1 = true
 var ot_layer2 = true
@@ -43,11 +46,14 @@ func _process(delta):
 				ot_layer3 = false
 				$Anim.play("hide_layer4")
 				print("estamos aquí")
-			
+			elif ot_layer3 and old_state == State.LAYER1:
+				reset_ot_layers()
+				ot_layer3 = false
+				$Anim.play_backwards("hide_layer3")
+				print("estamos aquí2")
 			elif ot_layer3:
 				reset_ot_layers()
 				ot_layer3 = false
-
 				$Anim.play("hide_layer2")
 		State.LAYER4:
 			if ot_layer4:
@@ -55,6 +61,12 @@ func _process(delta):
 				ot_layer4 = false
 				$Anim.play("hide_layer3")
 				print("layer4")
+
+func show_account(account):
+	$Layer3/Name.text = account
+	
+	old_state = State.LAYER1
+	state = State.LAYER3
 
 func reset_ot_layers():
 	ot_layer1 = true
@@ -77,12 +89,18 @@ func _on_Anim_animation_finished(anim_name):
 		$Anim.play_backwards("hide_layer3")
 
 func _on_OK_create_new_account_pressed():
-	# create_new_account() # TODO
+	# Crear cuenta
 	
-	old_state = State.LAYER2
-	state = State.LAYER3
+	# TODO: Falta validar bien el nombre
 	
-	pass # replace with function body
+	Persistence.load_accounts()
+	
+	if Persistence.create_account($Layer2/LineEdit.text):
+		old_state = State.LAYER2
+		state = State.LAYER3
+		Persistence.save_accounts()
+		
+		$Layer3/Name.text = $Layer2/LineEdit.text
 
 func _on_Cancel_create_new_account_pressed():
 	old_state = State.LAYER2
@@ -94,19 +112,20 @@ func _on_Create_create_new_account_pressed():
 	state = State.LAYER2
 
 func _on_Delete_select_account_pressed():
-	# delete_account() # TODO
-	
+	# Preparar para eliminar la cuenta
 	old_state = State.LAYER3
 	state = State.LAYER4
-	
-	pass # replace with function body
 
 func _on_OK_select_account_pressed():
 	pass
 
 func _on_ConfirmDelete_pressed():
-	old_state = State.LAYER4
-	state = State.LAYER1
+	# Confirmar eliminar cuenta
+	
+	if Persistence.delete_account($Layer3/Name.text):
+		$Layer2/LineEdit.text = ""
+		old_state = State.LAYER4
+		state = State.LAYER1
 
 func _on_NoDelete_pressed():
 	old_state = State.LAYER4

@@ -5,7 +5,7 @@
 [ext_resource path="res://Game/MainScreens/Elements/Button.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/MainScreens/Accounts/AccountPanel.tscn" type="PackedScene" id=4]
 
-[node name="Accounts" type="Node"]
+[node name="Accounts" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -14,6 +14,10 @@ script = ExtResource( 1 )
 [node name="Back" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="AccountPanel1" parent="." index="2" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+
+[node name="Layer2" parent="AccountPanel1" index="1"]
 
 editor/display_folded = true
 
