@@ -117,6 +117,7 @@ func _on_Delete_select_account_pressed():
 	state = State.LAYER4
 
 func _on_OK_select_account_pressed():
+	# Pasar a la pantalla de juego.
 	pass
 
 func _on_ConfirmDelete_pressed():
