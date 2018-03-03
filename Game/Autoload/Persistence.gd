@@ -2,13 +2,17 @@
 
 extends Node
 
+const ACCOUNTS_NAME_PATH = "user://accounts.bin"
+
 # Sólo es un password temporal
 var temporal_password = "y~mu_L!6$qq9o119y1W("
 
-const ACCOUNTS_NAME_PATH = "user://accounts.bin"
 var accounts = [] setget , get_accounts
-
 var account_is_loaded = false
+var current_account
+
+var account_data
+var account_data_is_loaded = false
 
 func _ready():
 	var accounts_file_data = File.new()
@@ -18,15 +22,20 @@ func _ready():
 	else:
 		save_accounts()
 		load_accounts()
-		print("save and load")
 		
 #	Test
 #	test()
 	
 func test():
 	load_accounts()
-	create_account("Test")
 	create_account("Hola")
+	
+#	load_account_data("Hola")
+#	var my_account_data = get_account_data()
+#	my_account_data["Stats"] = "mis stats"
+#	save_account_data("Hola")
+#	print("my_account_data: ", my_account_data)
+	
 	save_accounts()
 
 func save_accounts():
@@ -47,9 +56,7 @@ func save_accounts():
 func load_accounts():
 	if not account_is_loaded:
 		account_is_loaded = true
-		print("account_is_loaded")
 	else:
-		print("return")
 		return
 	
 	var file = File.new()
@@ -100,9 +107,13 @@ func create_new_data(account_name):
 		return false
 
 func create_data_account(owner):
+	# Se almacena el objeto player_stats no las stats en si
+	var rec_player_stats = load("res://Game/Actors/Player/PlayerStats.gd")
+	player_stats = rec_player_stats.new()
+	
 	var data_account = {
 		Owner = owner,
-		Stats = null
+		PlayerStats = player_stats
 	}
 	
 	return data_account
@@ -136,20 +147,46 @@ func get_accounts():
 	return accounts
 
 # Este método es para obtener la data de una cuenta en específico
-# para uso mas recurrente es mejor utilizar get_recurrent_account_data.
+# para uso mas recurrente es mejor utilizar get_account_data.
 # Pero si se desea saber la data de otras cuentas se puede utilizar
 # este método.
-func get_account_data(account_name):
+func load_account_data(account_name):
+	if not account_data_is_loaded:
+		account_data_is_loaded = true
+	else:
+		return false
+	
 	var file = File.new()
 	var path = "user://" + account_name + ".bin"
 	
 	if file.file_exists(path):
 		var err = file.open_encrypted_with_pass(path, 
 				File.READ, temporal_password)
-		var account_data = file.get_var()
+		account_data = file.get_var()
 		file.close()
 		
-		return account_data
+		return true
+
+# Retorna verdadero si guarda la data y falso si no la guarda
+func save_account_data(account_name):
+	account_data_is_loaded = false
+	
+	var file = File.new()
+	var path = "user://" + account_name + ".bin"
+	
+	if file.file_exists(path):
+		var err = file.open_encrypted_with_pass(path, 
+				File.WRITE, temporal_password)
+		file.store_var(account_data)
+		file.close()
 		
-#func get_recurrent_account_data():
-#	return account_data
+		return true
+		
+	return false
+
+# Añade las stats al account_data
+#func add_stats(stats):
+#	account_data["Stats"] = stats
+
+func get_account_data():
+	return account_data

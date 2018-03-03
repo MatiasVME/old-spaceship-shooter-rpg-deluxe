@@ -17,7 +17,19 @@ script = ExtResource( 1 )
 
 editor/display_folded = true
 
+[node name="Layer1" parent="AccountPanel1" index="0"]
+
+editor/display_folded = true
+
 [node name="Layer2" parent="AccountPanel1" index="1"]
+
+editor/display_folded = true
+
+[node name="Layer3" parent="AccountPanel1" index="2"]
+
+editor/display_folded = true
+
+[node name="Layer4" parent="AccountPanel1" index="3"]
 
 editor/display_folded = true
 
@@ -42,14 +54,6 @@ margin_right = 1216.0
 margin_bottom = 576.0
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
-
-[connection signal="pressed" from="AccountPanel1/Layer1/Create" to="." method="_on_Create_pressed1"]
-
-[connection signal="pressed" from="AccountPanel2/Layer1/Create" to="." method="_on_Create_pressed2"]
-
-[connection signal="pressed" from="AccountPanel3/Layer1/Create" to="." method="_on_Create_pressed3"]
-
-[connection signal="pressed" from="AccountPanel4/Layer1/Create" to="." method="_on_Create_pressed4"]
 
 
 [editable path="AccountPanel1"]

@@ -29,7 +29,7 @@ export (int) var points_protection = 0 # Mejora la vitalidad
 export (int) var points_money_luck = 0 # Suerte para recoger dinero
 export (int) var points_item_luck = 0 # Suerte para recoger items
 
-# Resultado
+# Stats resultado
 
 var stats = {
 	"Power" : 0,
@@ -42,6 +42,9 @@ var stats = {
 }
 
 func _ready():
+	update_stats()
+	
+func update_stats():
 	stats["Power"] = 1 + points_power * inc_power
 	stats["ShipVelocity"] = 2.5 + points_power * inc_power
 	stats["FireVelocity"] = 600 + points_power * inc_power
