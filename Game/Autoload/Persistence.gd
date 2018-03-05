@@ -109,7 +109,7 @@ func create_new_data(account_name):
 func create_data_account(owner):
 	# Se almacena el objeto player_stats no las stats en si
 	var rec_player_stats = load("res://Game/Actors/Player/PlayerStats.gd")
-	player_stats = rec_player_stats.new()
+	var player_stats = rec_player_stats.new()
 	
 	var data_account = {
 		Owner = owner,

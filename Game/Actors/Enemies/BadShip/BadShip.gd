@@ -2,25 +2,8 @@ extends "../EnemyShip.gd"
 
 var rec_bullet = load("res://Game/Actors/Bullets/EnemyBullet/EnemyBullet.tscn")
 
-var mark_to_dead = false
-var life
-
-var limit_right
-var limit_left
-
-var spawn_y
-
-var velocity_x = 0.5
-var velocity_y = 0.5
-var velocity_increment_x = 1
-var velocity_increment_y = 1
-
-enum MovementX {LEFT, RIGHT}
-var current_movement_x = MovementX.LEFT
-enum MovementY {UP, DOWN}
-var current_movement_y
-
-var first_impulse = true
+enum Size {SIZE_1, SIZE_2, SIZE_3}
+var size = SIZE_1
 
 func _ready():
 	spawn_y = global_position.y
@@ -38,69 +21,25 @@ func _ready():
 	$TimeToFire.wait_time = rand_range(5, 10)
 	$TimeToFire.start()
 	
+	
+	
 func _physics_process(delta):
 	adjust_increment_x()
 	movement_x()
 	movement_y()
-		
-func adjust_increment_x():
-	if linear_velocity.x > 5 or linear_velocity.x < -5:
-		velocity_increment_x += 0.01
-	else:
-		velocity_increment_x = 1
 
-func movement_x():
-	if not is_limit_left() and current_movement_x == MovementX.LEFT:
-		if linear_velocity.x < 10:
-			apply_impulse(Vector2(0, 0), Vector2(-velocity_x * velocity_increment_x, 0))
-			
-			if first_impulse:
-				apply_impulse(Vector2(0, 0), Vector2(-velocity_x * 100, 0))
-				first_impulse = false
-	elif not is_limit_right() and current_movement_x == MovementX.RIGHT:
-		apply_impulse(Vector2(0, 0), Vector2(velocity_x  * velocity_increment_x, 0))
+func set_sprite_size(size):
+	match size:
+		Size.SIZE_1:
+			$AnimSize.interpolate_property($Image, "scale", $Image.scale, Vector2(0.5, 0.5), 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+			$AnimSize.start()
+		Size.SIZE_2:
+			$AnimSize.interpolate_property($Image, "scale", $Image.scale, Vector2(0.6, 0.6), 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+			$AnimSize.start()
+		Size.SIZE_3:
+			$AnimSize.interpolate_property($Image, "scale", $Image.scale, Vector2(0.7, 0.7), 0.3, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
+			$AnimSize.start()
 
-func movement_y():
-	if is_limit_up() and current_movement_y == MovementY.UP:
-		if linear_velocity.y > 10:
-			apply_impulse(Vector2(0, 0), Vector2(0, -velocity_y * velocity_increment_y))
-	elif is_limit_down() and current_movement_y == MovementY.UP:
-		apply_impulse(Vector2(0, 0), Vector2(0, velocity_y * velocity_increment_y))
-
-func is_limit_left():
-	if global_position.x <= limit_left:
-		current_movement_x = MovementX.RIGHT
-		apply_impulse(Vector2(0, 0), Vector2(25, 0))
-		
-		return true
-		
-	return false
-	
-func is_limit_right():
-	if global_position.x >= limit_right:
-		current_movement_x = MovementX.LEFT
-		apply_impulse(Vector2(0, 0), Vector2(-500, 0))
-
-		return true
-		
-	return false
-	
-func is_limit_up():
-	if global_position.y <= spawn_y - 40:
-		current_movement_y = MovementY.DOWN
-		apply_impulse(Vector2(0, 0), Vector2(0, 50))
-		return true
-		
-	return false
-
-func is_limit_down():
-	if global_position.y >= spawn_y + 40:
-		current_movement_y = MovementY.UP
-		apply_impulse(Vector2(0, 0), Vector2(0, -50))
-		return true
-		
-	return false
-	
 func random_texture():
 	var texture_num = int(rand_range(1, 5) - 0.001)
 	var rec_texture = load(str("res://Game/Actors/Enemies/BadShip/BadShip-Skin-", str(texture_num),".png"))
@@ -141,3 +80,9 @@ func _on_TimeToFire_timeout():
 	bullet.global_position.y = $Image.global_position.y
 	bullet.global_position.x = $Image.global_position.x
 	get_parent().add_child(bullet)
+
+
+func _on_Anim_animation_finished(anim_name):
+	if anim_name == "show":
+		set_sprite_size(int(rand_range(0, 4 - 0.0001)))
+		print("ok")

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game/Levels/ElementMesh.gd" type="Script" id=1]
+
+[node name="ElementMesh" type="Position2D"]
+
+position = Vector2( 352, 96 )
+script = ExtResource( 1 )
+has_ship = false
+
+

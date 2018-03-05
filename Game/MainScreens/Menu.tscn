@@ -134,7 +134,7 @@ use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=5]
 
 size = 100
 use_mipmaps = false
@@ -142,7 +142,7 @@ use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 
 size = 32
 use_mipmaps = false
@@ -198,7 +198,6 @@ _sections_unfolded = [ "Rect" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="4"]
 
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -459,7 +458,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 6 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.144196, 0.241774, 0.878906, 1 )
 custom_colors/font_color_shadow = Color( 0.0545044, 0.063972, 0.296875, 1 )
 text = "rpg"
@@ -484,7 +483,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.195256, 0.84375, 0.121948, 1 )
 custom_colors/font_color_shadow = Color( 0.0158691, 0.0625, 0.0176907, 1 )
 text = "0.1.0"

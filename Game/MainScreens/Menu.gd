@@ -11,7 +11,7 @@ func _on_Credits_pressed():
 	get_tree().change_scene("res://Game/MainScreens/Credits.tscn")
 
 func _on_Exit_pressed():
-	get_tree().quit()
+	get_tree().change_scene("res://Game/MainScreens/ExitSplash.tscn")
 	
 func _on_Start_pressed():
 #	reset_level()

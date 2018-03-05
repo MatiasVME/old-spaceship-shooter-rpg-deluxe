@@ -20,37 +20,31 @@ func _process(delta):
 			if old_state == State.LAYER2 and ot_layer1:
 				reset_ot_layers()
 				$Anim.play("hide_layer2")
-				print("mmm")
 				ot_layer1 = false
 			# Cuando aparece por primera vez
 			elif $Anim.assigned_animation != "hide_layer1" and old_state == null:
 				reset_ot_layers()
 				$Anim.play_backwards("hide_layer1")
 				ot_layer2 = true
-				print("xd")
 			# Cuando se borra una cuenta
 			elif old_state == State.LAYER4 and ot_layer1:
 				reset_ot_layers()
 				ot_layer1 = false
 				$Anim.play("hide_layer4")
-				print("xD")
 		State.LAYER2:
 			if ot_layer2:
 				reset_ot_layers()
 				$Anim.play("hide_layer1")
-				print("layer2")
 				ot_layer2 = false
 		State.LAYER3:
 			if ot_layer3 and old_state == State.LAYER4:
 				reset_ot_layers()
 				ot_layer3 = false
 				$Anim.play("hide_layer4")
-				print("estamos aquí")
 			elif ot_layer3 and old_state == State.LAYER1:
 				reset_ot_layers()
 				ot_layer3 = false
 				$Anim.play_backwards("hide_layer3")
-				print("estamos aquí2")
 			elif ot_layer3:
 				reset_ot_layers()
 				ot_layer3 = false
@@ -60,7 +54,6 @@ func _process(delta):
 				reset_ot_layers()
 				ot_layer4 = false
 				$Anim.play("hide_layer3")
-				print("layer4")
 
 func show_account(account):
 	$Layer3/Name.text = account
@@ -131,4 +124,3 @@ func _on_ConfirmDelete_pressed():
 func _on_NoDelete_pressed():
 	old_state = State.LAYER4
 	state = State.LAYER3
-	print("noDelete")

@@ -120,7 +120,7 @@ tracks/1/keys = {
 input_pickable = false
 collision_layer = 3
 collision_mask = 3
-mode = 0
+mode = 2
 mass = 2.0
 friction = 1.0
 bounce = 0.5
@@ -153,6 +153,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
 
 shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="Anim" type="AnimationPlayer" parent="." index="2"]
 
@@ -187,7 +188,18 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[node name="AnimSize" type="Tween" parent="." index="7"]
+
+repeat = false
+playback_process_mode = 1
+playback_speed = 1.0
+playback/active = false
+playback/repeat = false
+playback/speed = 1.0
+
 [connection signal="body_entered" from="." to="." method="_on_BadShip_body_entered"]
+
+[connection signal="animation_finished" from="Anim" to="." method="_on_Anim_animation_finished"]
 
 [connection signal="timeout" from="TimeToDead" to="." method="_on_TimeToDead_timeout"]
 

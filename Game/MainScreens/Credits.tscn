@@ -121,30 +121,6 @@ _sections_unfolded = [ "Transform" ]
 [node name="Texto" parent="." index="5" instance=ExtResource( 5 )]
 
 margin_top = 182.0
-bbcode_text = "[center][color=red]Matías Muñoz Espinoza[/color]
-[url=https://patreon.com/matiasme][Patreon][/url] [url=https://github.com/MatiasVME][Github][/url] [url=https://furygames.itch.io][Itch.io][/url] [url=https://twitter.com/writkas][Twitter][/url]
-[color=red]Kenney[/color]
-Asset Kenney [url=https://kenney.nl/][Web][/url]
-[color=red]Music[/color]
-Intro [url=https://opengameart.org/content/interplanetary-odyssey][OGA][/url] [url=https://patrickdearteaga.com][Web][/url]
-Battle [url=https://opengameart.org/content/railjet-long-seamless-loop][OGA][/url] [url=http://www.nosoapradio.us][Web][/url]
-Boss [url=https://opengameart.org/content/space-boss-battle-theme][OGA][/url] [url=http://www.matthewpablo.com/][Web][/url]
-End Battle [url=https://opengameart.org/content/action-music-pack][OGA][/url] [url=http://www.marcelofernandezmusic.com][Web][/url]
-[color=red]Others[/color]
-Laser Sounds [url=https://opengameart.org/content/laser-fire][OGA][/url]
-[/center]"
-text = "Matías Muñoz Espinoza
-[Patreon] [Github] [Itch.io] [Twitter]
-Kenney
-Asset Kenney [Web]
-Music
-Intro [OGA] [Web]
-Battle [OGA] [Web]
-Boss [OGA] [Web]
-End Battle [OGA] [Web]
-Others
-Laser Sounds [OGA]
-"
 
 [node name="AnimOther" type="AnimationPlayer" parent="." index="6"]
 

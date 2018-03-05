@@ -9,7 +9,8 @@ var debug = true
 
 var is_over = false
 var current_level = 1
-var score = 0
+var score = 0 # Borrar
+var last_level = 6
 
 var enemies_can_fire = false
 var enemies_in_screen = 0

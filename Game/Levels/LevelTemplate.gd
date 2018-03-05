@@ -63,7 +63,7 @@ func _on_Anim_animation_finished( anim_name ):
 		Main.player_can_move = false
 		Main.current_level += 1
 		
-		if Main.current_level > Main.LAST_LEVEL:
+		if Main.current_level > Main.last_level:
 			reset_all(true)
 			save_high_score()
 			get_tree().change_scene("res://Game/MainScreens/Score.tscn")
