@@ -10,7 +10,7 @@ config_version=3
 
 [application]
 
-config/name="Ultra Space Ships RPG"
+config/name="Ultra Spaceships RPG"
 run/main_scene="res://Game/MainScreens/Splash.tscn"
 config/icon="res://icon.png"
 

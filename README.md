@@ -1,6 +1,6 @@
-# Ultra Space Ships RPG
+# Ultra Spaceships RPG
 
-Contiunación del Juego [Ultra Space Ships](https://furygames.itch.io/ultra-space-ships) pero esta vez con elementos RPG
+Contiunación del Juego [Ultra Spaceships](https://furygames.itch.io/ultra-space-ships) pero esta vez con elementos RPG
 
 ## Créditos
 
