@@ -9,6 +9,7 @@ var debug = true
 
 var HUD setget set_hud, get_hud
 var player setget set_player, get_player
+#var current_account setget set_current_account, get_current_account
 
 var is_over = false
 var current_level = 1
@@ -37,3 +38,5 @@ func set_hud(_HUD):
 	
 func get_hud():
 	return HUD
+	
+#func set_current_account

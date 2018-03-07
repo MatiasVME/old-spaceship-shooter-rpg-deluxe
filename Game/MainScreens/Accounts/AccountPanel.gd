@@ -110,8 +110,10 @@ func _on_Delete_select_account_pressed():
 	state = State.LAYER4
 
 func _on_OK_select_account_pressed():
-	# Pasar a la pantalla de juego.
-	pass
+	# Establecer la cuenta con la que se va a jugar.
+	
+	# Pasar a la pantalla de LevelMode.
+	get_tree().change_scene("res://Game/Levels/LevelMode.tscn")
 
 func _on_ConfirmDelete_pressed():
 	# Confirmar eliminar cuenta
@@ -124,3 +126,7 @@ func _on_ConfirmDelete_pressed():
 func _on_NoDelete_pressed():
 	old_state = State.LAYER4
 	state = State.LAYER3
+
+
+func _on_OK_pressed():
+	pass # replace with function body

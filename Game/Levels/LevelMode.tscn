@@ -6,7 +6,7 @@
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 64
+size = 58
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 2 )
@@ -20,7 +20,7 @@ use_filter = false
 font_data = ExtResource( 2 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="LevelMode" type="Node" index="0"]
+[node name="LevelMode" type="Node"]
 
 [node name="Background" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -57,9 +57,9 @@ anchor_left = 0.5
 anchor_top = 0.0
 anchor_right = 0.5
 anchor_bottom = 0.0
-margin_left = -624.0
+margin_left = -480.0
 margin_top = 288.0
-margin_right = 624.0
+margin_right = 480.0
 margin_bottom = 435.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -81,11 +81,16 @@ _sections_unfolded = [ "custom_colors" ]
 
 [node name="Easy" parent="." index="3" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 288.0
 margin_top = -512.0
 margin_right = 478.0
 margin_bottom = -463.0
 toggle_mode = true
+
+[node name="Label" parent="Easy" index="0"]
+
+text = "Easy"
 
 [node name="Normal" parent="." index="4" instance=ExtResource( 3 )]
 
@@ -117,11 +122,16 @@ text = "Hard"
 
 [node name="Short" parent="." index="6" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 288.0
 margin_top = -256.0
 margin_right = 478.0
 margin_bottom = -207.0
 toggle_mode = true
+
+[node name="Label" parent="Short" index="0"]
+
+text = "Short"
 
 [node name="Medium" parent="." index="7" instance=ExtResource( 3 )]
 
@@ -163,10 +173,10 @@ toggle_mode = true
 [node name="Label" parent="Back" index="0"]
 
 custom_fonts/font = SubResource( 2 )
-text = "Long"
 
 [node name="Start" parent="." index="10" instance=ExtResource( 3 )]
 
+editor/display_folded = true
 margin_left = 1072.0
 margin_top = -64.0
 margin_right = 1262.0
@@ -178,8 +188,10 @@ custom_fonts/font = SubResource( 2 )
 text = "Start"
 
 
+[editable path="Easy"]
 [editable path="Normal"]
 [editable path="Hard"]
+[editable path="Short"]
 [editable path="Medium"]
 [editable path="Long"]
 [editable path="Back"]

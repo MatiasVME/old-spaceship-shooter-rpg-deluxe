@@ -237,7 +237,7 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[node name="AccountPanel" type="NinePatchRect"]
+[node name="AccountPanel" type="NinePatchRect" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -703,6 +703,8 @@ blend_times = [  ]
 [connection signal="pressed" from="Layer2/OK" to="." method="_on_OK_create_new_account_pressed"]
 
 [connection signal="pressed" from="Layer2/Cancel" to="." method="_on_Cancel_create_new_account_pressed"]
+
+[connection signal="pressed" from="Layer3/OK" to="." method="_on_OK_pressed"]
 
 [connection signal="pressed" from="Layer3/OK" to="." method="_on_OK_select_account_pressed"]
 
