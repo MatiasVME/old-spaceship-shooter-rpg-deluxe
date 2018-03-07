@@ -5,7 +5,7 @@
 [ext_resource path="res://Game/Levels/LevelGenerator.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/HUD/HUD.tscn" type="PackedScene" id=4]
 
-[node name="Levels" type="Node" index="0"]
+[node name="Levels" type="Node"]
 
 script = ExtResource( 1 )
 

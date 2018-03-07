@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game/Levels/LevelGenerator.gd" type="Script" id=1]
 
-[node name="LevelGenerator" type="Node" index="0"]
+[node name="LevelGenerator" type="Node"]
 
 script = ExtResource( 1 )
 dificulty = 0

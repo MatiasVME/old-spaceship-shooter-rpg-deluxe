@@ -14,6 +14,7 @@ export (float) var inc_ship_velocity = 0.2 # La velocidad de la nave
 export (float) var inc_fire_velocity = 0.2 # Velocidad de fuego
 export (float) var inc_explosive_bullet = 0.2 # Mejora el daño de bala por explosion
 export (float) var inc_protection = 0.2 # Mejora la vitalidad
+# Energy
 export (float) var inc_money_luck = 0.2 # Suerte para recoger dinero
 export (float) var inc_item_luck = 0.2 # Suerte para recoger items
 # export (float) var inc_shield = 1 # Escudo # TODO
@@ -26,6 +27,7 @@ export (int) var points_ship_velocity = 0 # La velocidad de la nave
 export (int) var points_fire_velocity = 0 # Velocidad de fuego
 export (int) var points_explosive_bullet = 0 # Mejora el daño de bala por explosion
 export (int) var points_protection = 0 # Mejora la vitalidad
+# Energy
 export (int) var points_money_luck = 0 # Suerte para recoger dinero
 export (int) var points_item_luck = 0 # Suerte para recoger items
 

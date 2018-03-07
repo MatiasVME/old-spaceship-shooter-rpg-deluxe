@@ -2,11 +2,9 @@
 
 [ext_resource path="res://Game/Levels/CoordinateMesh.tscn" type="PackedScene" id=1]
 
-[node name="Figure2" type="Node" index="0"]
+[node name="Figure2" type="Node"]
 
 [node name="CoordinateMesh" parent="." index="0" instance=ExtResource( 1 )]
-
-enemy_amount = 0
 
 [node name="ElementMesh1" parent="CoordinateMesh/Row1" index="0"]
 
