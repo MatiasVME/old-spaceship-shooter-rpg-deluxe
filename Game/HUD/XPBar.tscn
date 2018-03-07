@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Game/HUD/Bar/WhiteBar.png" type="Texture" id=1]
-[ext_resource path="res://Game/HUD/Bar/GreenBar.png" type="Texture" id=2]
+[ext_resource path="res://Game/HUD/Bar/YellowBar.png" type="Texture" id=2]
 
-[node name="HealBar" type="Node2D"]
+[node name="XPBar" type="Node2D"]
 
 [node name="Bar" type="TextureProgress" parent="." index="0"]
 
@@ -23,7 +23,7 @@ min_value = 0.0
 max_value = 100.0
 step = 1.0
 page = 0.0
-value = 50.0
+value = 30.0
 exp_edit = false
 rounded = false
 texture_under = ExtResource( 1 )

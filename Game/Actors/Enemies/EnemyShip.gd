@@ -3,7 +3,7 @@ extends RigidBody2D
 export (int) var max_life = 6
 export (int) var min_life = 3
 
-export (int) var score_value = 5
+#export (int) var score_value = 5
 export (int) var xp_value = 1
 
 export (float) var max_wait_time = 1
@@ -33,8 +33,9 @@ var first_impulse = true
 
 func _ready():
 	randomize()
-
-func drop_life_if_can():
+	
+# TODO: Cambiar a que sea un item random en vez de una vida
+func drop_life_if_can(): 
 	var prob = rand_range(1, one_of_each)
 	
 	if prob < 2:

@@ -7,6 +7,9 @@ var music_enable = true
 var sound_enable = true
 var debug = true
 
+var HUD setget set_hud, get_hud
+var player setget set_player, get_player
+
 var is_over = false
 var current_level = 1
 var score = 0 # Borrar
@@ -23,10 +26,14 @@ var lifes = 3
 
 var update_life_board = false
 
-var player setget set_player, get_player
-
 func set_player(_player):
 	player = _player
 	
 func get_player():
 	return player
+	
+func set_hud(_HUD):
+	HUD = _HUD
+	
+func get_hud():
+	return HUD

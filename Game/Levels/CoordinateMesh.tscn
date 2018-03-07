@@ -3,11 +3,11 @@
 [ext_resource path="res://Game/Levels/CoordinateMesh.gd" type="Script" id=1]
 [ext_resource path="res://Game/Levels/ElementMesh.tscn" type="PackedScene" id=2]
 
-[node name="CoordinateMesh" type="Node2D" index="0"]
+[node name="CoordinateMesh" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-dificulty = 0
+enemy_amount = 0
 
 [node name="Row1" type="Node2D" parent="." index="0"]
 

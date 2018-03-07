@@ -2,7 +2,9 @@
 
 [ext_resource path="res://Game/Levels/ElementMesh.gd" type="Script" id=1]
 
-[node name="ElementMesh" type="Position2D"]
+[node name="ElementMesh" type="Position2D" groups=[
+"ElementMesh",
+]]
 
 position = Vector2( 352, 96 )
 script = ExtResource( 1 )

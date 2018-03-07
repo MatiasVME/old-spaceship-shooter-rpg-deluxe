@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Game/MainScreens/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Game/Buttons/button_hover.png" type="Texture" id=5]
 [ext_resource path="res://Game/Buttons/button_disabled.png" type="Texture" id=6]
 [ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Game/Sounds/MenuTitle.ogg" type="AudioStream" id=8]
 
 [sub_resource type="Animation" id=1]
 
@@ -425,6 +426,8 @@ anchor_bottom = 0.0
 margin_left = -315.0
 margin_right = 315.0
 margin_bottom = 215.0
+rect_rotation = -14.0625
+rect_scale = Vector2( 1.1158, 1.1158 )
 rect_pivot_offset = Vector2( 315, 50 )
 rect_clip_content = false
 mouse_filter = 2
@@ -434,7 +437,7 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.941406, 0.595733, 0, 1 )
 custom_colors/font_color_shadow = Color( 0.801091, 0.839844, 0.131226, 1 )
-text = "ULTRA SPACE SHIPS"
+text = "ULTRA SPACESHIPS"
 align = 1
 valign = 1
 percent_visible = 1.0
@@ -452,7 +455,8 @@ margin_left = 197.0
 margin_top = 95.0
 margin_right = 446.0
 margin_bottom = 208.0
-rect_rotation = -25.0
+rect_rotation = -0.375626
+rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 124, 56 )
 rect_clip_content = false
 mouse_filter = 2
@@ -494,6 +498,14 @@ percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 8 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
 
