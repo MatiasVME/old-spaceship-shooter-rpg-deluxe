@@ -3,8 +3,8 @@ extends Node
 const RES_X = 1280
 const RES_Y = 720
 
-var music_enable = true
-var sound_enable = true
+var music_enable = false
+var sound_enable = false
 var debug = true
 
 var HUD setget set_hud, get_hud

@@ -113,7 +113,7 @@ func _on_OK_select_account_pressed():
 	# Establecer la cuenta con la que se va a jugar.
 	
 	# Pasar a la pantalla de LevelMode.
-	get_tree().change_scene("res://Game/Levels/LevelMode.tscn")
+	get_tree().change_scene("res://Game/MainScreens/ShowProfile.tscn")
 
 func _on_ConfirmDelete_pressed():
 	# Confirmar eliminar cuenta

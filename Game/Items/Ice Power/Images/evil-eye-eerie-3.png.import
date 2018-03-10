@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/evil-eye-eerie-3.png-709f32ac400ed312880b459c626bcf6f.stex"
+
+[deps]
+
+source_file="res://Game/Items/Ice Power/Images/evil-eye-eerie-3.png"
+source_md5="2a07fef1e2ec1d28afad75e77507661f"
+
+dest_files=[ "res://.import/evil-eye-eerie-3.png-709f32ac400ed312880b459c626bcf6f.stex" ]
+dest_md5="29add0b93673df777c1e0c3196e699dd"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

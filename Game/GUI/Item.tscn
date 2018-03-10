@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game/GUI/Panel/Item.png" type="Texture" id=1]
 
-[node name="Item" type="NinePatchRect"]
+[node name="ItemPanel" type="NinePatchRect" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -22,6 +22,20 @@ patch_margin_left = 33
 patch_margin_top = 33
 patch_margin_right = 33
 patch_margin_bottom = 33
-_sections_unfolded = [ "Patch Margin", "Rect" ]
+_sections_unfolded = [ "Patch Margin", "Pause", "Rect" ]
+
+[node name="HBox" type="HBoxContainer" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
 
 

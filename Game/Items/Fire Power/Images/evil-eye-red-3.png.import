@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/evil-eye-red-3.png-589989f358c5f40c0e04ced7e7761626.stex"
+
+[deps]
+
+source_file="res://Game/Items/Fire Power/Images/evil-eye-red-3.png"
+source_md5="f02b9c2b21aac9491da20250c11d8062"
+
+dest_files=[ "res://.import/evil-eye-red-3.png-589989f358c5f40c0e04ced7e7761626.stex" ]
+dest_md5="8e1dfbaab32f5ae4cfd557a76a66e2b7"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
