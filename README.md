@@ -7,8 +7,9 @@ Contiunación del Juego [Ultra Spaceships](https://furygames.itch.io/ultra-space
 ### Matías Muñoz Espinoza
 [[Github]](https://github.com/MatiasVME) [[Itch.io]](https://furygames.itch.io) [[Twitter]](https://twitter.com/writkas) [[Patreon]](https://www.patreon.com/matiasme) [[YouTube]](https://www.youtube.com/user/ElementalCodeNet/)
 
-### Kenney
+### Illustration
 Asset Kenney [[Web]](https://kenney.nl/)
+Some Items [[OGA]](https://opengameart.org/users/eleazzaar)
 
 ### Music
 Intro [[OGA]](https://opengameart.org/content/interplanetary-odyssey) [[Web]](https://patrickdearteaga.com)

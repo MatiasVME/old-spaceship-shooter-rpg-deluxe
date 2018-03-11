@@ -21,7 +21,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="LevelMode" type="Node"]
+[node name="LevelMode" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -176,22 +176,35 @@ margin_bottom = -15.0
 
 custom_fonts/font = SubResource( 2 )
 
-[node name="Start" parent="." index="10" instance=ExtResource( 4 )]
+[node name="Continue" parent="." index="10" instance=ExtResource( 4 )]
 
 editor/display_folded = true
 margin_left = 1072.0
 margin_top = -64.0
 margin_right = 1262.0
 margin_bottom = -15.0
+disabled = true
 
-[node name="Label" parent="Start" index="0"]
+[node name="Label" parent="Continue" index="0"]
 
 custom_fonts/font = SubResource( 2 )
-text = "Start"
+text = "Continue"
+
+[connection signal="pressed" from="Easy" to="." method="_on_Easy_pressed"]
+
+[connection signal="pressed" from="Normal" to="." method="_on_Normal_pressed"]
+
+[connection signal="pressed" from="Hard" to="." method="_on_Hard_pressed"]
+
+[connection signal="pressed" from="Short" to="." method="_on_Short_pressed"]
+
+[connection signal="pressed" from="Medium" to="." method="_on_Medium_pressed"]
+
+[connection signal="pressed" from="Long" to="." method="_on_Long_pressed"]
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 
-[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Continue" to="." method="_on_Continue_pressed"]
 
 
 [editable path="Easy"]
@@ -201,4 +214,4 @@ text = "Start"
 [editable path="Medium"]
 [editable path="Long"]
 [editable path="Back"]
-[editable path="Start"]
+[editable path="Continue"]

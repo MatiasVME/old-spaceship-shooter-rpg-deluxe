@@ -5,11 +5,11 @@ const RES_Y = 720
 
 var music_enable = false
 var sound_enable = false
-var debug = true
+var debug = false
 
 var HUD setget set_hud, get_hud
 var player setget set_player, get_player
-#var current_account setget set_current_account, get_current_account
+var current_account setget set_current_account, get_current_account
 
 var is_over = false
 var current_level = 1
@@ -39,4 +39,8 @@ func set_hud(_HUD):
 func get_hud():
 	return HUD
 	
-#func set_current_account
+func set_current_account(_current_account):
+	current_account = _current_account
+	
+func get_current_account():
+	return current_account

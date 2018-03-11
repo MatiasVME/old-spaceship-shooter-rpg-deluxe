@@ -184,9 +184,5 @@ func save_account_data(account_name):
 		
 	return false
 
-# Añade las stats al account_data
-#func add_stats(stats):
-#	account_data["Stats"] = stats
-
 func get_account_data():
 	return account_data
