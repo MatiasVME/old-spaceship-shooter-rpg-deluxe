@@ -15,8 +15,12 @@ func _on_Exit_pressed():
 	
 func _on_Start_pressed():
 #	reset_level()
-#
+#	
 #	MusicManager.select_music(MusicManager.BATTLE)
 #	MusicManager.play_music()
 #
 	get_tree().change_scene("res://Game/MainScreens/Accounts.tscn")
+
+func _on_Connect_pressed():
+	# Para conectarse con gamejolt u otros
+	pass

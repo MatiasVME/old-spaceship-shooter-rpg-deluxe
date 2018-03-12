@@ -53,10 +53,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 1 ),
-"transitions": PoolRealArray( 1, -4, 1 ),
+"times": PoolRealArray( 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 545, -224 ), Vector2( 545, -224 ), Vector2( 545, 220 ) ]
+"values": [ Vector2( 545, -301 ), Vector2( 545, 220 ) ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Title:rect_position")
@@ -151,7 +151,7 @@ use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Menu" type="Node"]
+[node name="Menu" type="Node" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -194,19 +194,20 @@ mouse_filter = 0
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
-color = Color( 0.0196078, 0.0156863, 0.0823529, 0 )
+color = Color( 0.0196078, 0.0156863, 0.0823529, 1 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." index="4"]
 
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -95.0
-margin_top = -140.0
+margin_top = -625.077
 margin_right = 95.0
-margin_bottom = 68.0
+margin_bottom = -364.077
 rect_pivot_offset = Vector2( 95, 104 )
 rect_clip_content = false
 mouse_filter = 1
@@ -265,7 +266,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Options" type="TextureButton" parent="VBoxContainer" index="1"]
+[node name="Connect" type="TextureButton" parent="VBoxContainer" index="1"]
 
 editor/display_folded = true
 anchor_left = 0.0
@@ -275,6 +276,57 @@ anchor_bottom = 0.0
 margin_top = 53.0
 margin_right = 190.0
 margin_bottom = 102.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+disabled = true
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 4 )
+texture_hover = ExtResource( 5 )
+texture_disabled = ExtResource( 6 )
+_sections_unfolded = [ "Textures" ]
+
+[node name="Label" type="Label" parent="VBoxContainer/Connect" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.0390625, 0.0390625, 0.0390625, 1 )
+custom_colors/font_color_shadow = Color( 0.46875, 0.46875, 0.46875, 1 )
+text = "Connect"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_fonts" ]
+
+[node name="Options" type="TextureButton" parent="VBoxContainer" index="2"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 106.0
+margin_right = 190.0
+margin_bottom = 155.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -316,16 +368,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Credits" type="TextureButton" parent="VBoxContainer" index="2"]
+[node name="Credits" type="TextureButton" parent="VBoxContainer" index="3"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 106.0
+margin_top = 159.0
 margin_right = 190.0
-margin_bottom = 155.0
+margin_bottom = 208.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -366,16 +418,16 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
-[node name="Exit" type="TextureButton" parent="VBoxContainer" index="3"]
+[node name="Exit" type="TextureButton" parent="VBoxContainer" index="4"]
 
 editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 159.0
+margin_top = 212.0
 margin_right = 190.0
-margin_bottom = 208.0
+margin_bottom = 261.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 focus_mode = 2
@@ -422,11 +474,10 @@ anchor_left = 0.5
 anchor_top = 0.0
 anchor_right = 0.5
 anchor_bottom = 0.0
-margin_left = -315.0
-margin_right = 315.0
+margin_left = -1318.0
+margin_right = -688.0
 margin_bottom = 215.0
-rect_rotation = -14.0625
-rect_scale = Vector2( 1.1158, 1.1158 )
+rect_scale = Vector2( 1.06255, 1.06255 )
 rect_pivot_offset = Vector2( 315, 50 )
 rect_clip_content = false
 mouse_filter = 2
@@ -454,7 +505,7 @@ margin_left = 197.0
 margin_top = 95.0
 margin_right = 446.0
 margin_bottom = 208.0
-rect_rotation = -0.375626
+rect_rotation = -4.20425e-05
 rect_scale = Vector2( 0, 0 )
 rect_pivot_offset = Vector2( 124, 56 )
 rect_clip_content = false
@@ -507,6 +558,8 @@ mix_target = 0
 bus = "Master"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_Start_pressed"]
+
+[connection signal="pressed" from="VBoxContainer/Connect" to="." method="_on_Connect_pressed"]
 
 [connection signal="pressed" from="VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
 
