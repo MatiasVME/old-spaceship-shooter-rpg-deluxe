@@ -8,10 +8,11 @@ export (int) var min_life = 3
 #export (int) var score_value = 5
 export (int) var xp_value = 1
 
-export (float) var max_wait_time = 1
-export (float) var min_wait_time = 3
+# Tiempo el cuál se demora en disparar
+export (float) var max_wait_time = 3
+export (float) var min_wait_time = 1
 
-export (int) var one_of_each = 5
+export (int) var one_of_each = 20
 
 var mark_to_dead = false
 var life
@@ -36,19 +37,10 @@ var first_impulse = true
 func _ready():
 	randomize()
 	
-# TODO: Cambiar a que sea un item random en vez de una vida
 func drop_item_if_can(): 
 	var prob = round(rand_range(0, one_of_each))
-	print(prob)
 	
 	if prob <= 1:
-		# ItemManager.get_random_item()
-#		var item = load("res://Game/Items/Toolbox/ItemToolbox.tscn").instance()
-#		item.get_node("Body").global_position = self.global_position
-#
-##		get_node("../../..").add_child(item)
-#
-#		item.impulse()
 		emit_signal("drop_item")
 
 func adjust_increment_x():

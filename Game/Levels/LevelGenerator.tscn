@@ -5,6 +5,6 @@
 [node name="LevelGenerator" type="Node"]
 
 script = ExtResource( 1 )
-dificulty = 0
+dificulty = 1
 
 

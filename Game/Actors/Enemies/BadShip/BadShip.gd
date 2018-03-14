@@ -58,9 +58,7 @@ func _on_BadShip_body_entered( body ):
 
 func _on_TimeToDead_timeout():
 	# Cuando muere completamente
-#	Main.score += score_value
 	drop_item_if_can()
-	print("drop??")
 	
 	queue_free()
 

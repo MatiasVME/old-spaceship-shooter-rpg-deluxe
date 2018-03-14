@@ -25,8 +25,8 @@ func update_stats():
 	$StatsPanel/Margin/VBox/Grid/ValueMoneyLuck.text = str(player_stats.stats["MoneyLuck"])
 	$StatsPanel/Margin/VBox/Grid/ValueItemLuck.text = str(player_stats.stats["ItemLuck"])
 
-func _on_Play_pressed():
-	get_tree().change_scene("res://Game/Levels/LevelMode.tscn")
-
 func _on_Back_pressed():
 	get_tree().change_scene("res://Game/MainScreens/Accounts.tscn")
+
+func _on_Continue_pressed():
+	get_tree().change_scene("res://Game/Levels/LevelMode.tscn")

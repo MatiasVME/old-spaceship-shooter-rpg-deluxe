@@ -9,6 +9,7 @@ Contiunación del Juego [Ultra Spaceships](https://furygames.itch.io/ultra-space
 
 ### Illustration
 Asset Kenney [[Web]](https://kenney.nl/)
+
 Some Items [[OGA]](https://opengameart.org/users/eleazzaar)
 
 ### Music

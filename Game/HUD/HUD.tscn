@@ -14,15 +14,20 @@ scale = Vector2( 1, 1 )
 transform = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 1 )
 
-[node name="HealBar" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Visibility" type="Node2D" parent="." index="0"]
+
+modulate = Color( 1, 1, 1, 0.392157 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HealBar" parent="Visibility" index="0" instance=ExtResource( 2 )]
 
 position = Vector2( 16, 16 )
 
-[node name="XPBar" parent="." index="1" instance=ExtResource( 3 )]
+[node name="XPBar" parent="Visibility" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 528, 16 )
 
-[node name="EnergyBar" parent="." index="2" instance=ExtResource( 4 )]
+[node name="EnergyBar" parent="Visibility" index="2" instance=ExtResource( 4 )]
 
 position = Vector2( 1024, 16 )
 

@@ -8,6 +8,10 @@
 
 enemy_amount = 20
 
+[node name="Row1" parent="CoordinateMesh" index="0"]
+
+editor/display_folded = false
+
 [node name="ElementMesh1" parent="CoordinateMesh/Row2" index="0"]
 
 has_ship = true
