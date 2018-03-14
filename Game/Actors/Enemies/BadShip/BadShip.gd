@@ -21,8 +21,6 @@ func _ready():
 	$TimeToFire.wait_time = rand_range(5, 10)
 	$TimeToFire.start()
 	
-	
-	
 func _physics_process(delta):
 	adjust_increment_x()
 	movement_x()
@@ -60,8 +58,9 @@ func _on_BadShip_body_entered( body ):
 
 func _on_TimeToDead_timeout():
 	# Cuando muere completamente
-	Main.score += score_value
-	drop_life_if_can()
+#	Main.score += score_value
+	drop_item_if_can()
+	print("drop??")
 	
 	queue_free()
 

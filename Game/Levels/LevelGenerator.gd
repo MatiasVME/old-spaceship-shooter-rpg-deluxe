@@ -1,3 +1,5 @@
+# LevelGenerator.gd
+
 extends Node
 
 export (int) var dificulty = 0
@@ -39,4 +41,13 @@ func create_enemies(dificulty, stage_level, player_level):
 			enemy.global_position = element_mesh.global_position
 			add_child(enemy)
 			
+			enemy.connect("drop_item", self, "_on_drop_item", [enemy])
 			
+func _on_drop_item(enemy):
+	# TODO: Por el momento dropea un toolbox, pero a futuro tiene que
+	# dropear un item aleatorio.
+	var item = load("res://Game/Items/Toolbox/ItemToolbox.tscn").instance()
+	item.get_node("Body").global_position = enemy.global_position
+	add_child(item)
+	item.impulse()
+	

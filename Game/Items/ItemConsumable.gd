@@ -2,12 +2,19 @@
 
 extends "./Item.gd" 
 
-signal item_consumed
+#signal item_consumed
 
-var is_consumed = false setget set_is_consumed, get_is_consumed
+var drop_probability = 5 setget set_drop_probability, get_drop_probability
+var is_consumed = false setget , get_is_consumed
 
-func set_is_consumed(_is_consumed):
-	is_consumed = _is_consumed
+# Setters/Getters
+#
+
+func set_drop_probability(_drop_probability):
+	drop_probability = _drop_probability
+	
+func get_drop_probability():
+	return drop_probability
 
 func get_is_consumed():
 	return is_consumed

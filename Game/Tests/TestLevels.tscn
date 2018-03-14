@@ -1,11 +1,12 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Game/Levels/Levels.gd" type="Script" id=1]
+[ext_resource path="res://Game/Tests/TestLevels.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Game/Levels/LevelGenerator.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Game/HUD/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Actors/Player/Player.tscn" type="PackedScene" id=5]
 
-[node name="Levels" type="Node" index="0"]
+[node name="TestLevels" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -14,5 +15,9 @@ script = ExtResource( 1 )
 [node name="LevelGenerator" parent="." index="1" instance=ExtResource( 3 )]
 
 [node name="HUD" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="Player" parent="." index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 640, 608 )
 
 
