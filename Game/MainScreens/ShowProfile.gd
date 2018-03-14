@@ -9,6 +9,9 @@ func _ready():
 	update_stats()
 	
 func update_stats():
+	$Name.text = str(Persistence.get_account_data()["Owner"])
+	
+	$Level.text = str("Level: ") + str(player_stats.level)
 	$StatsPanel/Margin/VBox/GridContainer/ValueMaxHP.text = str(player_stats.max_hp)
 	$StatsPanel/Margin/VBox/GridContainer/ValueMaxEnergy.text = str(player_stats.max_energy)
 	$StatsPanel/Margin/VBox/GridContainer/ValueExperience.text = str(player_stats.xp_total) + " / " + str(player_stats.xp_for_next_level)
