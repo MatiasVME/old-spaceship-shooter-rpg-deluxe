@@ -139,8 +139,8 @@ script = ExtResource( 1 )
 max_life = 6
 min_life = 3
 xp_value = 1
-max_wait_time = 1
-min_wait_time = 3
+max_wait_time = 3
+min_wait_time = 1
 one_of_each = 5
 
 [node name="Image" type="Sprite" parent="." index="0"]

@@ -2,6 +2,9 @@
 
 extends "../ItemConsumable.gd"
 
+# Cantidad de toolbox que existen
+const AMOUNT_TOOLBOX_MAX = 4
+
 enum Toolbox {TOOLBOX_5, TOOLBOX_10, TOOLBOX_15, TOOLBOX_20}
 var toolbox
 
@@ -18,6 +21,14 @@ func impulse():
 	var rand_y = rand_range(-200, 200)
 	
 	$Body.apply_impulse(Vector2(0, 0), Vector2(rand_x, rand_y))
+
+func create_random_toolbox(max_size):
+	if max_size > AMOUNT_TOOLBOX_MAX:
+		print("No hay toolbox en esa cantidad")
+		return
+	
+	var rand_toolbox = round(rand_range(0, max_size))
+	create_toolbox(rand_toolbox)
 
 func create_toolbox(Toolbox):
 	match Toolbox:

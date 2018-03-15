@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Game/MainScreens/ShowProfile.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
@@ -6,6 +6,16 @@
 [ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Game/Actors/Player/Players/Player1.png" type="Texture" id=5]
 [ext_resource path="res://Game/MainScreens/Elements/Button.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Game/Items/Coin/Images/frame-1.png" type="Texture" id=7]
+[ext_resource path="res://Game/Items/Coin/Images/frame-2.png" type="Texture" id=8]
+[ext_resource path="res://Game/Items/Coin/Images/frame-3.png" type="Texture" id=9]
+[ext_resource path="res://Game/Items/Coin/Images/frame-4.png" type="Texture" id=10]
+[ext_resource path="res://Game/Items/Coin/Images/frame-5.png" type="Texture" id=11]
+[ext_resource path="res://Game/Items/Coin/Images/frame-6.png" type="Texture" id=12]
+[ext_resource path="res://Game/Items/Coin/Images/frame-7.png" type="Texture" id=13]
+[ext_resource path="res://Game/Items/Coin/Images/frame-8.png" type="Texture" id=14]
+[ext_resource path="res://Game/Items/Coin/Images/frame-9.png" type="Texture" id=15]
+[ext_resource path="res://Game/Items/Coin/Images/frame-10.png" type="Texture" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 
@@ -39,7 +49,16 @@ use_filter = false
 font_data = ExtResource( 4 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="ShowProfile" type="Node"]
+[sub_resource type="SpriteFrames" id=5]
+
+animations = [ {
+"frames": [ ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="ShowProfile" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -832,38 +851,7 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts" ]
 
-[node name="KeysAmount" type="Label" parent="." index="4"]
-
-visible = false
-anchor_left = 0.0
-anchor_top = 0.0
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 752.0
-margin_top = 480.0
-margin_right = 1168.0
-margin_bottom = 528.0
-rect_pivot_offset = Vector2( 0, 0 )
-rect_clip_content = false
-mouse_filter = 2
-mouse_default_cursor_shape = 0
-size_flags_horizontal = 1
-size_flags_vertical = 4
-custom_fonts/font = SubResource( 4 )
-custom_colors/font_color = Color( 0.289491, 0.839844, 0.193558, 1 )
-custom_colors/font_color_shadow = Color( 0.111132, 0.300781, 0.0505219, 1 )
-text = "Shop Keys Amount: 5"
-align = 1
-valign = 1
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
-_sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts" ]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Level" type="Label" parent="." index="5"]
+[node name="Level" type="Label" parent="." index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -890,10 +878,41 @@ lines_skipped = 0
 max_lines_visible = -1
 _sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts" ]
 
-[node name="Player" type="Sprite" parent="." index="6"]
+[node name="Player" type="Sprite" parent="." index="5"]
 
 position = Vector2( 944, 144 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KeysAmount" type="Label" parent="." index="6"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 752.0
+margin_top = 480.0
+margin_right = 1168.0
+margin_bottom = 528.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.289491, 0.839844, 0.193558, 1 )
+custom_colors/font_color_shadow = Color( 0.111132, 0.300781, 0.0505219, 1 )
+text = "Shop Keys Amount: 5"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts" ]
 __meta__ = {
 "_edit_lock_": true
 }
@@ -941,6 +960,41 @@ margin_bottom = -31.0
 [node name="Label" parent="Stats" index="0"]
 
 text = "Stats"
+
+[node name="CoinImg" type="AnimatedSprite" parent="." index="11"]
+
+position = Vector2( 1248, 32 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 5 )
+animation = "default"
+_sections_unfolded = [ "Transform" ]
+
+[node name="CoinsAmount" type="Label" parent="." index="12"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1072.0
+margin_top = 16.0
+margin_right = 1212.0
+margin_bottom = 48.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.980469, 0.915629, 0.225967, 1 )
+custom_colors/font_color_shadow = Color( 0.546875, 0.409021, 0.0427246, 1 )
+text = "999999"
+align = 2
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Material", "Visibility", "custom_colors", "custom_fonts" ]
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
 

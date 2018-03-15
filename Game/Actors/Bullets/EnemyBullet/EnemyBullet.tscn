@@ -172,7 +172,9 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[node name="EnemyBullet" type="RigidBody2D"]
+[node name="EnemyBullet" type="RigidBody2D" groups=[
+"EnemyBullet",
+]]
 
 input_pickable = false
 collision_layer = 4
@@ -223,7 +225,7 @@ blend_times = [  ]
 [node name="LifeTime" type="Timer" parent="." index="3"]
 
 process_mode = 1
-wait_time = 1.0
+wait_time = 2.0
 one_shot = true
 autostart = true
 

@@ -91,3 +91,7 @@ func _on_Anim_animation_finished( anim_name ):
 		queue_free()
 	elif anim_name == "start":
 		Main.player_is_inmortal = false
+
+func _on_HitArea_body_shape_entered(body_id, body, body_shape, area_shape):
+	if body.is_in_group("EnemyBullet"):
+		body.queue_free()

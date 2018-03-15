@@ -19,9 +19,7 @@ func _ready():
 	
 	# Esto es para poder ejecutar la escena individualmente,
 	# requiere al menos un profile guardado en disco.
-	if Persistence.get_account_data() == null:
-		Persistence.load_account_data(Persistence.accounts[0])
-		Main.set_current_account(Persistence.accounts[0])
+	Persistence.load_alternative_data()
 
 func create_figure():
 	# Se ocupa round ya que la aproximación de int() no es redondeada
@@ -34,7 +32,6 @@ func create_figure():
 func get_level(dificulty, stage_level, player_level):
 	create_enemies(dificulty, stage_level, player_level)
 	
-
 func create_enemies(dificulty, stage_level, player_level):
 	if figure == null:
 		return
@@ -74,6 +71,7 @@ func create_enemy(enemy, dificulty, stage_level, player_level, element_mesh):
 func _on_drop_item(enemy):
 	# TODO: Por el momento dropea un toolbox, pero a futuro tiene que
 	# dropear un item aleatorio.
+	# ItemManager.get_random_item(level)
 	var item = load("res://Game/Items/Toolbox/ItemToolbox.tscn").instance()
 	item.get_node("Body").global_position = enemy.global_position
 	add_child(item)

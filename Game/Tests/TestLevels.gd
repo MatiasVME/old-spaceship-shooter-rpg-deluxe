@@ -7,3 +7,4 @@ func _ready():
 	$LevelGenerator.get_level(1, 1, 1)
 	
 	Main.player_can_move = true
+	Main.enemies_can_fire = true

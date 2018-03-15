@@ -21,6 +21,7 @@ Persistence="*res://Game/Autoload/Persistence.gd"
 DataManager="*res://Game/Autoload/DataManager.gd"
 MusicManager="*res://Game/Autoload/MusicManager.tscn"
 SoundManager="*res://Game/Autoload/SoundManager.tscn"
+ItemManager="*res://Game/Autoload/ItemManager.gd"
 
 [display]
 

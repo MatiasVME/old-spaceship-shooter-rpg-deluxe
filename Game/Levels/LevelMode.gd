@@ -1,6 +1,6 @@
 extends Node
 
-enum Dificulty {EASY, NORMAL, HARD}
+enum Dificulty {EASY = 1, NORMAL, HARD}
 var dificulty
 
 enum Time {SHORT, MEDIUM, LONG}

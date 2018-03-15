@@ -108,12 +108,17 @@ func create_new_data(account_name):
 
 func create_data_account(owner):
 	# Se almacena el objeto player_stats no las stats en si
-	var rec_player_stats = load("res://Game/Actors/Player/PlayerStats.gd")
-	var player_stats = rec_player_stats.new()
+	var player_stats = load("res://Game/Actors/Player/PlayerStats.gd").new()
+	var player_inventory = load("res://Game/Items/Inventory.gd").new()
+	var battle_bag_inventory = load("res://Game/Items/Inventory.gd").new()
 	
 	var data_account = {
 		Owner = owner,
-		PlayerStats = player_stats
+		DataVersion = 1,
+		Coins = 0,
+		PlayerStats = player_stats,
+		PlayerInventory = player_inventory,
+		BattleBagInventory = battle_bag_inventory
 	}
 	
 	return data_account
@@ -183,6 +188,13 @@ func save_account_data(account_name):
 		return true
 		
 	return false
+	
+# Esto es para poder ejecutar la escena individualmente,
+# requiere al menos un profile guardado en disco.
+func load_alternative_data():
+	if get_account_data() == null:
+		load_account_data(accounts[0])
+		Main.set_current_account(accounts[0])
 
 func get_account_data():
 	return account_data

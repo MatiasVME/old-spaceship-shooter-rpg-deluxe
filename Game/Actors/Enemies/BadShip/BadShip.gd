@@ -12,7 +12,9 @@ func _ready():
 	limit_left = $LimitLeft.global_position.x
 	
 	randomize()
-	life = int(rand_range(min_life, max_life + 1) - 0.01)
+	
+	# Vida de la nave enemiga
+	life = round(rand_range(min_life, max_life))
 	
 	random_texture()
 	
@@ -81,5 +83,5 @@ func _on_TimeToFire_timeout():
 
 func _on_Anim_animation_finished(anim_name):
 	if anim_name == "show":
-		set_sprite_size(int(rand_range(0, 4 - 0.0001)))
-		print("ok")
+		set_sprite_size(int(round(rand_range(0, 3)))) # Need fix
+		print("size: ", size)

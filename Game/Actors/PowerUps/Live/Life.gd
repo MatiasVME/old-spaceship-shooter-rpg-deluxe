@@ -15,8 +15,8 @@ func _on_Anim_animation_finished( anim_name ):
 		$Anim.play("idle")
 	elif anim_name == "consume":
 		if Main.lifes < 5:
-			Main.lifes += 1
-			Main.update_life_board = true
+#			Main.lifes += 1
+#			Main.update_life_board = true
 		
 			SoundManager.select_sound(SoundManager.CONSUME_LIFE)
 			SoundManager.play_sound()
