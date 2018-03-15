@@ -1,6 +1,6 @@
 # ItemToolbox.gd
 
-extends "../ItemConsumable.gd"
+extends "res://Game/Items/ItemConsumable.gd"
 
 # Cantidad de toolbox que existen
 const AMOUNT_TOOLBOX_MAX = 4
@@ -27,11 +27,11 @@ func create_random_toolbox(max_size):
 		print("No hay toolbox en esa cantidad")
 		return
 	
-	var rand_toolbox = round(rand_range(0, max_size))
+	var rand_toolbox = int(round(rand_range(0, max_size)))
 	create_toolbox(rand_toolbox)
 
-func create_toolbox(Toolbox):
-	match Toolbox:
+func create_toolbox(_toolbox):
+	match _toolbox:
 		Toolbox.TOOLBOX_5:
 			describe_toolbox(Toolbox.TOOLBOX_5, 5)
 		Toolbox.TOOLBOX_10:
@@ -41,13 +41,13 @@ func create_toolbox(Toolbox):
 		Toolbox.TOOLBOX_20:
 			describe_toolbox(Toolbox.TOOLBOX_20, 20)
 			
-func describe_toolbox(Toolbox, _repair_num):
+func describe_toolbox(_toolbox, _repair_num):
 	repair_num = _repair_num
 	
 	var _item_name
 	var _description
 	
-	match Toolbox:
+	match _toolbox:
 		Toolbox.TOOLBOX_5:
 			_item_name = "Toolbox 5"
 			_description = "Repair 5HP when you need"
@@ -67,7 +67,9 @@ func describe_toolbox(Toolbox, _repair_num):
 	
 	self.set_item_name(_item_name)
 	self.set_description(_description)
-	self.set_texture($Image.texture)
+	
+	var toolbox_texture = preload("res://Game/Items/Toolbox/Image/cogwheels.png")
+	self.set_texture(toolbox_texture)
 
 # Setters/Getters
 #

@@ -1,6 +1,6 @@
 # ItemConsumable.gd
 
-extends "./Item.gd" 
+extends "Item.gd" 
 
 #signal item_consumed
 

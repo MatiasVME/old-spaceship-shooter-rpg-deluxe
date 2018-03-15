@@ -19,10 +19,15 @@ func generate_first_items():
 		player_inventory.add_item_in_inventory(toolbox)
 		print(player_inventory)
 	
-	# Generar de 1 a 2 energy
+	# Generar de 1 a 2 energy # TODO
+	amount = round(rand_range(1, 2))
 	
 	# Generar de 5 a 25 coins
+	amount = round(rand_range(5, 25))
+	Persistence.get_account_data()["Coins"] = amount
 	
+	# Salvar la data
+	Persistence.save_account_data(Main.current_account)
 	
 func generate_random_item(level):
 	pass

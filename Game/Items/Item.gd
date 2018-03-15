@@ -1,4 +1,4 @@
-extends Node 
+extends Node
 
 var item_name setget set_item_name, get_item_name
 var description setget set_description, get_description

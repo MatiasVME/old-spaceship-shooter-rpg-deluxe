@@ -14,7 +14,7 @@ extents = Vector2( 20, 20 )
 custom_solver_bias = 0.0
 extents = Vector2( 30, 30 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=3]
 
 resource_name = "consume"
 length = 0.3
@@ -57,9 +57,8 @@ tracks/2/keys = {
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "drop"
 length = 0.3
 loop = false
 step = 0.1
@@ -88,7 +87,7 @@ tracks/1/keys = {
 "values": [ false, false ]
 }
 
-[node name="ItemToolbox" type="Node2D" groups=[
+[node name="ItemToolbox" type="Node2D" index="0" groups=[
 "ItemConsumable",
 ]]
 
@@ -152,8 +151,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/consume = SubResource( 4 )
-anims/drop = SubResource( 3 )
+anims/consume = SubResource( 3 )
+anims/drop = SubResource( 4 )
 blend_times = [  ]
 
 [connection signal="body_entered" from="Body/AreaConsume" to="." method="_on_AreaConsume_body_entered"]

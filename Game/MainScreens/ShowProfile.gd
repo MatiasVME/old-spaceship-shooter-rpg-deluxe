@@ -3,8 +3,12 @@ extends Node
 var player_stats
 
 func _ready():
+	Persistence.load_alternative_data()
+	
 	Persistence.load_account_data(Main.get_current_account())
 	player_stats = Persistence.get_account_data()["PlayerStats"]
+	
+	$CoinImg.playing = true
 	
 	update_stats()
 	
@@ -24,7 +28,9 @@ func update_stats():
 	$StatsPanel/Margin/VBox/Grid/ValueEnergy.text = str(player_stats.stats["Energy"])
 	$StatsPanel/Margin/VBox/Grid/ValueMoneyLuck.text = str(player_stats.stats["MoneyLuck"])
 	$StatsPanel/Margin/VBox/Grid/ValueItemLuck.text = str(player_stats.stats["ItemLuck"])
-
+	
+	$CoinsAmount.text = str(Persistence.get_account_data()["Coins"])
+	
 func _on_Back_pressed():
 	get_tree().change_scene("res://Game/MainScreens/Accounts.tscn")
 

@@ -94,6 +94,10 @@ func _on_OK_create_new_account_pressed():
 		Persistence.save_accounts()
 		
 		$Layer3/Name.text = $Layer2/LineEdit.text
+		
+		Main.current_account = $Layer3/Name.text
+		Persistence.load_account_data(Main.current_account)
+		ItemManager.generate_first_items()
 
 func _on_Cancel_create_new_account_pressed():
 	old_state = State.LAYER2
@@ -127,7 +131,6 @@ func _on_ConfirmDelete_pressed():
 func _on_NoDelete_pressed():
 	old_state = State.LAYER4
 	state = State.LAYER3
-
 
 func _on_OK_pressed():
 	pass # replace with function body
