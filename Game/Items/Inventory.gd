@@ -1,6 +1,6 @@
 # Inventory.gd
 
-export (Array) var inventory = []
+export (Array) var inventory = [] setget , get_inv
 
 func add_item_in_inventory(item):
 	inventory.append(item)
@@ -16,3 +16,5 @@ func remove_item_in_inventory(item_name):
 			inventory.remove(i)
 		i += 1
 
+func get_inv():
+	return inventory

@@ -11,13 +11,16 @@ func generate_first_items():
 	
 	# Generar de 1 a 3 toolbox
 	amount = int(round(rand_range(1, 3)))
+#	print("amount: ", amount)
 	
-	for i in range(amount):
+	for i in range(amount): # amount
+#		print("i: ", i)
 		var toolbox = load("res://Game/Items/Toolbox/ItemToolbox.gd").new()
-		var max_size = round(rand_range(0, 1))
+		var max_size = int(round(rand_range(0, 1)))
 		toolbox.create_random_toolbox(max_size)
 		player_inventory.add_item_in_inventory(toolbox)
-		print(player_inventory)
+		
+#	print("Se generaron: ", player_inventory.get_inv())
 	
 	# Generar de 1 a 2 energy # TODO
 	amount = round(rand_range(1, 2))

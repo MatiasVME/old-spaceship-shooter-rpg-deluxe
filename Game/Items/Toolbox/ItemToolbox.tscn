@@ -87,7 +87,7 @@ tracks/1/keys = {
 "values": [ false, false ]
 }
 
-[node name="ItemToolbox" type="Node2D" index="0" groups=[
+[node name="ItemToolbox" type="Node2D" groups=[
 "ItemConsumable",
 ]]
 

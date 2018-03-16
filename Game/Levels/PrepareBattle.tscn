@@ -17,7 +17,7 @@ use_filter = false
 font_data = ExtResource( 3 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="PrepareBattle" type="Node"]
+[node name="PrepareBattle" type="Node" index="0"]
 
 script = ExtResource( 1 )
 
@@ -51,6 +51,7 @@ _sections_unfolded = [ "custom_colors", "custom_fonts" ]
 
 [node name="Vault" type="NinePatchRect" parent="." index="2"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0

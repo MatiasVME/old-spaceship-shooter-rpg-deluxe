@@ -26,17 +26,17 @@ export (float) var inc_item_luck = 0.2 # Suerte para recoger items
 
 # Puntaje asignado por el jugador
 #
+#
+#export (int) var points_power = 0 # El daño de bala
+#export (int) var points_ship_velocity = 0 # La velocidad de la nave 
+#export (int) var points_fire_velocity = 0 # Velocidad de fuego
+#export (int) var points_explosive_bullet = 0 # Mejora el daño de bala por explosion
+#export (int) var points_protection = 0 # Mejora la vitalidad
+#export (int) var points_energy = 0 # Mejora la energía
+#export (int) var points_money_luck = 0 # Suerte para recoger dinero
+#export (int) var points_item_luck = 0 # Suerte para recoger items
 
-export (int) var points_power = 0 # El daño de bala
-export (int) var points_ship_velocity = 0 # La velocidad de la nave 
-export (int) var points_fire_velocity = 0 # Velocidad de fuego
-export (int) var points_explosive_bullet = 0 # Mejora el daño de bala por explosion
-export (int) var points_protection = 0 # Mejora la vitalidad
-export (int) var points_energy = 0 # Mejora la energía
-export (int) var points_money_luck = 0 # Suerte para recoger dinero
-export (int) var points_item_luck = 0 # Suerte para recoger items
-
-# Stats resultado
+# Stats points (antes era el resultado)
 
 var stats = {
 	"Power" : 0,
@@ -51,13 +51,13 @@ var stats = {
 
 func _ready():
 	update_stats()
-	
-func update_stats():
-	stats["Power"] = 1 + points_power * inc_power
-	stats["ShipVelocity"] = 2.5 + points_power * inc_power
-	stats["FireVelocity"] = 600 + points_power * inc_power
-	stats["ExplosiveBullet"] = 1 + points_power * inc_power # TOOD
-	stats["Protection"] = 10 + points_power * inc_power
-	stats["Energy"] = 10 + points_energy * inc_energy 
-	stats["MoneyLuck"] = 1 + points_power * inc_power # TODO
-	stats["ItemLuck"] = 1 + points_power * inc_power # TODO
+#
+#func update_stats():
+#	stats["Power"] = 1 + points_power * inc_power
+#	stats["ShipVelocity"] = 2.5 + points_power * inc_power
+#	stats["FireVelocity"] = 600 + points_power * inc_power
+#	stats["ExplosiveBullet"] = 1 + points_power * inc_power # TOOD
+#	stats["Protection"] = 10 + points_power * inc_power
+#	stats["Energy"] = 10 + points_energy * inc_energy 
+#	stats["MoneyLuck"] = 1 + points_power * inc_power # TODO
+#	stats["ItemLuck"] = 1 + points_power * inc_power # TODO
