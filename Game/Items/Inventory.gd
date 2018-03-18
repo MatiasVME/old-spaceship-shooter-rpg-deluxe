@@ -10,11 +10,9 @@ func remove_item_in_inventory(item_name):
 		print("El inventario esta vacio")
 		return
 	
-	var i = 0
-	while (i < inventory.size()):
+	for i in range(inventory.size()):
 		if inventory[i].item_name == item_name:
 			inventory.remove(i)
-		i += 1
-
+		
 func get_inv():
 	return inventory

@@ -1,0 +1,166 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Game/GUI/Panel/Item.png" type="Texture" id=1]
+[ext_resource path="res://Game/Items/ItemMedium.png" type="Texture" id=2]
+[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/GUI/ArrowMove/ArrowMoveNormal.png" type="Texture" id=4]
+[ext_resource path="res://Game/GUI/ArrowMove/ArrowMovePressed.png" type="Texture" id=5]
+[ext_resource path="res://Game/GUI/ArrowMove/ArrowMoveHover.png" type="Texture" id=6]
+[ext_resource path="res://Game/GUI/Buttons/Use/UseNormal.png" type="Texture" id=7]
+[ext_resource path="res://Game/GUI/Buttons/Use/UsePressed.png" type="Texture" id=8]
+[ext_resource path="res://Game/GUI/Buttons/Use/UseHover.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 16
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 12
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 3 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="ItemPanel" type="NinePatchRect"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 540.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 540, 100 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 1 )
+patch_margin_left = 33
+patch_margin_top = 33
+patch_margin_right = 33
+patch_margin_bottom = 33
+_sections_unfolded = [ "Patch Margin", "Pause", "Rect" ]
+
+[node name="ItemImage" type="Sprite" parent="." index="0"]
+
+position = Vector2( 48, 48 )
+texture = ExtResource( 2 )
+
+[node name="Title" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 8.0
+margin_right = 440.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0306091, 0.460938, 0.0575047, 1 )
+custom_colors/font_color_shadow = Color( 0.0277044, 0.230469, 0.0261078, 1 )
+text = "Tool x25"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="Description" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_top = 32.0
+margin_right = 440.0
+margin_bottom = 96.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.118134, 0.149324, 0.617188, 1 )
+custom_colors/font_color_shadow = Color( 0.0590515, 0.0195312, 0.15625, 1 )
+text = "Tool x25 Tool x25 Tool x25 Tool x25 Tool x25 Tool x25 Tool x25 "
+align = 1
+valign = 1
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="MoveItem" type="TextureButton" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 488.0
+margin_top = 8.0
+margin_right = 598.0
+margin_bottom = 110.0
+rect_scale = Vector2( 0.4, 0.4 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+texture_hover = ExtResource( 6 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+[node name="Use" type="TextureButton" parent="." index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 448.0
+margin_top = 56.0
+margin_right = 588.0
+margin_bottom = 113.0
+rect_scale = Vector2( 0.6, 0.6 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+texture_hover = ExtResource( 9 )
+_sections_unfolded = [ "Rect", "Textures" ]
+
+

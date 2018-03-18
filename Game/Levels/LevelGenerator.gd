@@ -73,7 +73,7 @@ func _on_drop_item(enemy):
 	# dropear un item aleatorio.
 	# ItemManager.get_random_item(level)
 	var item = load("res://Game/Items/Toolbox/ItemToolbox.tscn").instance()
-	item.get_node("Body").global_position = enemy.global_position
+	item.get_node("ItemInBattle").global_position = enemy.global_position
 	add_child(item)
-	item.impulse()
+	item.get_node("ItemInBattle").impulse()
 	

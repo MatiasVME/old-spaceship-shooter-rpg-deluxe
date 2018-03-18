@@ -1,91 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Game/Items/Toolbox/ItemToolbox.gd" type="Script" id=1]
-[ext_resource path="res://Game/Items/Toolbox/Image/cogwheels.png" type="Texture" id=2]
-[ext_resource path="res://Game/Items/Toolbox/Image/frame-0-blue.png" type="Texture" id=3]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 20, 20 )
-
-[sub_resource type="RectangleShape2D" id=2]
-
-custom_solver_bias = 0.0
-extents = Vector2( 30, 30 )
-
-[sub_resource type="Animation" id=3]
-
-resource_name = "consume"
-length = 0.3
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Body/Image:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( -4, -4 ),
-"update": 0,
-"values": [ Vector2( 0.4, 0.4 ), Vector2( 1e-05, 1e-05 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Body/Collision:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ true, true ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("Body/Image:modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
-}
-
-[sub_resource type="Animation" id=4]
-
-length = 0.3
-loop = false
-step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Body/Image:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( -4, -4 ),
-"update": 0,
-"values": [ Vector2( 1e-05, 1e-05 ), Vector2( 0.4, 0.4 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Body/Collision:disabled")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 1,
-"values": [ false, false ]
-}
+[ext_resource path="res://Game/Items/Toolbox/ItemToolboxScene.gd" type="Script" id=1]
+[ext_resource path="res://Game/Items/ItemInBattle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Game/Items/Toolbox/Image/cogwheels-mini.png" type="Texture" id=3]
 
 [node name="ItemToolbox" type="Node2D" groups=[
 "ItemConsumable",
@@ -93,70 +10,16 @@ tracks/1/keys = {
 
 script = ExtResource( 1 )
 
-[node name="Body" type="RigidBody2D" parent="." index="0"]
+[node name="ItemInBattle" parent="." index="0" instance=ExtResource( 2 )]
 
-input_pickable = false
-collision_layer = 24
-collision_mask = 24
-mode = 0
-mass = 0.5
-friction = 1.0
-bounce = 1.0
-gravity_scale = 1.0
-custom_integrator = false
-continuous_cd = 0
-contacts_reported = 0
-contact_monitor = false
-sleeping = false
-can_sleep = true
-linear_velocity = Vector2( 0, 0 )
-linear_damp = -1.0
-angular_velocity = 0.0
-angular_damp = -1.0
-_sections_unfolded = [ "Collision" ]
-
-[node name="Image" type="Sprite" parent="Body" index="0"]
+[node name="Image" parent="ItemInBattle" index="0"]
 
 editor/display_folded = true
-scale = Vector2( 1e-05, 1e-05 )
-texture = ExtResource( 2 )
-_sections_unfolded = [ "Transform", "Visibility" ]
-
-[node name="Frame" type="Sprite" parent="Body/Image" index="0"]
-
 texture = ExtResource( 3 )
 
-[node name="Collision" type="CollisionShape2D" parent="Body" index="1"]
+[node name="AreaConsume" parent="ItemInBattle" index="2"]
 
-shape = SubResource( 1 )
-
-[node name="AreaConsume" type="Area2D" parent="Body" index="2"]
-
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
-audio_bus_override = false
-audio_bus_name = "Master"
-
-[node name="Collision" type="CollisionShape2D" parent="Body/AreaConsume" index="0"]
-
-shape = SubResource( 2 )
-
-[node name="Anim" type="AnimationPlayer" parent="." index="1"]
-
-root_node = NodePath("..")
-autoplay = ""
-playback_process_mode = 1
-playback_default_blend_time = 0.0
-playback_speed = 1.0
-anims/consume = SubResource( 3 )
-anims/drop = SubResource( 4 )
-blend_times = [  ]
-
-[connection signal="body_entered" from="Body/AreaConsume" to="." method="_on_AreaConsume_body_entered"]
-
-[connection signal="animation_finished" from="Anim" to="." method="_on_Anim_animation_finished"]
+editor/display_folded = true
 
 
+[editable path="ItemInBattle"]

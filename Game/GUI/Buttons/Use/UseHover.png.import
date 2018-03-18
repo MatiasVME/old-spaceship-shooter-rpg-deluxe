@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Item.png-b560d18283c6a6ba10c1bb64d59f295b.stex"
+path="res://.import/UseHover.png-e5bcb781d0c5201006a0dcd679258d1d.stex"
 
 [deps]
 
-source_file="res://Game/Items/Item.png"
-source_md5="276038da2ec1ee9f2c38a003b617a43d"
+source_file="res://Game/GUI/Buttons/Use/UseHover.png"
+source_md5="5af6055c443677cd76e370d5ba558dbc"
 
-dest_files=[ "res://.import/Item.png-b560d18283c6a6ba10c1bb64d59f295b.stex" ]
-dest_md5="fd057db55c76d8de44052c774773633f"
+dest_files=[ "res://.import/UseHover.png-e5bcb781d0c5201006a0dcd679258d1d.stex" ]
+dest_md5="6aa84ca9f8c4b3250030d60a0ff58924"
 
 [params]
 

@@ -195,6 +195,8 @@ func load_alternative_data():
 	if get_account_data() == null:
 		load_account_data(accounts[0])
 		Main.set_current_account(accounts[0])
+	else:
+		print("No se ha cargado la data alternativa")
 
 func get_account_data():
 	return account_data

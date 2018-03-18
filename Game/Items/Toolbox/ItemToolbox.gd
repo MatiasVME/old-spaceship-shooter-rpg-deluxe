@@ -13,21 +13,26 @@ var repair_num setget , get_repair_num
 
 func _ready():
 	randomize()
-	
-	$Anim.play("drop")
-	
-func impulse():
-	var rand_x = rand_range(-200, 200)
-	var rand_y = rand_range(-200, 200)
-	
-	$Body.apply_impulse(Vector2(0, 0), Vector2(rand_x, rand_y))
 
-func create_random_toolbox(max_size):
+# Crea una caja de herramientas según el contexto. Según los parámetros
+# player_level, game_level
+func create_random_toolbox_according_to_context(player_level, game_level):
+	var context_points = int(round((player_level + game_level) * 0.5))
+	print("create_random_toolbox_according_to_context:context_points: ", context_points)
+	
+	match context_points:
+		1, 2, 3:
+			print("1")
+			create_random_toolbox(0, 1)
+		4, 5, 6, 7, 8, 9, 10, 11, 12:
+			create_random_toolbox(0, 2)
+
+func create_random_toolbox(min_size, max_size):
 	if max_size > AMOUNT_TOOLBOX_MAX:
 		print("No hay toolbox en esa cantidad")
 		return
 	
-	var rand_toolbox = int(round(rand_range(0, max_size)))
+	var rand_toolbox = int(round(rand_range(min_size, max_size)))
 	create_toolbox(rand_toolbox)
 
 func create_toolbox(_toolbox):
@@ -40,7 +45,7 @@ func create_toolbox(_toolbox):
 			describe_toolbox(Toolbox.TOOLBOX_15, 15)
 		Toolbox.TOOLBOX_20:
 			describe_toolbox(Toolbox.TOOLBOX_20, 20)
-			
+	
 func describe_toolbox(_toolbox, _repair_num):
 	repair_num = _repair_num
 	
@@ -70,30 +75,13 @@ func describe_toolbox(_toolbox, _repair_num):
 	
 	var toolbox_texture = preload("res://Game/Items/Toolbox/Image/cogwheels.png")
 	self.set_texture(toolbox_texture)
+	print("textura: ", toolbox_texture)
+	print("created: ", get_item_name())
+	var inv = Persistence.get_account_data()["PlayerInventory"]
+	print("Inv: ", inv)
 
 # Setters/Getters
 #
 
 func get_repair_num():
 	return repair_num
-
-# Signals Functions
-#
-
-func _on_AreaConsume_body_entered(body):
-	if body.is_in_group("Player") and $Anim.assigned_animation != "consume":
-		$Anim.play("consume")
-		print("consume")
-
-func _on_Anim_animation_finished(anim_name):
-	if anim_name == "drop":
-		pass
-	elif anim_name == "consume":
-		SoundManager.select_sound(SoundManager.CONSUME_LIFE)
-		SoundManager.play_sound()
-		
-#		else:
-#			SoundManager.select_sound(SoundManager.NOPE)
-#			SoundManager.play_sound()
-		print("queue_free")
-		queue_free()

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Item.png-b560d18283c6a6ba10c1bb64d59f295b.stex"
+path="res://.import/UseNormal.png-ae2996eb2461b3ffee6fee77e8bf6190.stex"
 
 [deps]
 
-source_file="res://Game/Items/Item.png"
-source_md5="276038da2ec1ee9f2c38a003b617a43d"
+source_file="res://Game/GUI/Buttons/Use/UseNormal.png"
+source_md5="cddc743245eafa72b7c36a40eff548e5"
 
-dest_files=[ "res://.import/Item.png-b560d18283c6a6ba10c1bb64d59f295b.stex" ]
-dest_md5="fd057db55c76d8de44052c774773633f"
+dest_files=[ "res://.import/UseNormal.png-ae2996eb2461b3ffee6fee77e8bf6190.stex" ]
+dest_md5="e61f0009954172716bcb7b2bd3838a06"
 
 [params]
 
