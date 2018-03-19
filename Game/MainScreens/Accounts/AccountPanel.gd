@@ -86,7 +86,7 @@ func _on_OK_create_new_account_pressed():
 	
 	# TODO: Falta validar bien el nombre
 	
-	Persistence.load_accounts()
+#	Persistence.load_accounts() # No estoy seguro si esto va o no
 	
 	if Persistence.create_account($Layer2/LineEdit.text):
 		old_state = State.LAYER2
@@ -95,8 +95,9 @@ func _on_OK_create_new_account_pressed():
 		
 		$Layer3/Name.text = $Layer2/LineEdit.text
 		
-		Main.current_account = $Layer3/Name.text
-		Persistence.load_account_data(Main.current_account)
+#		Main.set_current_account($Layer3/Name.text)
+#		Persistence.load_account_data(Main.current_account)
+		Persistence.change_current_account($Layer3/Name.text)
 		ItemManager.generate_first_items()
 
 func _on_Cancel_create_new_account_pressed():
@@ -114,8 +115,9 @@ func _on_Delete_select_account_pressed():
 
 func _on_OK_select_account_pressed():
 	# Establecer la cuenta con la que se va a jugar.
-	print("$Layer3/Name.text: ", $Layer3/Name.text)
-	Main.set_current_account($Layer3/Name.text)
+#	Main.set_current_account($Layer3/Name.text)
+#	Persistence.load_account_data(Main.current_account)
+	Persistence.change_current_account($Layer3/Name.text)
 	
 	# Pasar a la pantalla de LevelMode.
 	get_tree().change_scene("res://Game/MainScreens/ShowProfile.tscn")

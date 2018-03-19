@@ -58,7 +58,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[node name="ShowProfile" type="Node"]
+[node name="ShowProfile" type="Node" index="0"]
 
 script = ExtResource( 1 )
 

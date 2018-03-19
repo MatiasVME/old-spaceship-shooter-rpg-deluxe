@@ -5,7 +5,7 @@ var player_stats
 func _ready():
 	Persistence.load_alternative_data()
 	
-	Persistence.load_account_data(Main.get_current_account())
+#	Persistence.load_account_data(Main.get_current_account())
 	player_stats = Persistence.get_account_data()["PlayerStats"]
 	
 	$CoinImg.playing = true

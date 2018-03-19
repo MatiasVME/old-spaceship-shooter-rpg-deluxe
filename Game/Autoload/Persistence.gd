@@ -152,13 +152,17 @@ func get_accounts():
 	return accounts
 
 # Este método es para obtener la data de una cuenta en específico
-# para uso mas recurrente es mejor utilizar get_account_data.
+# para uso mas recurrente es mejor utilizar get_account_data().
 # Pero si se desea saber la data de otras cuentas se puede utilizar
 # este método.
 func load_account_data(account_name):
-	if not account_data_is_loaded:
+	print("-- Load account data --")
+	
+	if not account_data_is_loaded: # TODO: Ver si esto funciona o no
 		account_data_is_loaded = true
+		print("-- Account is loaded --")
 	else:
+		print("-- Account is not loaded --")
 		return false
 	
 	var file = File.new()
@@ -182,6 +186,7 @@ func save_account_data(account_name):
 	if file.file_exists(path):
 		var err = file.open_encrypted_with_pass(path, 
 				File.WRITE, temporal_password)
+		# Sacar la data de un archivo antes de almacenarla
 		file.store_var(account_data)
 		file.close()
 		
@@ -197,6 +202,20 @@ func load_alternative_data():
 		Main.set_current_account(accounts[0])
 	else:
 		print("No se ha cargado la data alternativa")
+
+# 
+func change_current_account(account_name):
+	print("--- Change current account ---")
+	print("account_name: ", account_name)
+	
+#	save_account_data(account_name)
+	
+	if current_account != account_name:
+		current_account = account_name
+		
+		load_account_data(account_name)
+	else:
+		print("--- La cuenta no ha cambiado ---")
 
 func get_account_data():
 	return account_data

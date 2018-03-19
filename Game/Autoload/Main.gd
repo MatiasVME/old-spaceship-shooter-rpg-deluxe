@@ -5,7 +5,7 @@ const RES_Y = 720
 
 var music_enable = false
 var sound_enable = false
-var debug = false
+var debug = true
 
 var HUD setget set_hud, get_hud
 var player setget set_player, get_player

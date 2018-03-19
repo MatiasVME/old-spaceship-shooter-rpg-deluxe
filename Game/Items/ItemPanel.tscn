@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Game/GUI/Panel/Item.png" type="Texture" id=1]
 [ext_resource path="res://Game/Items/ItemMedium.png" type="Texture" id=2]
-[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/Fonts/SpaceMono/SpaceMono-Regular.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Game/GUI/ArrowMove/ArrowMoveNormal.png" type="Texture" id=4]
 [ext_resource path="res://Game/GUI/ArrowMove/ArrowMovePressed.png" type="Texture" id=5]
 [ext_resource path="res://Game/GUI/ArrowMove/ArrowMoveHover.png" type="Texture" id=6]
@@ -10,9 +10,9 @@
 [ext_resource path="res://Game/GUI/Buttons/Use/UsePressed.png" type="Texture" id=8]
 [ext_resource path="res://Game/GUI/Buttons/Use/UseHover.png" type="Texture" id=9]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=3]
 
-size = 16
+size = 18
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
@@ -20,7 +20,7 @@ _sections_unfolded = [ "Font", "Settings" ]
 
 [sub_resource type="DynamicFont" id=2]
 
-size = 12
+size = 14
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
@@ -69,7 +69,7 @@ mouse_filter = 2
 mouse_default_cursor_shape = 0
 size_flags_horizontal = 1
 size_flags_vertical = 4
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.0306091, 0.460938, 0.0575047, 1 )
 custom_colors/font_color_shadow = Color( 0.0277044, 0.230469, 0.0261078, 1 )
 text = "Tool x25"

@@ -36,8 +36,13 @@ func generate_first_items():
 	amount = round(rand_range(5, 25))
 	Persistence.get_account_data()["Coins"] = amount
 	
+	# Test
+#	Persistence.get_account_data()["Nuevo"] = "hola"
+	
 	# Salvar la data
+	print("Persistence.get_account_data().hash(): ", Persistence.get_account_data().hash())
 	print("save_account_data: ", Persistence.save_account_data(Main.current_account))
+	print("Persistence.get_account_data().hash(): ", Persistence.get_account_data().hash())
 	print(Persistence.account_data["PlayerInventory"].get_inv()[0].get_item_name())
 	
 func generate_random_item(level):

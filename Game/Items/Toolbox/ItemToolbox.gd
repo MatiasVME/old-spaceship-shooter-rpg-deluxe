@@ -73,7 +73,7 @@ func describe_toolbox(_toolbox, _repair_num):
 	self.set_item_name(_item_name)
 	self.set_description(_description)
 	
-	var toolbox_texture = preload("res://Game/Items/Toolbox/Image/cogwheels.png")
+	var toolbox_texture = preload("res://Game/Items/Toolbox/Image/cogwheels-medium.png")
 	self.set_texture(toolbox_texture)
 	print("textura: ", toolbox_texture)
 	print("created: ", get_item_name())
