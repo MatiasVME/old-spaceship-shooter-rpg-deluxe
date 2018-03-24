@@ -16,7 +16,7 @@ var ot_layer4 = true
 func _process(delta):
 	match state:
 		State.LAYER1:
-			# Cuando see preciona cancelar en el layer2
+			# Cuando see presiona cancelar en el layer2
 			if old_state == State.LAYER2 and ot_layer1:
 				reset_ot_layers()
 				$Anim.play("hide_layer2")
@@ -83,22 +83,15 @@ func _on_Anim_animation_finished(anim_name):
 
 func _on_OK_create_new_account_pressed():
 	# Crear cuenta
-	
-	# TODO: Falta validar bien el nombre
-	
-#	Persistence.load_accounts() # No estoy seguro si esto va o no
-	
-	if Persistence.create_account($Layer2/LineEdit.text):
+	if Persistence.save_data($Layer2/LineEdit.text):
 		old_state = State.LAYER2
 		state = State.LAYER3
-		Persistence.save_accounts()
-		
+
 		$Layer3/Name.text = $Layer2/LineEdit.text
-		
-#		Main.set_current_account($Layer3/Name.text)
-#		Persistence.load_account_data(Main.current_account)
-		Persistence.change_current_account($Layer3/Name.text)
 		ItemManager.generate_first_items()
+	else:
+		# Todo hacer algo si el nombre no es valido
+		print("No se pudo crear la data")
 
 func _on_Cancel_create_new_account_pressed():
 	old_state = State.LAYER2
@@ -115,9 +108,8 @@ func _on_Delete_select_account_pressed():
 
 func _on_OK_select_account_pressed():
 	# Establecer la cuenta con la que se va a jugar.
-#	Main.set_current_account($Layer3/Name.text)
-#	Persistence.load_account_data(Main.current_account)
-	Persistence.change_current_account($Layer3/Name.text)
+	Main.set_current_account($Layer3/Name.text)
+	Persistence.load_data(Main.get_current_account())
 	
 	# Pasar a la pantalla de LevelMode.
 	get_tree().change_scene("res://Game/MainScreens/ShowProfile.tscn")
@@ -125,10 +117,11 @@ func _on_OK_select_account_pressed():
 func _on_ConfirmDelete_pressed():
 	# Confirmar eliminar cuenta
 	
-	if Persistence.delete_account($Layer3/Name.text):
+	if Persistence.remove_profile($Layer3/Name.text):
 		$Layer2/LineEdit.text = ""
 		old_state = State.LAYER4
 		state = State.LAYER1
+	pass
 
 func _on_NoDelete_pressed():
 	old_state = State.LAYER4

@@ -3,17 +3,17 @@ extends Node
 var player_stats
 
 func _ready():
-	Persistence.load_alternative_data()
-	
-#	Persistence.load_account_data(Main.get_current_account())
-	player_stats = Persistence.get_account_data()["PlayerStats"]
+#	Persistence.load_alternative_data()
+#
+##	Persistence.load_account_data(Main.get_current_account())
+#	player_stats = Persistence.get_account_data()["PlayerStats"]
 	
 	$CoinImg.playing = true
 	
 	update_stats()
 	
 func update_stats():
-	$Name.text = str(Persistence.get_account_data()["Owner"])
+#	$Name.text = str(Persistence.get_account_data()["Owner"])
 	
 	$Level.text = str("Level: ") + str(player_stats.level)
 	$StatsPanel/Margin/VBox/GridContainer/ValueMaxHP.text = str(player_stats.max_hp)
