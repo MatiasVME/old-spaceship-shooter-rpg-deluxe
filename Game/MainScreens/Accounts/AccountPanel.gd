@@ -90,7 +90,7 @@ func _on_OK_create_new_account_pressed():
 		$Layer3/Name.text = $Layer2/LineEdit.text
 		ItemManager.generate_first_items()
 	else:
-		# Todo hacer algo si el nombre no es valido
+		# TODO: hacer algo si el nombre no es valido
 		print("No se pudo crear la data")
 
 func _on_Cancel_create_new_account_pressed():
@@ -121,7 +121,8 @@ func _on_ConfirmDelete_pressed():
 		$Layer2/LineEdit.text = ""
 		old_state = State.LAYER4
 		state = State.LAYER1
-	pass
+	else:
+		Print("No se pudo remover el profile")
 
 func _on_NoDelete_pressed():
 	old_state = State.LAYER4
