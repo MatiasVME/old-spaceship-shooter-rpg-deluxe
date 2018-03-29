@@ -83,5 +83,13 @@ func describe_toolbox(_toolbox, _repair_num):
 # Setters/Getters
 #
 
+func get_serialized():
+	var result = .get_serialized()
+	
+	result["Toolbox"] = toolbox
+	result["RepairNum"] = repair_num
+	
+	return result
+
 func get_repair_num():
 	return repair_num

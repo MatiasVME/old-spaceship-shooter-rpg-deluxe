@@ -13,6 +13,17 @@ func remove_item_in_inventory(item_name):
 	for i in range(inventory.size()):
 		if inventory[i].item_name == item_name:
 			inventory.remove(i)
-		
+
+# Setters/Getters
+#
+
+func get_serialized():
+	var result = []
+	
+	for i in range(inventory.size()):
+		result.append(i.get_serialized())
+	
+	return result
+
 func get_inv():
 	return inventory
