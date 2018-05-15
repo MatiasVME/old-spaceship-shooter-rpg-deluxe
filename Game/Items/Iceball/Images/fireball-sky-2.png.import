@@ -7,10 +7,7 @@ path="res://.import/fireball-sky-2.png-bde161c8a46f397351056609cf482fbf.stex"
 [deps]
 
 source_file="res://Game/Items/Iceball/Images/fireball-sky-2.png"
-source_md5="edc46fe7db6cea409d06a2f7b0980ea7"
-
 dest_files=[ "res://.import/fireball-sky-2.png-bde161c8a46f397351056609cf482fbf.stex" ]
-dest_md5="c04418692d7c76e9700ae4d08917a568"
 
 [params]
 

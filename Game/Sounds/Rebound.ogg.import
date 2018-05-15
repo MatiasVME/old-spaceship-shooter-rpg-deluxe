@@ -7,10 +7,7 @@ path="res://.import/Rebound.ogg-2541f8e2841d19c5c1018eb94b8e54a7.oggstr"
 [deps]
 
 source_file="res://Game/Sounds/Rebound.ogg"
-source_md5="b8666172656a0b51302dd6af2e450d1e"
-
 dest_files=[ "res://.import/Rebound.ogg-2541f8e2841d19c5c1018eb94b8e54a7.oggstr" ]
-dest_md5="1e4c97d63272173f3a4cea2212c706f2"
 
 [params]
 

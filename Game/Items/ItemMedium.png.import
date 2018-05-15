@@ -7,10 +7,7 @@ path="res://.import/ItemMedium.png-84e844bf61170ad9872c876dd8001acf.stex"
 [deps]
 
 source_file="res://Game/Items/ItemMedium.png"
-source_md5="5d57dbebce54d89374dab201ae8b8ffa"
-
 dest_files=[ "res://.import/ItemMedium.png-84e844bf61170ad9872c876dd8001acf.stex" ]
-dest_md5="3fae06b55fc4c73956bc22fa282f3ac0"
 
 [params]
 

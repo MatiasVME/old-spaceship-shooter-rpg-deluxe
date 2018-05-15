@@ -26,31 +26,32 @@ export (float) var inc_item_luck = 0.2 # Suerte para recoger items
 
 # Puntaje asignado por el jugador
 #
-#
-#export (int) var points_power = 0 # El daño de bala
-#export (int) var points_ship_velocity = 0 # La velocidad de la nave 
-#export (int) var points_fire_velocity = 0 # Velocidad de fuego
-#export (int) var points_explosive_bullet = 0 # Mejora el daño de bala por explosion
-#export (int) var points_protection = 0 # Mejora la vitalidad
-#export (int) var points_energy = 0 # Mejora la energía
-#export (int) var points_money_luck = 0 # Suerte para recoger dinero
-#export (int) var points_item_luck = 0 # Suerte para recoger items
+
+export (int) var points_power = 0 # El daño de bala
+export (int) var points_ship_velocity = 0 # La velocidad de la nave 
+export (int) var points_fire_velocity = 0 # Velocidad de fuego
+export (int) var points_explosive_bullet = 0 # Mejora el daño de bala por explosion
+export (int) var points_protection = 0 # Mejora la vitalidad
+export (int) var points_energy = 0 # Mejora la energía
+export (int) var points_money_luck = 0 # Suerte para recoger dinero
+export (int) var points_item_luck = 0 # Suerte para recoger items
 
 # Stats points (antes era el resultado)
 
 var stats = {
-	"Power" : 0,
-	"ShipVelocity" : 0,
-	"FireVelocity" : 0,
-	"ExplosiveBullet" : 0,
-	"Protection" : 0,
-	"Energy" : 0,
-	"MoneyLuck" : 0,
-	"ItemLuck" : 0
+	"Power" : points_power,
+	"ShipVelocity" : points_ship_velocity,
+	"FireVelocity" : points_fire_velocity,
+	"ExplosiveBullet" : points_explosive_bullet,
+	"Protection" : points_protection,
+	"Energy" : points_energy,
+	"MoneyLuck" : points_money_luck,
+	"ItemLuck" : points_item_luck
 }
 
 func _ready():
-	update_stats()
+#	update_stats()
+	pass
 #
 #func update_stats():
 #	stats["Power"] = 1 + points_power * inc_power

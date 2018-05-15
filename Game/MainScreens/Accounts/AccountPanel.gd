@@ -88,7 +88,9 @@ func _on_OK_create_new_account_pressed():
 		state = State.LAYER3
 
 		$Layer3/Name.text = $Layer2/LineEdit.text
-		ItemManager.generate_first_items()
+		Main.set_current_account($Layer2/LineEdit.text)
+		
+		create_player()
 	else:
 		# TODO: hacer algo si el nombre no es valido
 		print("No se pudo crear la data")
@@ -116,7 +118,6 @@ func _on_OK_select_account_pressed():
 
 func _on_ConfirmDelete_pressed():
 	# Confirmar eliminar cuenta
-	
 	if Persistence.remove_profile($Layer3/Name.text):
 		$Layer2/LineEdit.text = ""
 		old_state = State.LAYER4
@@ -130,3 +131,10 @@ func _on_NoDelete_pressed():
 
 func _on_OK_pressed():
 	pass # replace with function body
+	
+func create_player():
+	# Crea el inventario
+	var player_inv = Main.create_inv()
+	
+	# Crea los primeros items del juego
+	ItemManager.generate_first_items(player_inv)

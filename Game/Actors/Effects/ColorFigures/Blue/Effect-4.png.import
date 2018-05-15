@@ -7,10 +7,7 @@ path="res://.import/Effect-4.png-db85283d4f3953ac734d3b6679082788.stex"
 [deps]
 
 source_file="res://Game/Actors/Effects/ColorFigures/Blue/Effect-4.png"
-source_md5="9f6eef184a983e233d5850c161b65f9a"
-
 dest_files=[ "res://.import/Effect-4.png-db85283d4f3953ac734d3b6679082788.stex" ]
-dest_md5="bf95abe331f86949181260de7dcca02a"
 
 [params]
 

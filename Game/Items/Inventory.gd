@@ -21,9 +21,13 @@ func get_serialized():
 	var result = []
 	
 	for i in range(inventory.size()):
-		result.append(i.get_serialized())
+		result.append(inventory[i].get_serialized())
 	
 	return result
+
+func set_serialized(dict):
+	# Transformar diccionario a objeto
+	pass
 
 func get_inv():
 	return inventory

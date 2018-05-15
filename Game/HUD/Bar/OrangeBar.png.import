@@ -7,10 +7,7 @@ path="res://.import/OrangeBar.png-00bd57935d11c8a6af6c5804dc5e1a11.stex"
 [deps]
 
 source_file="res://Game/HUD/Bar/OrangeBar.png"
-source_md5="bfb1bb5fb8c192d3563fad2b4bb64836"
-
 dest_files=[ "res://.import/OrangeBar.png-00bd57935d11c8a6af6c5804dc5e1a11.stex" ]
-dest_md5="21551e568c30787e7891e20700b9a0ce"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/UseNormal.png-ae2996eb2461b3ffee6fee77e8bf6190.stex"
 [deps]
 
 source_file="res://Game/GUI/Buttons/Use/UseNormal.png"
-source_md5="cddc743245eafa72b7c36a40eff548e5"
-
 dest_files=[ "res://.import/UseNormal.png-ae2996eb2461b3ffee6fee77e8bf6190.stex" ]
-dest_md5="e61f0009954172716bcb7b2bd3838a06"
 
 [params]
 

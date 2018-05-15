@@ -7,10 +7,7 @@ path="res://.import/hardisk_original.png-00904c45c79c254fbfa57fc761c2aab0.stex"
 [deps]
 
 source_file="res://addons/PersistenceNode/hardisk_original.png"
-source_md5="529da8459378c2d8a194cc953a3352dd"
-
 dest_files=[ "res://.import/hardisk_original.png-00904c45c79c254fbfa57fc761c2aab0.stex" ]
-dest_md5="133d8e5e951daef06489db9675008986"
 
 [params]
 

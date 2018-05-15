@@ -7,10 +7,7 @@ path="res://.import/GranLaser-3.png-228209af338e4d73a5ed76efe1460b72.stex"
 [deps]
 
 source_file="res://Game/Actors/Bullets/GranLaser/GranLaser-3.png"
-source_md5="ea858cf5b819c199659df980fba11106"
-
 dest_files=[ "res://.import/GranLaser-3.png-228209af338e4d73a5ed76efe1460b72.stex" ]
-dest_md5="5f3d27e39c3a3467ce7f42a852aa7cc7"
 
 [params]
 

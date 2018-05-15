@@ -7,10 +7,7 @@ path="res://.import/Laser-Sound.ogg-67174ea4fafb8fecf3b6c37bdb165ab0.oggstr"
 [deps]
 
 source_file="res://Game/Sounds/Laser-Sound.ogg"
-source_md5="9893eb27bab0855929ac31485642c416"
-
 dest_files=[ "res://.import/Laser-Sound.ogg-67174ea4fafb8fecf3b6c37bdb165ab0.oggstr" ]
-dest_md5="9328f87d0f5619bfb18697c4f338ac2a"
 
 [params]
 

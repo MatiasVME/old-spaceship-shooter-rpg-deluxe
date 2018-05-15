@@ -7,10 +7,7 @@ path="res://.import/ArrowMoveHover.png-d075cb3eb9703fbac5877c173ee9e5f9.stex"
 [deps]
 
 source_file="res://Game/GUI/ArrowMove/ArrowMoveHover.png"
-source_md5="d0d8e7ddfb279c387490988efc4b165d"
-
 dest_files=[ "res://.import/ArrowMoveHover.png-d075cb3eb9703fbac5877c173ee9e5f9.stex" ]
-dest_md5="82f5cbf08ee65c8a643a5cf5f3d6932a"
 
 [params]
 

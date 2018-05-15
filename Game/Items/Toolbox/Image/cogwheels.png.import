@@ -7,10 +7,7 @@ path="res://.import/cogwheels.png-cf5b8315f7ee7e0bb35b4a88b8a05e38.stex"
 [deps]
 
 source_file="res://Game/Items/Toolbox/Image/cogwheels.png"
-source_md5="fc103df286fd05b92291d7dbe2a7bf9b"
-
 dest_files=[ "res://.import/cogwheels.png-cf5b8315f7ee7e0bb35b4a88b8a05e38.stex" ]
-dest_md5="ac6805a5c7e6c02f5e47d6a1348cd55b"
 
 [params]
 

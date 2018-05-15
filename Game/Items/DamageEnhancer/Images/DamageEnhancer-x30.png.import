@@ -7,10 +7,7 @@ path="res://.import/DamageEnhancer-x30.png-628840d16e5b4b57a6801e3892c87db0.stex
 [deps]
 
 source_file="res://Game/Items/DamageEnhancer/Images/DamageEnhancer-x30.png"
-source_md5="3edbd3d22af226044754c3085c1e0250"
-
 dest_files=[ "res://.import/DamageEnhancer-x30.png-628840d16e5b4b57a6801e3892c87db0.stex" ]
-dest_md5="0ef7b47d61b1769e70960f28809bc0df"
 
 [params]
 

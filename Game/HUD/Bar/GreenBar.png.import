@@ -7,10 +7,7 @@ path="res://.import/GreenBar.png-fce30279d5c1cb698a63c9572404286f.stex"
 [deps]
 
 source_file="res://Game/HUD/Bar/GreenBar.png"
-source_md5="0f5091bc6fd4522d2be3857e9b7b844a"
-
 dest_files=[ "res://.import/GreenBar.png-fce30279d5c1cb698a63c9572404286f.stex" ]
-dest_md5="8dab109d94b3a58701636fcd0c28788d"
 
 [params]
 

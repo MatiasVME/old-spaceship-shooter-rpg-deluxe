@@ -7,10 +7,7 @@ path="res://.import/YellowBar.png-da8adc4731747a76d4c6f0333c58d7a8.stex"
 [deps]
 
 source_file="res://Game/HUD/Bar/YellowBar.png"
-source_md5="d295ea5f217f7cdad734d622cff25ddf"
-
 dest_files=[ "res://.import/YellowBar.png-da8adc4731747a76d4c6f0333c58d7a8.stex" ]
-dest_md5="1990d916f1a8ff3e86a543c439755f38"
 
 [params]
 

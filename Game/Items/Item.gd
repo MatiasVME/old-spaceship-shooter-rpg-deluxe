@@ -9,7 +9,7 @@ func get_serialized():
 	return {
 		IntemName = item_name,
 		Description = description,
-		TexturePath = texture,
+		TexturePath = texture.resource_path,
 		MinLevelDrop = min_level_drop
 	}
 

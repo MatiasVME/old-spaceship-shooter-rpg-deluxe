@@ -7,10 +7,7 @@ path="res://.import/Lifes1.png-4753ed91dd7f4882ed6a2f87c6805a57.stex"
 [deps]
 
 source_file="res://Game/Actors/PowerUps/Live/Lifes1.png"
-source_md5="a64578e6e35818e180d36865e76f88cc"
-
 dest_files=[ "res://.import/Lifes1.png-4753ed91dd7f4882ed6a2f87c6805a57.stex" ]
-dest_md5="9d1356c9d73c837db8db69f5c42b3334"
 
 [params]
 

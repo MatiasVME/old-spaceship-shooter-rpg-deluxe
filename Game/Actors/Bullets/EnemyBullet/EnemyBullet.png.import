@@ -7,10 +7,7 @@ path="res://.import/EnemyBullet.png-cd58959602c9cbccedc55057229f4392.stex"
 [deps]
 
 source_file="res://Game/Actors/Bullets/EnemyBullet/EnemyBullet.png"
-source_md5="f37b87317e22f53b851df133a4165c2b"
-
 dest_files=[ "res://.import/EnemyBullet.png-cd58959602c9cbccedc55057229f4392.stex" ]
-dest_md5="2a94901642f2f1862d699ec04c5a265f"
 
 [params]
 

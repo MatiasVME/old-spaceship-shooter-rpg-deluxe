@@ -7,10 +7,7 @@ path="res://.import/evil-eye-red-2.png-4812ec1ed24f9ae96e117524afb6d4d5.stex"
 [deps]
 
 source_file="res://Game/Items/Fire Power/Images/evil-eye-red-2.png"
-source_md5="ef0bf6bb45f8df27c1457801964d31b9"
-
 dest_files=[ "res://.import/evil-eye-red-2.png-4812ec1ed24f9ae96e117524afb6d4d5.stex" ]
-dest_md5="de07f0efd9ec0b81bf95c7ab5a8da289"
 
 [params]
 

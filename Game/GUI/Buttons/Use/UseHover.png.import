@@ -7,10 +7,7 @@ path="res://.import/UseHover.png-e5bcb781d0c5201006a0dcd679258d1d.stex"
 [deps]
 
 source_file="res://Game/GUI/Buttons/Use/UseHover.png"
-source_md5="5af6055c443677cd76e370d5ba558dbc"
-
 dest_files=[ "res://.import/UseHover.png-e5bcb781d0c5201006a0dcd679258d1d.stex" ]
-dest_md5="6aa84ca9f8c4b3250030d60a0ff58924"
 
 [params]
 

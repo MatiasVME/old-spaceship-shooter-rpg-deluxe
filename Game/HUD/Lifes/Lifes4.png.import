@@ -7,10 +7,7 @@ path="res://.import/Lifes4.png-ab770da8b0f7bc4e3877b9f3713809ba.stex"
 [deps]
 
 source_file="res://Game/HUD/Lifes/Lifes4.png"
-source_md5="f7f04a0a7e790dcfc13f6b4472a22255"
-
 dest_files=[ "res://.import/Lifes4.png-ab770da8b0f7bc4e3877b9f3713809ba.stex" ]
-dest_md5="20231df59661f1a4c2e75fd8ddf70e72"
 
 [params]
 

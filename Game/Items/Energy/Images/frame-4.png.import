@@ -7,10 +7,7 @@ path="res://.import/frame-4.png-0b8d2f241a19aed8ae42b73fd13c0977.stex"
 [deps]
 
 source_file="res://Game/Items/Energy/Images/frame-4.png"
-source_md5="ac29c811f6f1c023155c00fc1c73cacd"
-
 dest_files=[ "res://.import/frame-4.png-0b8d2f241a19aed8ae42b73fd13c0977.stex" ]
-dest_md5="ba1fda18205ff098300b40a4e9587d10"
 
 [params]
 

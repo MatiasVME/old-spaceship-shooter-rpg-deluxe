@@ -7,10 +7,7 @@ path="res://.import/button_pressed.png-8258366768d1c3a65b948eeb197b207d.stex"
 [deps]
 
 source_file="res://Game/Buttons/button_pressed.png"
-source_md5="b183b3ea733505a89e0697b2cbc894c3"
-
 dest_files=[ "res://.import/button_pressed.png-8258366768d1c3a65b948eeb197b207d.stex" ]
-dest_md5="cf1483ea71373034fe0d06a238633b59"
 
 [params]
 

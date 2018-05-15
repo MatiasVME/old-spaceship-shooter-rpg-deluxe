@@ -7,10 +7,7 @@ path="res://.import/horror-red-3.png-ec78510afbbdc70de9d22be3aae6a4cb.stex"
 [deps]
 
 source_file="res://Game/Items/HorrorFire/Images/horror-red-3.png"
-source_md5="1724bd88591a3169e24ce8002f632c6a"
-
 dest_files=[ "res://.import/horror-red-3.png-ec78510afbbdc70de9d22be3aae6a4cb.stex" ]
-dest_md5="e10409309d040a9d44408d37d5dd9736"
 
 [params]
 

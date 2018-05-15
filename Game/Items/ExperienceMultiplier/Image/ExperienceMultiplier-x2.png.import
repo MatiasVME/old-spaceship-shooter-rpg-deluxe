@@ -7,10 +7,7 @@ path="res://.import/ExperienceMultiplier-x2.png-4d9cd519eaf033e3497fe85e813c1335
 [deps]
 
 source_file="res://Game/Items/ExperienceMultiplier/Image/ExperienceMultiplier-x2.png"
-source_md5="3e4a497094043c989bd2a7ce0dcca559"
-
 dest_files=[ "res://.import/ExperienceMultiplier-x2.png-4d9cd519eaf033e3497fe85e813c1335.stex" ]
-dest_md5="d6330bc83b4c40be53f34c14da83e3ec"
 
 [params]
 

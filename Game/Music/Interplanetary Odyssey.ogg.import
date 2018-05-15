@@ -7,10 +7,7 @@ path="res://.import/Interplanetary Odyssey.ogg-5b07be99e1a837cf7a048aabaf981ac2.
 [deps]
 
 source_file="res://Game/Music/Interplanetary Odyssey.ogg"
-source_md5="9839d5a284b96ab355999a93cafe4299"
-
 dest_files=[ "res://.import/Interplanetary Odyssey.ogg-5b07be99e1a837cf7a048aabaf981ac2.oggstr" ]
-dest_md5="fc10eecc9cabf97350ecc21be48e18bd"
 
 [params]
 

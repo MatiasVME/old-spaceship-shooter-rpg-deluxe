@@ -7,10 +7,7 @@ path="res://.import/Boss5.png-09c43e3d249ed7241a5b05e8bf341999.stex"
 [deps]
 
 source_file="res://Game/Actors/Enemies/BadBossShip/Boss5.png"
-source_md5="e96a488885e74c9308bf8a78024a4b26"
-
 dest_files=[ "res://.import/Boss5.png-09c43e3d249ed7241a5b05e8bf341999.stex" ]
-dest_md5="9ea3f07764b4241bfd8ed065a1331286"
 
 [params]
 

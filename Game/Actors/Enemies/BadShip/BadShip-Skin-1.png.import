@@ -7,10 +7,7 @@ path="res://.import/BadShip-Skin-1.png-52a2a285fb7568f84fb0a7e2f54d1e6d.stex"
 [deps]
 
 source_file="res://Game/Actors/Enemies/BadShip/BadShip-Skin-1.png"
-source_md5="82621c8db8263b567b114eeb0e3652a0"
-
 dest_files=[ "res://.import/BadShip-Skin-1.png-52a2a285fb7568f84fb0a7e2f54d1e6d.stex" ]
-dest_md5="edfe3313f03bac182877eb8328b1331c"
 
 [params]
 

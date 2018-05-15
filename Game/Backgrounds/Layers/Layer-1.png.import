@@ -7,10 +7,7 @@ path="res://.import/Layer-1.png-3573603800f5e77df71a89dd921c2249.stex"
 [deps]
 
 source_file="res://Game/Backgrounds/Layers/Layer-1.png"
-source_md5="fb810d19a34b7511662b719cc06051fd"
-
 dest_files=[ "res://.import/Layer-1.png-3573603800f5e77df71a89dd921c2249.stex" ]
-dest_md5="08f927920389ddbf3b7bb5705c52fbd2"
 
 [params]
 

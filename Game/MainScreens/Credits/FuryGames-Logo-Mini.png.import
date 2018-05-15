@@ -7,10 +7,7 @@ path="res://.import/FuryGames-Logo-Mini.png-f49a8024bf4ed5a8034ada9538467b2e.ste
 [deps]
 
 source_file="res://Game/MainScreens/Credits/FuryGames-Logo-Mini.png"
-source_md5="845d2344f1fade9d8392898d2d9a3e18"
-
 dest_files=[ "res://.import/FuryGames-Logo-Mini.png-f49a8024bf4ed5a8034ada9538467b2e.stex" ]
-dest_md5="05f955651f188c8e8decc2981475187e"
 
 [params]
 

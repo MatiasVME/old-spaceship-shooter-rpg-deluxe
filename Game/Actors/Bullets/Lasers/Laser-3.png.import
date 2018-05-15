@@ -7,10 +7,7 @@ path="res://.import/Laser-3.png-4a543268ee9db8254616133bc9ace9e7.stex"
 [deps]
 
 source_file="res://Game/Actors/Bullets/Lasers/Laser-3.png"
-source_md5="8d03ae7a9c4d46d196e8a6fcf98bb37b"
-
 dest_files=[ "res://.import/Laser-3.png-4a543268ee9db8254616133bc9ace9e7.stex" ]
-dest_md5="6aa5657ec139d7ddb050efbe16f7b201"
 
 [params]
 

@@ -7,10 +7,7 @@ path="res://.import/save.png-99f178124b01bca9f0c06e2cbcac5a0c.stex"
 [deps]
 
 source_file="res://Game/MainScreens/Accounts/save.png"
-source_md5="0fd8b6b61295e08d82f5108780c0bb71"
-
 dest_files=[ "res://.import/save.png-99f178124b01bca9f0c06e2cbcac5a0c.stex" ]
-dest_md5="cc7ed9cf556c4d92713c40ddda31ca8f"
 
 [params]
 

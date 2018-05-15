@@ -7,10 +7,7 @@ path="res://.import/frame-0-blue.png-cb35db40381cb6608a2a3a80711a43e5.stex"
 [deps]
 
 source_file="res://Game/Items/Toolbox/Image/frame-0-blue.png"
-source_md5="3e6c47befe502bd10305d717ebee0140"
-
 dest_files=[ "res://.import/frame-0-blue.png-cb35db40381cb6608a2a3a80711a43e5.stex" ]
-dest_md5="38a63d3de166ccc6f2f1c03ebf36ad05"
 
 [params]
 

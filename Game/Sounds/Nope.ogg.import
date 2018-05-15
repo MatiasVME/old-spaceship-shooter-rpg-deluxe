@@ -7,10 +7,7 @@ path="res://.import/Nope.ogg-14d0d1b1c57ec03f8eda5c2c926d55f6.oggstr"
 [deps]
 
 source_file="res://Game/Sounds/Nope.ogg"
-source_md5="b4cab6583ba40aeffc83b6252f6eda22"
-
 dest_files=[ "res://.import/Nope.ogg-14d0d1b1c57ec03f8eda5c2c926d55f6.oggstr" ]
-dest_md5="fc4f937a9b672e0abba20c89ab274793"
 
 [params]
 

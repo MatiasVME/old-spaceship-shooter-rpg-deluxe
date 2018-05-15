@@ -7,10 +7,7 @@ path="res://.import/WhiteBar.png-4cf92269ab89bccb21af2b2a2f6176de.stex"
 [deps]
 
 source_file="res://Game/HUD/Bar/WhiteBar.png"
-source_md5="a8cdedee634f63118a4808d48031ba12"
-
 dest_files=[ "res://.import/WhiteBar.png-4cf92269ab89bccb21af2b2a2f6176de.stex" ]
-dest_md5="bfbcc1ba5e81ccff2b7935f35a48b571"
 
 [params]
 

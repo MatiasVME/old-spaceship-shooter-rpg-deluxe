@@ -7,10 +7,7 @@ path="res://.import/Boss1.png-5159c31d0217a4028f84e6e879dbd791.stex"
 [deps]
 
 source_file="res://Game/Actors/Enemies/BossesImg-TempFolder/Boss1.png"
-source_md5="25e9410d6861f2388c54ccfc5d587229"
-
 dest_files=[ "res://.import/Boss1.png-5159c31d0217a4028f84e6e879dbd791.stex" ]
-dest_md5="4ca91034842ee5e03369a35f14d612ed"
 
 [params]
 

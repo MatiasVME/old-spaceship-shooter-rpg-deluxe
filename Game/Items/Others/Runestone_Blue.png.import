@@ -7,10 +7,7 @@ path="res://.import/Runestone_Blue.png-3cba66330cc1022fe41b56940af7b107.stex"
 [deps]
 
 source_file="res://Game/Items/Others/Runestone_Blue.png"
-source_md5="e042e0ce4b6a6b56559a69a11df63a78"
-
 dest_files=[ "res://.import/Runestone_Blue.png-3cba66330cc1022fe41b56940af7b107.stex" ]
-dest_md5="732d18fae2756f9155957e88a9a81366"
 
 [params]
 

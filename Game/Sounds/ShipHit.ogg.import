@@ -7,10 +7,7 @@ path="res://.import/ShipHit.ogg-c5f698b683458ee1326c9303d44f4151.oggstr"
 [deps]
 
 source_file="res://Game/Sounds/ShipHit.ogg"
-source_md5="08bbdd9841be79a4598db5153a2b7277"
-
 dest_files=[ "res://.import/ShipHit.ogg-c5f698b683458ee1326c9303d44f4151.oggstr" ]
-dest_md5="a915cca28cbce3b2f6c7a8d1f6a54487"
 
 [params]
 

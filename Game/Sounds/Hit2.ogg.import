@@ -7,10 +7,7 @@ path="res://.import/Hit2.ogg-80f4b769e433f5c0398e52aca5996f41.oggstr"
 [deps]
 
 source_file="res://Game/Sounds/Hit2.ogg"
-source_md5="49594191ffde9d0c9d46e0e28fcc26e4"
-
 dest_files=[ "res://.import/Hit2.ogg-80f4b769e433f5c0398e52aca5996f41.oggstr" ]
-dest_md5="638477eb1ed618d5f325ac23055fff63"
 
 [params]
 

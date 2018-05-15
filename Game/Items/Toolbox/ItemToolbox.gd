@@ -75,10 +75,10 @@ func describe_toolbox(_toolbox, _repair_num):
 	
 	var toolbox_texture = preload("res://Game/Items/Toolbox/Image/cogwheels-medium.png")
 	self.set_texture(toolbox_texture)
-	print("textura: ", toolbox_texture)
-	print("created: ", get_item_name())
-	var inv = Persistence.get_account_data()["PlayerInventory"]
-	print("Inv: ", inv)
+#	print("textura: ", toolbox_texture)
+#	print("created: ", get_item_name())
+#	var inv = Persistence.get_account_data()["PlayerInventory"]
+#	print("Inv: ", inv)
 
 # Setters/Getters
 #

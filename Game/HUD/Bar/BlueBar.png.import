@@ -7,10 +7,7 @@ path="res://.import/BlueBar.png-c6470b49c7d25d12cdc9ffb8f169dc91.stex"
 [deps]
 
 source_file="res://Game/HUD/Bar/BlueBar.png"
-source_md5="2459d4cc7c2412d10802a34d7e5c69eb"
-
 dest_files=[ "res://.import/BlueBar.png-c6470b49c7d25d12cdc9ffb8f169dc91.stex" ]
-dest_md5="f3e5e0983757c88bfdd6b78430984ee2"
 
 [params]
 

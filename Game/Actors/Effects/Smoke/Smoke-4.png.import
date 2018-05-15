@@ -7,10 +7,7 @@ path="res://.import/Smoke-4.png-3db818dfac7a66688ce47f440c770d4b.stex"
 [deps]
 
 source_file="res://Game/Actors/Effects/Smoke/Smoke-4.png"
-source_md5="92ed5d2581fd0be5ba513bcc9600bfa6"
-
 dest_files=[ "res://.import/Smoke-4.png-3db818dfac7a66688ce47f440c770d4b.stex" ]
-dest_md5="72cf0f4ef76dee482504ceed55f5683e"
 
 [params]
 

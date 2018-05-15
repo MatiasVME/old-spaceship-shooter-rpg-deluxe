@@ -7,10 +7,7 @@ path="res://.import/frame-8.png-33ec22698030d264de7410885701e387.stex"
 [deps]
 
 source_file="res://Game/Items/Coin/Images/frame-8.png"
-source_md5="437c13528b988c4331dc5ea3c5abec0a"
-
 dest_files=[ "res://.import/frame-8.png-33ec22698030d264de7410885701e387.stex" ]
-dest_md5="1a228d6130eea0c38726bc467da264f0"
 
 [params]
 

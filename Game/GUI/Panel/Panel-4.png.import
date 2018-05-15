@@ -7,10 +7,7 @@ path="res://.import/Panel-4.png-23b3b85fcfba2ac1bf4e89f15101629f.stex"
 [deps]
 
 source_file="res://Game/GUI/Panel/Panel-4.png"
-source_md5="7ff3baec4b6d201d14006e154c8fa6aa"
-
 dest_files=[ "res://.import/Panel-4.png-23b3b85fcfba2ac1bf4e89f15101629f.stex" ]
-dest_md5="410b283166c897c34bafe525b2551a78"
 
 [params]
 

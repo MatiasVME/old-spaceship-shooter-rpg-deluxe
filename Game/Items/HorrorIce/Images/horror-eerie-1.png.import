@@ -7,10 +7,7 @@ path="res://.import/horror-eerie-1.png-f52f1b06e0ee015997bcce6fca57e2a9.stex"
 [deps]
 
 source_file="res://Game/Items/HorrorIce/Images/horror-eerie-1.png"
-source_md5="3744b774afeba5739a6183f5c045e9cc"
-
 dest_files=[ "res://.import/horror-eerie-1.png-f52f1b06e0ee015997bcce6fca57e2a9.stex" ]
-dest_md5="adc11f17fb565c2ffe7032005eec914f"
 
 [params]
 

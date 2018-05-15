@@ -7,10 +7,7 @@ path="res://.import/Player3.png-dceac33640d2a3128fa58b1b93bc0155.stex"
 [deps]
 
 source_file="res://Game/Actors/Player/Players/Player3.png"
-source_md5="80e5b2b72b8b8a08cf4464b96ced5003"
-
 dest_files=[ "res://.import/Player3.png-dceac33640d2a3128fa58b1b93bc0155.stex" ]
-dest_md5="9f6966f2e9d2420e8104b380127d5c81"
 
 [params]
 

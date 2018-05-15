@@ -7,10 +7,7 @@ path="res://.import/evil-eye-eerie-3.png-709f32ac400ed312880b459c626bcf6f.stex"
 [deps]
 
 source_file="res://Game/Items/Ice Power/Images/evil-eye-eerie-3.png"
-source_md5="2a07fef1e2ec1d28afad75e77507661f"
-
 dest_files=[ "res://.import/evil-eye-eerie-3.png-709f32ac400ed312880b459c626bcf6f.stex" ]
-dest_md5="29add0b93673df777c1e0c3196e699dd"
 
 [params]
 

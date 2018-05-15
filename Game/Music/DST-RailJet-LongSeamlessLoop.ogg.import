@@ -7,10 +7,7 @@ path="res://.import/DST-RailJet-LongSeamlessLoop.ogg-c65cc94696fcd0fd69bd0fa1942
 [deps]
 
 source_file="res://Game/Music/DST-RailJet-LongSeamlessLoop.ogg"
-source_md5="589270e8f946fdf3439afcbf814ecb50"
-
 dest_files=[ "res://.import/DST-RailJet-LongSeamlessLoop.ogg-c65cc94696fcd0fd69bd0fa1942c9289.oggstr" ]
-dest_md5="e59a4d63c093ba427d943c72be96a165"
 
 [params]
 

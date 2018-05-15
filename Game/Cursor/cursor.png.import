@@ -7,10 +7,7 @@ path="res://.import/cursor.png-6375bb7e6e8dda90905b9fd140c91992.stex"
 [deps]
 
 source_file="res://Game/Cursor/cursor.png"
-source_md5="f986a5e4f93ad5a3cdd524dd1186225e"
-
 dest_files=[ "res://.import/cursor.png-6375bb7e6e8dda90905b9fd140c91992.stex" ]
-dest_md5="1ea135acfd4a745a1ad721762d3875a3"
 
 [params]
 

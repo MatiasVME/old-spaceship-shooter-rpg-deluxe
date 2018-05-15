@@ -7,10 +7,7 @@ path="res://.import/Item.png-b560d18283c6a6ba10c1bb64d59f295b.stex"
 [deps]
 
 source_file="res://Game/Items/Item.png"
-source_md5="276038da2ec1ee9f2c38a003b617a43d"
-
 dest_files=[ "res://.import/Item.png-b560d18283c6a6ba10c1bb64d59f295b.stex" ]
-dest_md5="fd057db55c76d8de44052c774773633f"
 
 [params]
 

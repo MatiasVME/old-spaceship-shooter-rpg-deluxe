@@ -7,10 +7,7 @@ path="res://.import/UsePressed.png-60e4b4b7ccaeb60a26262f4778218d19.stex"
 [deps]
 
 source_file="res://Game/GUI/Buttons/Use/UsePressed.png"
-source_md5="8347b202edfeef0ddbef5e0a3a36ffde"
-
 dest_files=[ "res://.import/UsePressed.png-60e4b4b7ccaeb60a26262f4778218d19.stex" ]
-dest_md5="75f28f40ea5664bb43abc4a9dbf04555"
 
 [params]
 

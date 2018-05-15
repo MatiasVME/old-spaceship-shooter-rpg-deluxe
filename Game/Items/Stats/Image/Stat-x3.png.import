@@ -7,10 +7,7 @@ path="res://.import/Stat-x3.png-d732b986cb20551f2b1f3dca85ba4b87.stex"
 [deps]
 
 source_file="res://Game/Items/Stats/Image/Stat-x3.png"
-source_md5="8fc52ca542adab92afb8e945d6e40bd8"
-
 dest_files=[ "res://.import/Stat-x3.png-d732b986cb20551f2b1f3dca85ba4b87.stex" ]
-dest_md5="94021993ecc13ecbea107b854b88cefa"
 
 [params]
 

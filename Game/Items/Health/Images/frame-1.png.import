@@ -7,10 +7,7 @@ path="res://.import/frame-1.png-e3635220b35e0c10b2f721ab5a9309c0.stex"
 [deps]
 
 source_file="res://Game/Items/Health/Images/frame-1.png"
-source_md5="f27543a594507110d1115e606a5ccfef"
-
 dest_files=[ "res://.import/frame-1.png-e3635220b35e0c10b2f721ab5a9309c0.stex" ]
-dest_md5="1daaac4443c221be591d2999ec607386"
 
 [params]
 

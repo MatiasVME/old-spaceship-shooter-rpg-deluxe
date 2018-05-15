@@ -7,10 +7,7 @@ path="res://.import/MenuTitle.ogg-5c1009be337347ed710f3aff35f8d9bc.oggstr"
 [deps]
 
 source_file="res://Game/Sounds/MenuTitle.ogg"
-source_md5="4bff8398fb1e2eb3b30b49a76c8cbbc6"
-
 dest_files=[ "res://.import/MenuTitle.ogg-5c1009be337347ed710f3aff35f8d9bc.oggstr" ]
-dest_md5="90f9d29a88c7b57f44ba75d19dd11094"
 
 [params]
 

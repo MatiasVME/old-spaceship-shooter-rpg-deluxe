@@ -7,10 +7,7 @@ path="res://.import/PlasmaBullet-5.png-8ec48e43e8e63e64884a7a413885e154.stex"
 [deps]
 
 source_file="res://Game/Actors/Bullets/PlasmaBullet/PlasmaBullet-5.png"
-source_md5="68c6e0a75fe68ce4d9ca882aa5354668"
-
 dest_files=[ "res://.import/PlasmaBullet-5.png-8ec48e43e8e63e64884a7a413885e154.stex" ]
-dest_md5="b253b4dfe2177ce0351e376811e555e4"
 
 [params]
 
