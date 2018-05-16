@@ -4,18 +4,16 @@
 [ext_resource path="res://addons/PersistenceNode/icon.png" type="Texture" id=2]
 
 [node name="Persistence" type="Node" index="0"]
-
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_icon": ExtResource( 2 )
 }
 mode = 1
-password = "123"
+password = "123abc"
 folder_name = "Profiles"
 no_valid_names = [ "default", "example" ]
 debug = false
 beautifier_active = true
 profile_name_min_size = 3
 profile_name_max_size = 15
-
 

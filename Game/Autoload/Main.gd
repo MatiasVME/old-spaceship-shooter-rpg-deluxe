@@ -26,7 +26,7 @@ var player_can_move = false
 var player_is_dead = false
 var player_mark_to_dead = false
 var player_is_inmortal = true
-var lifes = 3
+var lifes = 3 # Ya no tendrá  vida
 
 var update_life_board = false
 
