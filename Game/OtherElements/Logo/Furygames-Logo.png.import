@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/save.png-99f178124b01bca9f0c06e2cbcac5a0c.stex"
+path="res://.import/Furygames-Logo.png-c24aa9ceeb17f30abc8e7c35b6a4693c.stex"
 
 [deps]
 
-source_file="res://Game/MainScreens/Accounts/save.png"
-dest_files=[ "res://.import/save.png-99f178124b01bca9f0c06e2cbcac5a0c.stex" ]
+source_file="res://Game/OtherElements/Logo/Furygames-Logo.png"
+dest_files=[ "res://.import/Furygames-Logo.png-c24aa9ceeb17f30abc8e7c35b6a4693c.stex" ]
 
 [params]
 

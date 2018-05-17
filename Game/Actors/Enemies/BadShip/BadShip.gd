@@ -3,7 +3,7 @@ extends "../EnemyShip.gd"
 var rec_bullet = load("res://Game/Actors/Bullets/EnemyBullet/EnemyBullet.tscn")
 
 enum Size {SIZE_1, SIZE_2, SIZE_3}
-var size = SIZE_1
+export (Size) var size = SIZE_1
 
 func _ready():
 	spawn_y = global_position.y

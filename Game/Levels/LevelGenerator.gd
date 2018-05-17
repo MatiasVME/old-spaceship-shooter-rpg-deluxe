@@ -19,7 +19,7 @@ func _ready():
 	
 	# Esto es para poder ejecutar la escena individualmente,
 	# requiere al menos un profile guardado en disco.
-	Persistence.load_alternative_data()
+#	Persistence.load_alternative_data()
 
 func create_figure():
 	# Se ocupa round ya que la aproximación de int() no es redondeada

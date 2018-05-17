@@ -7,20 +7,20 @@ func reset_level():
 	Main.is_over = false
 	Main.score = 0
 
-func _on_Credits_pressed():
-	get_tree().change_scene("res://Game/MainScreens/Credits.tscn")
-
-func _on_Exit_pressed():
-	get_tree().change_scene("res://Game/MainScreens/ExitSplash.tscn")
-	
-func _on_Start_pressed():
-#	reset_level()
-#	
-#	MusicManager.select_music(MusicManager.BATTLE)
-#	MusicManager.play_music()
+#func _on_Credits_pressed():
+#	get_tree().change_scene("res://Game/MainScreens/Credits.tscn")
 #
-	get_tree().change_scene("res://Game/MainScreens/Accounts.tscn")
-
-func _on_Connect_pressed():
-	# Para conectarse con gamejolt u otros
-	pass
+#func _on_Exit_pressed():
+#	get_tree().change_scene("res://Game/MainScreens/ExitSplash.tscn")
+#
+#func _on_Start_pressed():
+##	reset_level()
+##	
+##	MusicManager.select_music(MusicManager.BATTLE)
+##	MusicManager.play_music()
+##
+#	get_tree().change_scene("res://Game/MainScreens/Accounts.tscn")
+#
+#func _on_Connect_pressed():
+#	# Para conectarse con gamejolt u otros
+#	pass

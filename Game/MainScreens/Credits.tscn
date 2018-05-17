@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Game/MainScreens/Credits.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Game/MainScreens/Credits/FuryGames-Logo-Mini.png" type="Texture" id=4]
+[ext_resource path="res://Game/Fonts/Nokia/nokia.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Game/OtherElements/Logo/Furygames-Logo.png" type="Texture" id=4]
 [ext_resource path="res://Game/MainScreens/Credits/Texto.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Game/MainScreens/Elements/Button.tscn" type="PackedScene" id=6]
 
@@ -29,6 +29,8 @@ tracks/0/keys = {
 [sub_resource type="DynamicFont" id=2]
 
 size = 64
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 3 )
@@ -40,33 +42,19 @@ resource_name = "other"
 length = 20.0
 loop = true
 step = 0.1
-tracks/0/type = "value"
-tracks/0/path = NodePath("Logo:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 16.1, 16.4, 16.7 ),
-"transitions": PoolRealArray( 4, 4, 0.25 ),
-"update": 0,
-"values": [ Vector2( 1, 1 ), Vector2( 1.3, 1.3 ), Vector2( 1, 1 ) ]
-}
 
 [node name="Credits" type="Node" index="0"]
-
 script = ExtResource( 1 )
 
 [node name="Background" parent="." index="0" instance=ExtResource( 2 )]
 
 [node name="Blue" type="ColorRect" parent="." index="1"]
-
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_right = 1280.0
-margin_bottom = 720.0
+margin_right = 400.0
+margin_bottom = 640.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 0
@@ -77,7 +65,6 @@ color = Color( 0.0196078, 0.0156863, 0.0823529, 0 )
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Rect", "Size Flags", "Theme", "Visibility" ]
 
 [node name="Anim" type="AnimationPlayer" parent="." index="2"]
-
 root_node = NodePath("..")
 autoplay = "show"
 playback_process_mode = 1
@@ -87,14 +74,14 @@ anims/show = SubResource( 1 )
 blend_times = [  ]
 
 [node name="Title" type="Label" parent="." index="3"]
-
 anchor_left = 0.5
 anchor_top = 0.0
 anchor_right = 0.5
 anchor_bottom = 0.0
 margin_left = -170.0
+margin_top = 20.0
 margin_right = 169.0
-margin_bottom = 109.0
+margin_bottom = 129.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 2
@@ -104,26 +91,25 @@ size_flags_vertical = 4
 custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.24588, 0.875, 0.225586, 1 )
 custom_colors/font_color_shadow = Color( 0.381523, 0.824219, 0.180298, 1 )
-text = "Credits"
+text = "Créditos"
 align = 1
 valign = 1
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+_sections_unfolded = [ "Custom Fonts", "custom_colors", "custom_fonts" ]
 
 [node name="Logo" type="Sprite" parent="." index="4"]
-
-position = Vector2( 1148.09, 642.821 )
+position = Vector2( 200, 500 )
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Texto" parent="." index="5" instance=ExtResource( 5 )]
-
-margin_top = 182.0
+margin_top = 150.0
+margin_bottom = 420.0
 
 [node name="AnimOther" type="AnimationPlayer" parent="." index="6"]
-
 root_node = NodePath("..")
 autoplay = "other"
 playback_process_mode = 1
@@ -133,7 +119,11 @@ anims/other = SubResource( 3 )
 blend_times = [  ]
 
 [node name="Back" parent="." index="7" instance=ExtResource( 6 )]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -95.0
+margin_top = -60.0
+margin_right = 95.0
+margin_bottom = -11.0
 
 [connection signal="pressed" from="Back" to="." method="_on_Back_pressed"]
-
-

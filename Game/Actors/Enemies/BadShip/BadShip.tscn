@@ -113,10 +113,9 @@ tracks/1/keys = {
 "values": [ -1080.0, 0.0 ]
 }
 
-[node name="BadShip" type="RigidBody2D" groups=[
+[node name="BadShip" type="RigidBody2D" index="0" groups=[
 "Enemies",
 ]]
-
 input_pickable = false
 collision_layer = 3
 collision_mask = 3
@@ -142,20 +141,18 @@ xp_value = 1
 max_wait_time = 3
 min_wait_time = 1
 one_of_each = 5
+size = null
 
 [node name="Image" type="Sprite" parent="." index="0"]
-
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
-
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Anim" type="AnimationPlayer" parent="." index="2"]
-
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
@@ -167,28 +164,24 @@ anims/show = SubResource( 4 )
 blend_times = [  ]
 
 [node name="LimitLeft" type="Position2D" parent="." index="3"]
-
-position = Vector2( -300, 0 )
+position = Vector2( -120, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="LimitRight" type="Position2D" parent="." index="4"]
 
 [node name="TimeToDead" type="Timer" parent="." index="5"]
-
 process_mode = 1
 wait_time = 0.4
 one_shot = true
 autostart = false
 
 [node name="TimeToFire" type="Timer" parent="." index="6"]
-
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
 [node name="AnimSize" type="Tween" parent="." index="7"]
-
 repeat = false
 playback_process_mode = 1
 playback_speed = 1.0
@@ -197,11 +190,6 @@ playback/repeat = false
 playback/speed = 1.0
 
 [connection signal="body_entered" from="." to="." method="_on_BadShip_body_entered"]
-
 [connection signal="animation_finished" from="Anim" to="." method="_on_Anim_animation_finished"]
-
 [connection signal="timeout" from="TimeToDead" to="." method="_on_TimeToDead_timeout"]
-
 [connection signal="timeout" from="TimeToFire" to="." method="_on_TimeToFire_timeout"]
-
-

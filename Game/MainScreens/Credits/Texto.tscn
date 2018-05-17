@@ -1,24 +1,25 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Game/Fonts/kenvector_future.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Game/Fonts/Nokia/nokia.ttf" type="DynamicFontData" id=1]
 
 [sub_resource type="DynamicFont" id=1]
 
-size = 22
+size = 16
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
 use_mipmaps = false
 use_filter = false
 font_data = ExtResource( 1 )
 _sections_unfolded = [ "Font", "Settings" ]
 
-[node name="Texto" type="RichTextLabel"]
-
+[node name="Texto" type="RichTextLabel" index="0"]
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
 margin_top = 216.0
-margin_right = 1280.0
-margin_bottom = 568.0
+margin_right = 400.0
+margin_bottom = 570.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = true
 mouse_filter = 0
@@ -59,6 +60,5 @@ scroll_active = true
 scroll_following = false
 selection_enabled = false
 override_selected_font_color = false
-_sections_unfolded = [ "BBCode", "Margin", "Rect", "custom_fonts" ]
-
+_sections_unfolded = [ "BBCode", "Custom Fonts", "Margin", "Rect", "custom_fonts" ]
 
