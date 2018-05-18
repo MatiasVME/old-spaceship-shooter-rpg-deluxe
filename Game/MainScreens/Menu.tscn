@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Game/MainScreens/Menu.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
@@ -75,6 +75,16 @@ use_filter = false
 font_data = ExtResource( 7 )
 _sections_unfolded = [ "Font", "Settings" ]
 
+[sub_resource type="DynamicFont" id=7]
+
+size = 16
+outline_size = 0
+outline_color = Color( 1, 1, 1, 1 )
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 7 )
+_sections_unfolded = [ "Font", "Settings" ]
+
 [node name="Menu" type="Node" index="0"]
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
@@ -117,6 +127,7 @@ color = Color( 0.0196078, 0.0156863, 0.0823529, 0 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="VBox" type="VBoxContainer" parent="." index="4"]
+editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -370,6 +381,7 @@ max_lines_visible = -1
 _sections_unfolded = [ "custom_fonts" ]
 
 [node name="Title" type="Node" parent="." index="5"]
+editor/display_folded = true
 
 [node name="Spaceship" type="Label" parent="Title" index="0"]
 anchor_left = 0.5
@@ -509,6 +521,55 @@ pitch_scale = 1.0
 autoplay = false
 mix_target = 0
 bus = "Master"
+
+[node name="Display" type="Node" parent="." index="8"]
+
+[node name="Black" type="ColorRect" parent="Display" index="0"]
+modulate = Color( 1, 1, 1, 0.784314 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 470.0
+margin_right = 400.0
+margin_bottom = 600.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0, 0, 0, 1 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Text" type="RichTextLabel" parent="Display" index="1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 480.0
+margin_right = 390.0
+margin_bottom = 590.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/normal_font = SubResource( 7 )
+bbcode_enabled = true
+bbcode_text = "Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem "
+visible_characters = -1
+percent_visible = 1.0
+meta_underlined = true
+tab_size = 4
+text = "Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem Lorem lorem lorem "
+scroll_active = true
+scroll_following = false
+selection_enabled = false
+override_selected_font_color = false
+_sections_unfolded = [ "Bb Code", "Custom Colors", "Custom Fonts" ]
 
 [connection signal="pressed" from="VBox/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="VBox/Exit" to="." method="_on_Exit_pressed"]
