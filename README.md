@@ -4,7 +4,7 @@ Contiunación del Juego [Ultra Spaceships](https://furygames.itch.io/ultra-space
 
 ## Imágenes
 
-[Imgur](https://i.imgur.com/KJypIAi.gifv) [Imgur](https://i.imgur.com/KfxmE8K.png)
+![Imgur](https://i.imgur.com/KJypIAi.gif)![Imgur](https://i.imgur.com/KfxmE8K.png)
 
 ## Créditos
 
@@ -29,4 +29,4 @@ End Battle [[OGA]](https://opengameart.org/content/action-music-pack) [[Web]](ht
 Laser Sounds [[OGA]](https://opengameart.org/content/laser-fire)
 
 ## Descargar (Pronto)
-[[Itch.io]]()
+[[Itch.io]](http://furygames.itch.io)
