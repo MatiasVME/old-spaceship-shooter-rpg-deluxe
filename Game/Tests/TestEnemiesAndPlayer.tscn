@@ -1,20 +1,62 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Game/Tests/TestEnemiesAndPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Game/Backgrounds/Background.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Game/Actors/Player/Player.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Game/Levels/ExampleShips.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Actors/Enemies/BadShip/BadShip.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Game/HUD/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Game/Levels/Edge.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Game/Actors/Player/Player.tscn" type="PackedScene" id=6]
 
-[node name="TestEnemiesAndPlayer" type="Node"]
-
+[node name="TestLevels" type="Node" index="0"]
 script = ExtResource( 1 )
 
 [node name="Background" parent="." index="0" instance=ExtResource( 2 )]
 
-[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Badships" type="Node" parent="." index="1"]
 
-position = Vector2( 606.643, 606.643 )
+[node name="BadShip" parent="Badships" index="0" instance=ExtResource( 3 )]
+position = Vector2( 340, 90 )
+mode = 0
+max_life = 12
+min_life = 8
 
-[node name="Ships" parent="." index="2" instance=ExtResource( 4 )]
+[node name="BadShip2" parent="Badships" index="1" instance=ExtResource( 3 )]
+position = Vector2( 340, 160 )
+mode = 0
 
+[node name="BadShip3" parent="Badships" index="2" instance=ExtResource( 3 )]
+position = Vector2( 340, 230 )
+mode = 0
+
+[node name="BadShip4" parent="Badships" index="3" instance=ExtResource( 3 )]
+position = Vector2( 260, 90 )
+mode = 0
+
+[node name="BadShip5" parent="Badships" index="4" instance=ExtResource( 3 )]
+position = Vector2( 260, 160 )
+mode = 0
+
+[node name="BadShip6" parent="Badships" index="5" instance=ExtResource( 3 )]
+position = Vector2( 260, 230 )
+mode = 0
+
+[node name="BadShip7" parent="Badships" index="6" instance=ExtResource( 3 )]
+position = Vector2( 170, 90 )
+mode = 0
+
+[node name="BadShip8" parent="Badships" index="7" instance=ExtResource( 3 )]
+position = Vector2( 170, 160 )
+mode = 0
+
+[node name="BadShip9" parent="Badships" index="8" instance=ExtResource( 3 )]
+position = Vector2( 170, 230 )
+mode = 0
+
+[node name="HUD" parent="." index="2" instance=ExtResource( 4 )]
+
+[node name="Edge" parent="." index="3" instance=ExtResource( 5 )]
+
+[node name="Player" parent="." index="4" instance=ExtResource( 6 )]
+position = Vector2( 180, 540 )
+_sections_unfolded = [ "Collision", "collision" ]
 
