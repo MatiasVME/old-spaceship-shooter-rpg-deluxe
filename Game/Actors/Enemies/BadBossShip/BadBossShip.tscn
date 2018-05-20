@@ -120,10 +120,9 @@ tracks/2/keys = {
 "values": [ false ]
 }
 
-[node name="BadBossShip" type="RigidBody2D" groups=[
+[node name="BadBossShip" type="RigidBody2D" index="0" groups=[
 "Enemies",
 ]]
-
 input_pickable = false
 collision_layer = 3
 collision_mask = 3
@@ -146,19 +145,17 @@ script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
 max_life = 300
 min_life = 300
-score_value = 5
+xp_value = 1
 max_wait_time = 0.3
 min_wait_time = 0.2
 one_of_each = 30
 
 [node name="Image" type="Sprite" parent="." index="0"]
-
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="Anim" type="AnimationPlayer" parent="." index="1"]
-
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
@@ -170,35 +167,27 @@ anims/show = SubResource( 3 )
 blend_times = [  ]
 
 [node name="LimitLeft" type="Position2D" parent="." index="2"]
-
-position = Vector2( -300, 0 )
+position = Vector2( -170, 0 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="LimitRight" type="Position2D" parent="." index="3"]
 
 [node name="TimeToDead" type="Timer" parent="." index="4"]
-
 process_mode = 1
 wait_time = 3.0
 one_shot = true
 autostart = false
 
 [node name="TimeToFire" type="Timer" parent="." index="5"]
-
 process_mode = 1
 wait_time = 0.1
 one_shot = false
 autostart = false
 
 [node name="Collision" type="CollisionPolygon2D" parent="." index="6"]
-
 build_mode = 0
 polygon = PoolVector2Array( -57.16, 17.0695, -55.8332, -8.80396, -81.0432, -86.4242, -68.4382, -91.7316, -20.0085, -29.37, 18.4699, -29.37, 70.2168, -91.0682, 79.5047, -83.7705, 56.9484, -6.8137, 58.2752, 15.7426, 102.724, 53.5576, 99.4073, 88.7189, 74.1973, 92.036, 18.4699, 31.0013, -16.6913, 31.6647, -75.0724, 90.0458, -98.9556, 88.0555, -102.273, 51.5674 )
 
 [connection signal="body_entered" from="." to="." method="_on_BadShip_body_entered"]
-
 [connection signal="timeout" from="TimeToDead" to="." method="_on_TimeToDead_timeout"]
-
 [connection signal="timeout" from="TimeToFire" to="." method="_on_TimeToFire_timeout"]
-
-

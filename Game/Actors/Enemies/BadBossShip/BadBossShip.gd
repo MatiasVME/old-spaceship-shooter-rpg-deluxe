@@ -4,26 +4,6 @@ extends "../EnemyShip.gd"
 
 var rec_bullet = load("res://Game/Actors/Bullets/EnemyBullet/EnemyBullet.tscn")
 
-var mark_to_dead = false
-var life
-
-var limit_right
-var limit_left
-
-var spawn_y
-
-var velocity_x = 0.5
-var velocity_y = 0.5
-var velocity_increment_x = 1
-var velocity_increment_y = 1
-
-enum MovementX {LEFT, RIGHT}
-var current_movement_x = MovementX.LEFT
-enum MovementY {UP, DOWN}
-var current_movement_y
-
-var first_impulse = true
-
 var rotated_fire = 0
 
 func _ready():
@@ -123,7 +103,7 @@ func _on_BadShip_body_entered( body ):
 			Main.enemies_can_fire = false
 
 func _on_TimeToDead_timeout():
-	Main.score += score_value
+#	Main.score += score_value
 	queue_free()
 
 func _on_TimeToFire_timeout():
