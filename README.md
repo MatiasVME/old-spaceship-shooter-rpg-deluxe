@@ -2,6 +2,10 @@
 
 Contiunación del Juego [Ultra Spaceships](https://furygames.itch.io/ultra-space-ships) pero esta vez con elementos RPG y para Android
 
+## Notas
+
+Estoy utilizando la versión master de godot, más específicamente la versión 3b8bd50b41e0197ab3bce653548715872a93ea80 . Puede que no abra el proyecto con la versión estable.
+
 ## Imágenes
 
 ![Imgur](https://i.imgur.com/KJypIAi.gif)![Imgur](https://i.imgur.com/KfxmE8K.png)
