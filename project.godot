@@ -16,11 +16,11 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Main="*res://Game/Autoload/Main.gd"
 Persistence="*res://Game/Autoload/Persistence.tscn"
+DataVersionManager="*res://Game/Autoload/DataVersionManager.gd"
+Main="*res://Game/Autoload/Main.gd"
 MusicManager="*res://Game/Autoload/MusicManager.tscn"
 SoundManager="*res://Game/Autoload/SoundManager.tscn"
-ItemManager="*res://Game/Autoload/ItemManager.gd"
 
 [display]
 
@@ -34,7 +34,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "PersistenceNode" )
+enabled=PoolStringArray( "PersistenceNode", "RPGElements" )
 
 [importer_defaults]
 

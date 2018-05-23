@@ -2,6 +2,7 @@ extends Node
 
 const RES_X = 400
 const RES_Y = 640
+const VERSION = "v0.1.0"
 
 var music_enable = false
 var sound_enable = false
@@ -11,8 +12,12 @@ var HUD setget set_hud, get_hud
 var player setget set_player, get_player
 var current_account setget set_current_account, get_current_account
 
-# Inventory
-var current_inv setget set_current_inv, get_current_inv
+# Toda la data
+var data = {}
+# Player
+var player = load("res://addons/RPGElements/Nodes/RPGCharacter.gd").new()
+# Stats
+var stats = load("res://addons/RPGElements/Nodes/RPGStats.gd").new()
 
 var is_over = false
 var current_level = 1
@@ -26,14 +31,24 @@ var player_can_move = false
 var player_is_dead = false
 var player_mark_to_dead = false
 var player_is_inmortal = true
-var lifes = 3 # Ya no tendrá  vida
 
-var update_life_board = false
+func _ready():
+	if debug:
+		player.debug = true
+		stats.debug = true
+	
+	# Generar el player
+	
+	pass
 
-# Crea el objeto inventario y lo setea como inventario actual
-func create_inv():
-	current_inv = load("res://Game/Items/Inventory.gd").new()
-	return current_inv
+# Metodos Publicos
+#
+
+func save_player_data():
+	data["Player"] = player.get_dictionary()
+	
+func save_stats_data():
+	data["Stats"] = stats.get_dictionary()
 
 # Setters/Getters
 #

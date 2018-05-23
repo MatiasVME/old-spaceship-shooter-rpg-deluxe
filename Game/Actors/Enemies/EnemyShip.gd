@@ -8,7 +8,7 @@ export (int) var min_life = 3
 #export (int) var score_value = 5
 export (int) var xp_value = 1
 
-# Tiempo el cuál se demora en disparar
+# Tiempo el cual se demora en disparar
 export (float) var max_wait_time = 3
 export (float) var min_wait_time = 1
 
@@ -80,7 +80,7 @@ func is_limit_right():
 	if global_position.x >= limit_right:
 		current_movement_x = MovementX.LEFT
 		apply_impulse(Vector2(0, 0), Vector2(-500, 0))
-
+		
 		return true
 		
 	return false

@@ -18,21 +18,18 @@ func _physics_process(delta):
 		return
 	
 	movement_x(speed)
-	movement_y(speed)
+#	movement_y(speed)
 	
 	move_and_collide(Vector2(move_x, move_y))
 	
-	fire()
-	
 func fire():
-	if Input.is_action_just_pressed("ui_accept"):
-		var laser = rec_laser.instance()
-		laser.global_position.y = $Image.global_position.y - 40
-		laser.global_position.x = $Image.global_position.x
-		get_parent().add_child(laser)
-		
-		SoundManager.select_sound(0)
-		SoundManager.play_sound()
+	var laser = rec_laser.instance()
+	laser.global_position.y = $Image.global_position.y - 40
+	laser.global_position.x = $Image.global_position.x
+	get_parent().add_child(laser)
+	
+	SoundManager.select_sound(0)
+	SoundManager.play_sound()
 	
 func movement_x(speed):
 	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
@@ -44,15 +41,15 @@ func movement_x(speed):
 	else:
 		move_x = 0
 
-func movement_y(speed):
-	direction = int(Input.is_action_pressed("ui_up")) - int(Input.is_action_pressed("ui_down"))
-	
-	if direction == 1 and not is_limited_up():
-		move_y = -speed
-	elif direction == -1 and not is_limited_down():
-		move_y = speed
-	else:
-		move_y = 0
+#func movement_y(speed):
+#	direction = int(Input.is_action_pressed("ui_up")) - int(Input.is_action_pressed("ui_down"))
+#
+#	if direction == 1 and not is_limited_up():
+#		move_y = -speed
+#	elif direction == -1 and not is_limited_down():
+#		move_y = speed
+#	else:
+#		move_y = 0
 	
 func is_limited_right():
 	if global_position.x > Main.RES_X - 50:
@@ -80,14 +77,8 @@ func is_limited_down():
 
 func _on_Anim_animation_finished( anim_name ):
 	if anim_name == "dead":
-		if Main.lifes > 1:
-			get_parent().create_player()
-			Main.player_can_move = true
-			Main.lifes -= 1
-			get_parent().get_node("HUD").update_life_board()
-		else:
-			Main.is_over = true
-		
+		pass
+		# TODO
 		queue_free()
 	elif anim_name == "start":
 		Main.player_is_inmortal = false
@@ -95,3 +86,6 @@ func _on_Anim_animation_finished( anim_name ):
 func _on_HitArea_body_shape_entered(body_id, body, body_shape, area_shape):
 	if body.is_in_group("EnemyBullet"):
 		body.queue_free()
+	
+func _on_TimeToFire_timeout():
+	fire()

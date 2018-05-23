@@ -74,10 +74,9 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 radius = 30.0
 
-[node name="Player" type="KinematicBody2D" groups=[
+[node name="Player" type="KinematicBody2D" index="0" groups=[
 "Player",
 ]]
-
 input_pickable = false
 collision_layer = 13
 collision_mask = 13
@@ -88,17 +87,14 @@ speed = 2.5
 auto_fire = false
 
 [node name="Image" type="Sprite" parent="." index="0"]
-
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
 [node name="Collision" type="CollisionShape2D" parent="." index="1"]
-
 shape = SubResource( 1 )
 
 [node name="Anim" type="AnimationPlayer" parent="." index="2"]
-
 root_node = NodePath("..")
 autoplay = "start"
 playback_process_mode = 1
@@ -109,7 +105,6 @@ anims/start = SubResource( 3 )
 blend_times = [  ]
 
 [node name="HitArea" type="Area2D" parent="." index="3"]
-
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -122,11 +117,14 @@ audio_bus_name = "Master"
 _sections_unfolded = [ "Collision" ]
 
 [node name="Collision" type="CollisionShape2D" parent="HitArea" index="0"]
-
 shape = SubResource( 4 )
 
+[node name="TimeToFire" type="Timer" parent="." index="4"]
+process_mode = 0
+wait_time = 0.1
+one_shot = false
+autostart = true
+
 [connection signal="animation_finished" from="Anim" to="." method="_on_Anim_animation_finished"]
-
 [connection signal="body_shape_entered" from="HitArea" to="." method="_on_HitArea_body_shape_entered"]
-
-
+[connection signal="timeout" from="TimeToFire" to="." method="_on_TimeToFire_timeout"]
