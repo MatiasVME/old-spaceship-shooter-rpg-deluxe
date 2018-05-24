@@ -4,12 +4,12 @@ const RES_X = 400
 const RES_Y = 640
 const VERSION = "v0.1.0"
 
-var music_enable = false
-var sound_enable = false
+var music_enable = true
+var sound_enable = true
 var debug = true
 
 var HUD setget set_hud, get_hud
-var player setget set_player, get_player
+#var player setget set_player, get_player
 var current_account setget set_current_account, get_current_account
 
 # Toda la data
@@ -31,6 +31,10 @@ var player_can_move = false
 var player_is_dead = false
 var player_mark_to_dead = false
 var player_is_inmortal = true
+
+# Teclas
+var direction = 0
+var button_can_fire = false
 
 func _ready():
 	if debug:
@@ -70,9 +74,3 @@ func set_current_account(_current_account):
 	
 func get_current_account():
 	return current_account
-
-func set_current_inv(inv):
-	current_inv = inv
-	
-func get_current_inv():
-	return current_inv

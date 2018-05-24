@@ -13,10 +13,13 @@ func _ready():
 	data = Persistence.get_data()
 
 func create_data(version):
-	match data_version:
+	match version:
 		"v0.1.0": create_data_001()
 		
 func create_data_001():
+	
+	# Crear la data del player
+	
 	Main.player.name = "Goodship"
 	Main.player.level = 0
 	Main.player.level_max = 30
@@ -27,5 +30,24 @@ func create_data_001():
 	
 	Main.save_player_data()
 	
+	# Crear data de las stats
+	
+	Main.stats.add_stat("Damage", 0, 50)
+	Main.stats.add_stat("ShipVelocity", 0, 25)
+	Main.stats.add_stat("FireVelocity", 0, 25)
+	Main.stats.add_stat("ExplosiveBullet", 0, 50)
+	Main.stats.add_stat("Protection", 0, 50)
 	
 	Main.save_stats_data()
+	
+	# Otra Data
+	
+	data["Coins"] = 25 # TODO: Definir un numero de coins al inicio
+	data["PastLevels"] = 0 # Niveles pasados
+	data["Keys"] = 0 # TODO: En un futuro se anadiran keys para abrir cofres
+	data["Skins"] = {
+		SkinsObtained = [Shop.get_random_spaceship_skin()],
+		SkinSelected = 0
+	}
+	
+	Persistence.save_data()

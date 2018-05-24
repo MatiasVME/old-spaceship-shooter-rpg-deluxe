@@ -18,7 +18,6 @@ func _physics_process(delta):
 		return
 	
 	movement_x(speed)
-#	movement_y(speed)
 	
 	move_and_collide(Vector2(move_x, move_y))
 	
@@ -32,24 +31,15 @@ func fire():
 	SoundManager.play_sound()
 	
 func movement_x(speed):
-	direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
+	if OS.get_name() != "Android":
+		direction = int(Input.is_action_pressed("ui_right")) - int(Input.is_action_pressed("ui_left"))
 
-	if direction == 1 and not is_limited_right():
+	if Main.direction == 1 and not is_limited_right():
 		move_x = speed
-	elif direction == -1 and not is_limited_left():
+	elif Main.direction == -1 and not is_limited_left():
 		move_x = -speed
 	else:
 		move_x = 0
-
-#func movement_y(speed):
-#	direction = int(Input.is_action_pressed("ui_up")) - int(Input.is_action_pressed("ui_down"))
-#
-#	if direction == 1 and not is_limited_up():
-#		move_y = -speed
-#	elif direction == -1 and not is_limited_down():
-#		move_y = speed
-#	else:
-#		move_y = 0
 	
 func is_limited_right():
 	if global_position.x > Main.RES_X - 50:
@@ -88,4 +78,5 @@ func _on_HitArea_body_shape_entered(body_id, body, body_shape, area_shape):
 		body.queue_free()
 	
 func _on_TimeToFire_timeout():
-	fire()
+	if Main.button_can_fire:
+		fire()

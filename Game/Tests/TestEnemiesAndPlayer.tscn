@@ -58,6 +58,6 @@ mode = 0
 [node name="Edge" parent="." index="3" instance=ExtResource( 5 )]
 
 [node name="Player" parent="." index="4" instance=ExtResource( 6 )]
-position = Vector2( 180, 540 )
+position = Vector2( 200, 517.8 )
 _sections_unfolded = [ "Collision", "collision" ]
 

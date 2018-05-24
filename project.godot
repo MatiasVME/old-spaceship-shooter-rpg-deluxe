@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 Persistence="*res://Game/Autoload/Persistence.tscn"
 DataVersionManager="*res://Game/Autoload/DataVersionManager.gd"
 Main="*res://Game/Autoload/Main.gd"
+Shop="*res://Game/Autoload/Shop.gd"
 MusicManager="*res://Game/Autoload/MusicManager.tscn"
 SoundManager="*res://Game/Autoload/SoundManager.tscn"
 
