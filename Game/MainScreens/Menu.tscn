@@ -127,7 +127,6 @@ color = Color( 0.0196078, 0.0156863, 0.0823529, 0 )
 _sections_unfolded = [ "Rect" ]
 
 [node name="VBox" type="VBoxContainer" parent="." index="4"]
-editor/display_folded = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -146,6 +145,7 @@ alignment = 0
 _sections_unfolded = [ "Rect" ]
 
 [node name="Modes" type="TextureButton" parent="VBox" index="0"]
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -571,5 +571,6 @@ selection_enabled = false
 override_selected_font_color = false
 _sections_unfolded = [ "Bb Code", "Custom Colors", "Custom Fonts" ]
 
+[connection signal="pressed" from="VBox/Modes" to="." method="_on_Modes_pressed"]
 [connection signal="pressed" from="VBox/Credits" to="." method="_on_Credits_pressed"]
 [connection signal="pressed" from="VBox/Exit" to="." method="_on_Exit_pressed"]
