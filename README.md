@@ -1,4 +1,8 @@
-# Spaceship Shooter RPG Deluxe
+# [[Abandonado]] Spaceship Shooter RPG Deluxe
+
+**Este proyecto esta abandonado, por que al parecer se corrompieron las escenas y no funciona en Android, que era el target principal. Se continuará este proyecto en un repositorio a parte.**
+
+**Nuevo Repositorio:** [Nuevo Repositorio](https://github.com/MatiasVME/SpaceshipShooterRPGDeluxe)
 
 Contiunación del Juego [Ultra Spaceships](https://furygames.itch.io/ultra-space-ships) pero esta vez con elementos RPG y para Android
 
@@ -31,6 +35,3 @@ End Battle [[OGA]](https://opengameart.org/content/action-music-pack) [[Web]](ht
 
 ### Otros
 Laser Sounds [[OGA]](https://opengameart.org/content/laser-fire)
-
-## Descargar (Pronto)
-[[Itch.io]](http://furygames.itch.io)
